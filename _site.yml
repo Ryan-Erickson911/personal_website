@@ -1,0 +1,29 @@
+name: "ryanerickson911"
+output_dir: "."
+navbar:
+  title: "Ryan Erickson"
+  left:
+    - text: "Home"
+      icon: fa-home
+      href: index.html
+    - text: "GIS Work"
+      icon: fa-globe
+      href: geog176A.html
+    - text: "Resume"
+      icon: fa-align-justify
+      href: resume.html
+    - text: Labs
+      icon: fa-flask
+      menu:
+        - text: "Labs Home"
+          href: index.html
+  right:
+    - icon: fa-github
+      href: https://github.com/iamryan
+    - icon: fa-question-circle
+      href: home.html
+output:
+  html_document:
+    theme: cosmo
+    
+    
