@@ -1,12 +1,12 @@
 ---
 title: "About Me"
 ---
-```{r, echo = FALSE}
-library(icon)
+```{r, include = FALSE}
+library(icons)
 ```
 
 <center>
 ![](img/IMG_4782.jpg){width=50%}
 </center>
 
-I've recently finished a Bachelor of Arts in Physics and Geography (Emphasis in GIS) and am testing the building of my website! I hope to keep this updated with projects that I do. You'll notice my resume is attached as well. I hope you find it interesting. 
+I've recently finished a Masters of Arts in Geographic Informational Science (GIS). I am in the process of updating of my website! I did not keep this updated but the full version is coming soon!

@@ -1,20 +1,16 @@
 ---
-title: "Home Page"
+title: "Hi, I'm Ryan Erickson"
 ---
-```{r, echo = FALSE}
-library(icon)
+```{r, include = FALSE}
+library(icons)
 ```
 <center>
-
-# Hi, I'm Ryan Erickson.
-## Nice to meet you!
-
+## Fancy seeing you here
 ```{r, echo=FALSE}
-fa("smile-beam", size = 5, animate="spin")
+fontawesome::fa("smile-beam")
 ```
 
 ### You've stumbled on the home page for my project website. Navigate this website to learn a little more about me and what I've done so far.
 
 I'm currently in the market for GIS work and on my way to becoming a top-level GIS Analyst. I'm proficient in coding in R and creating maps in both R and ESRI's ArcGIS Pro. 
-
 </center>
