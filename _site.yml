@@ -16,14 +16,12 @@ navbar:
       icon: fa-flask
       menu:
         - text: "Labs Home"
-          href: index.html
+          href: https://ryan-erickson911.github.io/geog176A_labs/
   right:
     - icon: fa-github
-      href: https://github.com/iamryan
+      href: https://github.com/Ryan-Erickson911
     - icon: fa-question-circle
       href: home.html
 output:
   html_document:
     theme: cosmo
-    
-    
