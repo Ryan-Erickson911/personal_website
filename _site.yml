@@ -16,7 +16,7 @@ navbar:
       icon: fa-flask
       menu:
         - text: "Labs Home"
-          href: https://ryan-erickson911.github.io/geog176A_labs/
+          href: https://ryan-erickson911.github.io/geog176A_labs
   right:
     - icon: fa-github
       href: https://github.com/Ryan-Erickson911
