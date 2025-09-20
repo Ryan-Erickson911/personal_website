@@ -52,3 +52,5 @@ This is a basic bi-variate map displaying the case and death relationships to av
 Here you see the beginnings of a flooding analysis raster. For fear accidentally sharing confidential resources and out of respect for my peers, I did not want to display data that is in the process of being published and is currently being researched. This is a basic map consisting of a DEM Raster and Polylines representing the Russian River in California that is the beginning for flood prediction and analysis. 
 
 #### ***For more work I've done in R, please visit my Labs page!***
+
+### ![Back to home page](https://ryan-erickson911.github.io/personal_website/)
