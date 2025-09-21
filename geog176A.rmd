@@ -2,7 +2,7 @@
 title: "Projects"
 ---
 
-These are some projects I've done through out my time at UCSB.
+These are some projects I've done through out my time at UCSB. I've only applied minimal edits to this page because it shows my mindset and writing abilities earlier in my career. Save this heading, this page is untouched since its publishing 2020.
 
 # ArcMaps - Maps I created in ArcMap Pro, by ESRI
 
@@ -49,8 +49,6 @@ This is a basic bi-variate map displaying the case and death relationships to av
 ![](img/russian_river.png)
 </center>
 
-Here you see the beginnings of a flooding analysis raster. For fear accidentally sharing confidential resources and out of respect for my peers, I did not want to display data that is in the process of being published and is currently being researched. This is a basic map consisting of a DEM Raster and Polylines representing the Russian River in California that is the beginning for flood prediction and analysis. 
-
-#### ***For more work I've done in R, please visit my Labs page!***
+Here you see the beginnings of a flooding analysis raster. For fear accidentally sharing confidential resources and out of respect for my peers, I did not want to display data that is in the process of being published and is currently being researched. This is a basic map consisting of a DEM Raster and Poly lines representing the Russian River in California that is the beginning for flood prediction and analysis. 
 
 ![Back to home page](https://ryan-erickson911.github.io/personal_website/)
