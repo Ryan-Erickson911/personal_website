@@ -1,11 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,800");
+@import url("https://kit.fontawesome.com/a4631bf45a.js");
 @import url("fontawesome-all.min.css");
-
-/*
-	ZeroFour by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -1694,7 +1688,7 @@ input, select, textarea {
 		}
 
 		.icon.brands:before {
-			font-family: 'Font Awesome 5 Brands';
+			font-family: 'Font Awesome 7 Brands';
 		}
 
 		.icon > .label {
