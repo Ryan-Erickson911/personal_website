@@ -4,8 +4,18 @@
 		<title>Ryan Erickson</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<script src="https://kit.fontawesome.com/a4631bf45a.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+      width: 75%;
+      margin: auto;
+    }
+    </style>
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -70,16 +80,16 @@
 									<div class="row">
 										<div class="col-12">
 											<header class="first major">
-												<h2>Ambitious, driven, self-motivated GIS developer</h2>
+												<h2>Inquisitive, Objective-oriented, Self-motivated GIS developer</h2>
 												<p>I have many side-projects that I've done over the last decade. Since most of the data are freely avaliable online, 
 												I added the sources to this site for both myself and those interested in this kind of work. This website is in its early 
 												stages and is simply meant to show that I am capable of such work. For now, many of the links go to various GitHubs 
-												I've made throughout the years and open-sourced data I used for my thesis. Or to the top of the page...</p>
+												I've made throughout the years and open-sourced data I used for my thesis. If not, it'll take you to the top of the page...</p>
 											</header>
 										</div>
 										<div class="col-4 col-12-medium">
 											<section>
-												<a href="left-sidebar.html" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+												<a href="left-sidebar.html" class="image featured"><img src="img/oldwork.png" alt="" /></a>
 												<header class="second icon solid fa-user">
 													<h3>Past</h3>
 													<p>Old Posters and Class Projects</p>
@@ -88,8 +98,8 @@
 										</div>
 										<div class="col-4 col-12-medium">
 											<section>
-												<a href="right-sidebar.html" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-												<header class="second icon solid fa-chart-bar">
+												<a href="right-sidebar.html" class="image featured"><img src="img/current.png" alt="" /></a>
+												<header class="second icon solid fa-solid fa-gift">
 													<h3>Present</h3>
 													<p>Most Recent Work Experience</p>
 												</header>
@@ -97,8 +107,8 @@
 									  </div>
 										<div class="col-4 col-12-medium">
 											<section>
-												<a href="no-sidebar.html" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-												<header class="second icon solid fa-chart-bar">
+												<a href="no-sidebar.html" class="image featured"><img src="images/olympusmons_marsmola.png" alt="" /></a>
+												<header class="second icon solid fa-solid fa-brain">
 													<h3>Future</h3>
 													<p>Upcomming Projects/Ideas</p>
 												</header>
@@ -110,52 +120,61 @@
 											more than 30 times in my life prior, 23 of those were before I turned 15. Many of the side projects, 
 											inspiration for my research, and general persona comes from a difficult upbringing. Topics like food inscurity, 
 											urban health, and environmental justice are sprinkled throughout my work. The most recent project I've 
-											been working on has been with CU's North Climate .</p>
+											been working on has been with CU's North Central Climate Adaptation and Science Center (NC CASC).</p>
 										</div>
 									</div>
 								</section>
+    					<div class="container">
+                <div id="myCarousel" class="carousel slide" data-interval="2500">
+                  <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <img src="images/poster.png" class="d-block" alt="Test 1" width="460" height="345">
+                      <div style="color: black;" class="carousel-caption d-none d-block">
+                        <h3 style="color: gold;">GIS Class Project</h3>
+                        <p>A poster I made with some friends of mine at UCSB.</p>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="images/maunaloa.png" alt="Flower" width="460" height="345">
+                      <div class="carousel-caption">
+                        <h3>DEM Mauna Loa</h3>
+                        <p>Ditigal Elevation Model and hillshade reated in GEE.</p>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="images/test02.png" alt="Test 2" width="460" height="345">
+                      <div class="carousel-caption">
+                        <h3>Temporary Display</h3>
+                        <p>Statisitcs showing normalized bell curve.</p>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="images/test01.png" alt="Flower" width="460" height="345">
+                      <div class="carousel-caption">
+                        <h3>Temporal Analysis</h3>
+                        <p>An 8-day simulation of growing tree density.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
 						</div>
 					</div>
 					<div class="wrapper style2">
-						<div class="inner">
-								<section class="container box feature2">
-									<div class="row">
-										<div class="col-6 col-12-medium">
-											<section>
-												<header class="major">
-													<h2>Newest Project</h2>
-													<p>Topographic signatures of life.</p>
-												</header>
-												<p>I recently started this project during May of 2025. After finishing my ozone model, 
-												I wanted to find something to apply it to. Life, as we know it, would not exist without 
-												some combination of processes. This work is dedicated to isolating and defining these
-												processes as they happen over the many eons of Earth's development. 
-												</p>
-												<footer>
-													<a href="https://www.cambridge.org/core/books/what-is-life/A876185F2DB06FF5C2CC67C9A60DAD7F" target='_blank' class="button medium icon solid fa-arrow-circle-right">What is Life?</a>
-												</footer>
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<header class="major">
-													<h2>Early Mapping Career</h2>
-													<p>Basic GIS analyses from school.</p>
-												</header>
-												<p>These are some of the first posters I made. I started mapping in 2017 and never stopped. 
-												While this isn't my best work, I added it as a tribute to how far I've come since then. 
-												I've always wanted to focus of human trends and movement. My recent work was in pursite of
-												making these better and more accessible to the public.</p>
-												<footer>
-													<a href="geog176A.html" class="button medium alt icon solid fa-info-circle">Old Work</a>
-												</footer>
-											</section>
-										</div>
-									</div>
-								</section>
-							</div>
-					</div>
-					<div class="wrapper style3">
 						<div class="inner">
 							<div class="container">
 								<div class="row">
@@ -163,7 +182,7 @@
 									  <section class="box article-list">
 									    <h2 class="icon fa-file-alt">Published Work</h2>
 											<article class="box excerpt">
-												<a href="thesis1a2.html" class="image left"><img src="images/pic06.jpg" alt="" /></a>
+												<a href="thesis1a2.html" class="image left"><img src="images/test03.png" alt="" /></a>
 												<div>
 													<header>
 													  <span class="date">September, 2025</span>
@@ -175,29 +194,31 @@
 														</div>
 											</article>
 									    <article class="box excerpt">
-									      <a href="https://nccasc.colorado.edu/blog" class="image left"><img src="images/pic04.jpg" alt="" /></a>
+									      <a href="https://nccasc.colorado.edu/blog" class="image left"><img src="images/test04.png" alt="" /></a>
 									      <div>
 									        <header>
 									          <span class="date">August, 2025</span>
 									          <h3><a href="https://nccasc.colorado.edu/blog">NC CASC Blog</a></h3>
 									        </header><p>I had the pleasure of working with NC CASC as a CEST member to start my work
 									        on the topographic signature of life project. For this work, I wrote a quite blog
-									        detailing it's importance and furture directions. It's not yet avaliable, but it will be soon!</p>
+									        detailing it's importance and furture directions. It's not yet avaliable, but it will be soon!
+									        This was part of a program called the Climate Adaptation Scientists of Tomorrow which funded
+									        my final semester at CU.</p>
 												</div>
 											</article>
 											<article class="box excerpt">
-												<a href="https://github.com/Ryan-Erickson911/wells_fargo" class="image left"><img src="images/pic06.jpg" alt="" /></a>
+												<a href="https://github.com/earthlab/firedpy" class="image left"><img src="images/test05.png" alt="" /></a>
 												<div>
 													<header>
 													  <span class="date">July, 2023</span>
-													  <h3><a href="https://github.com/Ryan-Erickson911/wells_fargo">Android/IOS App</a></h3>
-													</header><p>While I was working on Firedpy, a friend of mine came to me with a request to 
-													build an app. The company wanted a "basic" app similar to a banking app that managed potential
-													investments. The skeleton for it is still on my GitHub so I thought I would add it here to
-													showoff my diverse skill set.</p>
-														</div>
+													  <h3><a href="https://github.com/earthlab/firedpy">FIREDpy</a></h3>
+													</header><p>The FIRe Event Delineation tool created by Earth Lab at CU. I was briefly apart of some summer work
+													that fixed some edge-case issues on the program. It's a Python based CLI that classifies individual burn 
+													detections into discrete events from 2001 to near-present. It returns both a table and shapefiles of fire events 
+													for a time and place (Balch et. al., 2020).</p>
+												</div>
 											</article>
-											</section>
+										</section>
 									</div>
 									<div class="col-4 col-12-medium">
 											<section class="box spotlight">
@@ -209,11 +230,12 @@
 														<p>I made a map of where I've been!</p>
 													</header>
 													<p>Spoiler...you'll notice it's mainly in the US and surrounding nations. Most of the road trips I've taken across the US
-													were with my Grandparents. I hope to scan some old pictures and upload them into the POI summaries.</p>
-													<p>I hope to start working towards a financially stable life. When life and time permits, I hope to get my passport and travel 
-													to each of the major continents.</p>
+													were with my Grandparents when I was young. I hope to scan some old pictures and upload them into the POI summaries.</p>
+													<p>With the skills I've learned from UCSB and CUB, I hope to start working towards a financially stable life and travel 
+													like they did. When life and time permits, I hope to get my passport and travel to each of the major continents. Some of 
+													my favorite places and future destinations are on it as well!</p>
 													<footer>
-														<a href="https://ryan-erickson911.github.io/IamRyanE.github.io/" class="button alt icon solid fa-file-alt">Go to map</a>
+														<a href="https://ryan-erickson911.github.io/IamRyanE.github.io/" class="button alt icon solid "><i class="fa-solid fa-map-location-dot"></i> Go to map</a>
 													</footer>
 												</article>
 											</section>
