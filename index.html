@@ -63,7 +63,7 @@
 				      	  		<ul>
 									<li><a href="https://www.colorado.edu/geography/ryan-erickson" target='_blank'>CU Profile</a></li>
 				      				<li><a href="https://www.linkedin.com/in/ryan-ericksons-profile/" target='_blank'>Linkedin</a></li>
-									<li><a href="#contact">Resume\CV</a></li>
+									<li><a href="#contact" target='_self'>Resume\CV</a></li>
 									<li><a href="#contact" target='_self'>Contact</a></li>
 									<li>
 										<a href="#">Insights</a>
@@ -97,15 +97,21 @@
 						</div>
 					</header>
 				</div>
-				<div id="banner">
-					<h2>Hello, my name is Ryan and I'm a readily available GIS Developer with a Masters in Geography. Welcome to my website! </h2>
-					<p>My thesis focuses on machine learning and urban ecology if you're interested!</p>
-					<a href="https://github.com/Ryan-Erickson911/surface_ozone" target='_blank' class="button large icon solid"><i class="fa-brands fa-github"></i> Thesis</a>
+				<div class="container">
+					<div id="banner" style="padding-top: 5%; padding-bottom: 5%;">
+						<h2>
+							Hello, my name is Ryan <br>
+							<img src="img/meinsf.png"  style="display: inline-block" alt="Test 1" width="250" height="255"/><br>
+							I'm a readily available GIS Developer with a Masters in Geography.
+						</h2>
+						<p>My thesis focuses on data science and urban ecology if you're interested!</p>
+						<a href="https://github.com/Ryan-Erickson911/surface_ozone" target='_blank' class="button large icon solid"><i class="fa-brands fa-github"></i> Surface Ozone</a>
+					</div>
 				</div>
 			</div>
 			<div id="main-wrapper">
 				<div class="container">
-					<div class="wrapper style2">	
+					<div class="wrapper style2">
 						<div class="container">
 							<div class="inner">
 								<section>
@@ -118,48 +124,58 @@
 								</section>
 							</div>
 						</div>	
-						<div id="myCarousel" class="carousel slide" data-interval="2500">
+						<div id="myCarousel" class="carousel slide" data-interval="3000">
 							<section>
 								<ol class="carousel-indicators">
 									<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 									<li data-target="#myCarousel" data-slide-to="1"></li>
 									<li data-target="#myCarousel" data-slide-to="2"></li>
 									<li data-target="#myCarousel" data-slide-to="3"></li>
+									<li data-target="#myCarousel" data-slide-to="4"></li>
 								</ol>
 								<div class="carousel-inner">
 									<div class="item active">
-										<a href='geog176A.html'><img src="images/poster.png" class="d-block" alt="Test 1" width="460" height="345"/></a>
+										<a href='geog176A.html'><img src="images/poster.png" class="d-block" alt="cartgis" width="460" height="350"/></a>
 										<div class="carousel-caption">
 											<div class="caption-bubble">
-												<h3>GIS Class Project</h3>
+												<h3>Cartography and GIS</h3>
 												<p>A poster I made with some friends of mine for a class at UCSB.</p>
 											</div>
 										</div>
 									</div>
 									<div class="item">
-										<a href='no-sidebar.html'><img src="images/maunaloa.png" alt="Flower" width="460" height="345"/></a> 
+										<a href='no-sidebar.html'><img src="images/maunaloa.png" alt="dem" width="460" height="350"/></a> 
 										<div class="carousel-caption">
 											<div class="caption-bubble">
-												<h3>DEM Mauna Loa</h3>
+												<h3>Remote Sensing</h3>
 												<p>Ditigal Elevation Model of Mauna Loa, HI overlayed with a hillshade created in GEE.</p>
 											</div>
 										</div>
 									</div>
 									<div class="item">
-										<a href='geog176A.html'><img src="images/test02.png" alt="Test 2" width="460" height="345"></a>
+										<a href='geog176A.html'><img src="img/smark_2021-07-01.png" alt="ozone" width="460" height="350"></a>
 										<div class="carousel-caption">
 											<div class="caption-bubble">
-												<h3>Temporary Display</h3>
-												<p>Statisitcs showing normalized bell curve. Temp writing for two lines.</p>
+												<h3>Statistical Learning</h3>
+												<p>Training variables and predictive results from the XGBoost model in my thesis.</p>
 											</div>
 										</div>
 									</div>
 									<div class="item">
-										<a href='no-sidebar.html'><img src="images/test01.png" alt="Flower" width="460" height="345"></a>
+										<a href='no-sidebar.html'><img src="images/test01.png" alt="trees" width="460" height="350"></a>
 										<div class="carousel-caption">
 											<div class="caption-bubble">
-												<h3>Temporal Analysis</h3>
-												<p>An 8-day simulation of growing tree density. Temp writing for two lines.</p>
+												<h3>Spatial-Temporal Analysis</h3>
+												<p>An 8-day simulation of growing tree density created for fire risk analysis.</p>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<a href='no-sidebar.html'><img src="img/AstroArtPhotoShop.png" alt="astroart" width="460" height="350"></a>
+										<div class="carousel-caption">
+											<div class="caption-bubble">
+												<h3>Astrophysics</h3>
+												<p>A refined image of Messier 31 (the Andromeda Galaxy) using the <a href='geog176A.html#astrostuff'>LCO</a> at UCSB.</p>
 											</div>
 										</div>
 									</div>
@@ -339,7 +355,7 @@
 								<li><a href="https://www.epa.gov/outdoor-air-quality-data">EPA Air Quality Data</a></li>
 							</ul>
 							<ul class="divided">
-								<li><a href="#" id="contact">Top of Page</a></li>
+								<li><a href="#">Top of Page</a></li>
 							</ul>
 						</section>
 					</div>
@@ -375,7 +391,7 @@
 							<center><h2>Contact Information</h2></center>
 							<div>
 								<div class="row">
-									<div class="col-7-small col-12-small">
+									<div class="col-7-small col-12-small" id="contact">
 										<dl class="contact">
 											<dt>Email</dt>
 											<dd><a href="mailto:ryanerickson407@gmail.com">ryanerickson407@gmail.com</a></dd>
