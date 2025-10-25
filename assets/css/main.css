@@ -66,6 +66,26 @@ input, select, textarea {
 	appearance: none;
 }
 
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20.5em; /* Place the button at the bottom of the page */
+  left: 38em; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #696969; /* Set a background color */
+  color: grey; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  opacity: 75%;
+}
+
+#myBtn:hover {
+  background-color: rgba(233, 201, 24, 1); /* Add a dark-grey background on hover */
+}
 /* Basic */
 
 	html {
@@ -1470,7 +1490,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #50a1cf;
+			background-color: rgba(233, 201, 24, 1);
 		}
 
 		input[type="button"]:active,
@@ -1478,7 +1498,7 @@ input, select, textarea {
 		input[type="reset"]:active,
 		button:active,
 		.button:active {
-			background-color: #3081af;
+			background-color: #464a52;
 		}
 
 		input[type="button"].medium,
@@ -1507,21 +1527,21 @@ input, select, textarea {
 			background-color: #464a52;
 		}
 
-			input[type="button"].alt:hover,
-			input[type="submit"].alt:hover,
-			input[type="reset"].alt:hover,
-			button.alt:hover,
-			.button.alt:hover {
-				background-color: #565a62;
-			}
-
-			input[type="button"].alt:active,
-			input[type="submit"].alt:active,
-			input[type="reset"].alt:active,
-			button.alt:active,
-			.button.alt:active {
-				background-color: #363a42;
-			}
+		input[type="button"].alt:hover,
+		input[type="submit"].alt:hover,
+		input[type="reset"].alt:hover,
+		button.alt:hover,
+		.button.alt:hover {
+			background-color: rgba(233, 201, 24, 1);
+		}
+		
+		input[type="button"].alt:active,
+		input[type="submit"].alt:active,
+		input[type="reset"].alt:active,
+		button.alt:active,
+		.button.alt:active {
+			background-color: #3081af;
+		}
 
 /* List */
 
@@ -1736,6 +1756,12 @@ input, select, textarea {
 			#nav > ul > li > ul {
 				display: none;
 			}
+			
+			#nav li:hover > a, #nav li:hover > span {
+				background: rgba(0, 0, 0, 0.15);
+				box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0, 0.025), 1px 1px 0px 0px rgba(255, 255, 255, 0.025);
+				color: rgba(233, 201, 24, 1);
+			}
 
 	.dropotron {
 		background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0)), url("images/bg02.png");
@@ -1771,7 +1797,7 @@ input, select, textarea {
 		}
 
 		.dropotron li:hover > a, .dropotron li:hover > span {
-			color: #fff;
+			color: rgba(233, 201, 24, 1);
 		}
 
 /* Banner */
@@ -1926,7 +1952,7 @@ input, select, textarea {
 	#header {
 		position: relative;
 		border-radius: 10px;
-		background: rgba(255, 255, 255, 0.1);
+		background: rgba(29, 19, 175, 0.08);
 		padding: 0.75em;
 		margin-bottom: 0;
 	}
@@ -1941,7 +1967,7 @@ input, select, textarea {
 			background-color: #3B3E45;
 			background-color: rgba(59, 62, 69, 0.9);
 			border-radius: 8px;
-			box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.45), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.15);
+			box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.48), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.15);
 			text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
 		}
 
