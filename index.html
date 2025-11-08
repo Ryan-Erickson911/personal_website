@@ -10,7 +10,7 @@
 		<script src="https://kit.fontawesome.com/a4631bf45a.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-		hr {position: center; min-width: 350px; width: 80%}
+		hr {position: center; min-width: 30%; width: 80%}
     	.carousel-inner > .item > img,
     	.carousel-inner > .item > a > img {
     	  width: 80%;
@@ -53,44 +53,79 @@
     	</style>
 	</head>
 	<body class="homepage is-preload">
-		<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up" style="opacity: 50%; color: lightgrey;"></i></button>
+		<button onclick="topFunction()" id="myBtn" title="Go to top">
+			<i class="fa fa-arrow-up" style="color: lightgrey;"></i>
+		</button>
 		<div id="page-wrapper">
 			<div id="header-wrapper">
 				<div class="container">
 					<header id="header">
 						<div class="inner">
-				    		<h1><a href="https://github.com/Ryan-Erickson911" target='_blank' id="logo">R. Erickson</a></h1>
+				    		<h1>
+								<a href="https://github.com/Ryan-Erickson911" target='_blank' id="logo">R. Erickson</a>
+							</h1>
 							<nav id="nav">
 				      	  		<ul>
-									<li><a href="https://www.colorado.edu/geography/ryan-erickson" target='_blank'>CU Profile</a></li>
+									<li>
+										<a href="#">Affiliations</a>
+										<ul>
+											<li><a href="https://www.colorado.edu/geography/ryan-erickson" target='_blank'>CU Profile</a></li>
+											<li><a href="https://www.spatstat.com/people/" target='_blank'>STAR Lab</a></li>
+											<li><a href="https://ibs.colorado.edu/people/ryan-erickson/">CUPC</a></li>
+											<li><a href="https://cires.colorado.edu/people/ryan-erickson#ceca">CECA</a></li>
+										</ul>
+									</li>
 				      				<li><a href="https://www.linkedin.com/in/ryan-ericksons-profile/" target='_blank'>Linkedin</a></li>
 									<li><a href="https://boulder.joinhandshake.com/profiles/rerickson" target='_blank'>Handshake</a></li>
 									<li><a href="#contact" target='_self'>Contact</a></li>
-									<li>
+									<li style="width: min-content;">
 										<a href="#sitemenu"><i class="fa fa-bars"></i></a>
 										<ul>
-											<li><a href="https://www.rerickson.me/resume.html" target='_blank'>Resume</a></li>
-											<li><a href="https://www.rerickson.me/cv.html" target='_blank'>CV</a></li>
+											<li><a href="pages/resume.html" target='_self'>Resume</a></li>
+											<li><a href="pages/cv.html" target='_self'>CV</a></li>
 											<li>
 												<a href="#">GIS</a>
 												<ul>
-													<li><a href="https://ica-adv.copernicus.org/articles/3/9/2021/ica-adv-3-9-2021.pdf">What is a Map?</a></li>
-													<li><a href="https://www.researchgate.net/publication/315385359_GIS_History">GIS History</a></li>
-													<li><a href="https://ryan-erickson911.github.io/geog176A_labs/">Labs and Tutorials</a></li>
+													<li><a href="labs/lab_index.html">Labs and Tutorials</a></li>
+										    		<li><a href="https://geemap.org/" target='_blank'>Dr. Wu's YouTube for geemap</a></li>
+										    		<li><a href="https://www.arcgis.com/index.html" target='_blank'>Esri</a></li>
+										    		<li><a href="https://qgis.org/" target='_blank'>QGIS</a></li>
+										    		<li><a href="https://grass.osgeo.org/" target='_blank'>GRASS</a></li>
 												</ul>
 											</li>
 											<li>
-												<a href="#">Software</a>
+												<a href="#">Python</a>
 												<ul>
+													<li><a href="https://www.python.org/downloads/" target='_blank'>Versions</a></li>
 													<li><a href="https://anaconda.org/conda-forge/openai" target='_blank'>Anaconda</a></li>
-													<li><a href="https://www.python.org/" target='_blank'>Latest Python Version</a></li>
-													<li><a href="https://code.visualstudio.com/" target='_blank'>Visual Studio Code</a></li>
-										    		<li><a href="https://www.r-project.org/" target='_blank'>Latest R Version</a></li>
+													<li><a href="https://code.visualstudio.com/" target='_blank'>VS Code</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="#">R</a>
+												<ul>
+										    		<li><a href="https://www.r-project.org/" target='_blank'>Versions</a></li>
 										    		<li><a href="https://posit.co/downloads/" target='_blank'>RStudio</a></li>
 										    		<li><a href="https://positron.posit.co/" target='_blank'>Positron</a></li>
-										    		<li><a href="https://earthengine.google.com/" target='_blank'>Google Earth Engine</a></li>
-										    		<li><a href="https://geemap.org/" target='_blank'>Dr. Wu's YouTube for geemap</a></li>
-										    		<li><a href="https://www.epa.gov/outdoor-air-quality-data" target='_blank'>EPA Air Quality Data</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="#">Java</a>
+												<ul>
+										    		<li><a href="https://www.oracle.com/java/technologies/downloads/" target='_blank'>Versions</a></li>
+										    		<li><a href="https://eclipseide.org/" target='_blank'>Eclipse</a></li>
+										    		<li><a href="https://medium.com/javarevisited/25-reasons-why-java-is-still-around-in-2024-452c582d55d0" target='_blank'>Why Java?</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="#">Data</a>
+												<ul>
+													<li><a href="https://www.epa.gov/outdoor-air-quality-data" target='_blank'>EPA Air Quality Data</a></li>
+													<li><a href="https://epsg.io/" target='_blank'>Epsg.io</a></li>
+										    		<li><a href="https://developers.google.com/earth-engine/datasets/" target='_blank'>Google Earth Engine</a></li>
+										    		<li><a href="https://www.openstreetmap.org/#map=5/38.01/-95.84" target='_blank'>OpenStreetMap</a></li>
+										    		<li><a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html" target='_blank'>TIGER/Line</a></li>
+										    		<li><a href="https://www.unep.org/publications-data" target='_blank'>UNEP</a></li>
 												</ul>
 											</li>
 										</ul>
@@ -99,86 +134,157 @@
 					  		</nav>
 						</div>
 					</header>
+					<div id="banner">
+						<h2>
+							Hi, my name is Ryan <a href="#" class="faa-parent animated-hover"><i class="fa fa-smile-o faa-bounce" style="--faa-bounce-land-scale-x: 1.2;--faa-bounce-land-scale-y: .8;--faa-bounce-rebound: 5px;"></i></a>
+						</h2>
+						<h3>
+							I'm a GIS Developer with a Masters in Geography.<br><br>
+							<img src="img/meinsf.png"  style="display: inline-block" alt="Test 1" width="250" height="255"/>
+						</h3>
+						<p>My thesis focuses on data science and urban ecology if you're interested!</p>
+						<a href="https://github.com/Ryan-Erickson911/surface_ozone" target='_blank' class="button large icon solid"><i class="fa-brands fa-github"></i> Surface Ozone</a>
+					</div>
+					<center>
+						<p style="color: #fff;">
+							P.S. I'm still working on formatting and the final css doc for this site. It may not look the best for now, but I'll be making updates as time goes on :D
+						</p>
+					</center>
 				</div>
-				</div>
-				<div id="banner">
-					<h2>
-						Hi, my name is Ryan <a href="#" class="faa-parent animated-hover"><i class="fa fa-smile-o faa-bounce" style="--faa-bounce-land-scale-x: 1.2;--faa-bounce-land-scale-y: .8;--faa-bounce-rebound: 5px;"></i></a>
-					</h2>
-					<h3>
-						I'm a GIS Developer with a Masters in Geography.<br><br>
-						<img src="https://www.rerickson.me/img/meinsf.png"  style="display: inline-block" alt="Test 1" width="250" height="255"/>
-					</h3>
-					<p>My thesis focuses on data science and urban ecology if you're interested!</p>
-					<a href="https://github.com/Ryan-Erickson911/surface_ozone" target='_blank' class="button large icon solid"><i class="fa-brands fa-github"></i> Surface Ozone</a>
-				</div>
-				<center><p style="color: #fff;">P.S. I'm still working on formatting and the final css doc for this site. It may not look the best for now, but I'll be making updates as time goes on :D</p></center>
 			</div>
 			<div id="main-wrapper">
 				<div class="wrapper style1">
-					<div class="container">
-						<div class="inner">
-							<section>
-								<center><header class="first major">
-									<h2>About Me</h2>
-									<p>
-										I recently graduated from the University of Colorado, Boulder in 2025 with an MA in Geography. This website is dedicated to a summary of the reasearch and funding opportunities that allowed me to do so. 
-										I also added old classwork, final presentations, and statisitcal tutorials that have helped me over the course of my academic career. Most the of the work on this website is freely avaliable on my 
-										<a href="https://github.com/Ryan-Erickson911/" target='_blank'>Github</a>. I have an extremly diverse skill set due to the multi-disiplinary tendencies of spatial-temporal research. I've particularly focused on:  
-									</p>
-								</header></center>
-								<div class="container">
-									<div class="inner">
-										<section class="container box feature1">
-											<div class="row">
-												<div class="col-4 col-12-medium">
-													<section>
-														<a href="https://www.rerickson.me/geog176A.html" class="image featured"><img src="img/geography.png" alt="" /></a>
-														<header class="second icon solid fa-user">
-															<h3>Geography</h3>
-															<p>Physical and Human Analyses</p>
-														</header>
-													</section>
-												</div>
-												<div class="col-4 col-12-medium">
-													<section>
-														<a href="https://www.rerickson.me/right-sidebar.html" class="image featured"><img src="img/datasiencefin.png" alt="" /></a>
-														<header class="second icon solid fa-gift">
-															<h3>Data Science</h3>
-															<p>Programming and IT</p>
-														</header>
-													</section>
-												</div>
-												<div class="col-4 col-12-medium">
-													<section>
-														<a href="https://www.rerickson.me/no-sidebar.html" class="image featured"><img src="img/physicsfin.png" alt="" /></a>
-														<header class="second icon solid fa-brain">
-															<h3>Physics</h3>
-															<p>Astroart and Biophysics</p>
-														</header>
-													</section>
-												</div>
-											</div>
-										</section>
+					<div class="inner">
+						<section class="container box feature1">
+							<div class="row aln-center">
+								<div class="col-12">
+									<header id="about" class="first major">
+										<h2>About Me</h2>
+										<p>
+											Recently graduated with an MA in Geography 
+										</p>
+									</header>
+									<div class="col-12">
+										<p>
+											I graduated from Chaffey Community College in Rancho Cucamonga in 2015. It introduced me to the world of academic policy and statues. I majored in 
+											a specialized AA that focused on material shared throughout the UC system in California. To be frank, I would have never considered this had I not 
+											had an outstanding academic counsular at the time. They helped me navigate the entire UC system, and their knowledge aided me well beyond 
+											undergraduate studies. After earning my AA, I applied, and was accepted, into the University of California, Santa Barbara in 2017. I spent 3 years
+											here and graduated in 2020 with a double major in Geography and Physics. My Geography degree came with a specialization in GIS, and I wanted to further 
+											pursue it at the highest level. I was accepted into the Geography department at CU, Boulder as a Master's student under Dr. Guofeng Cao in 2021 at 
+											<a href="https://www.spatstat.com/people/">STARlab</a>. This website is dedicated to a summary of my work and research interests.</p>
 									</div>
 								</div>
-							</section>
-						</div>
+								<div class="col-4 col-12-medium">
+									<section>
+										<a href="pages/left-sidebar.html" class="image featured"><img src="img/geography.png" alt="" /></a>
+										<header class="second icon solid fa-user">
+											<h3>Geography</h3>
+											<p>Space, Place, and Time</p>
+										</header>
+									</section>
+								</div>
+								<div class="col-4 col-12-medium">
+									<section>
+										<a href="pages/no-sidebar.html" class="image featured"><img src="img/datasiencefin.png" alt="" /></a>
+										<header class="second icon solid fa-gift">
+											<h3>Data Science</h3>
+											<p>Programming and Syntax</p>
+										</header>
+									</section>
+								</div>
+								<div class="col-4 col-12-medium">
+									<section>
+										<a href="pages/right-sidebar.html" class="image featured"><img src="img/physicsfin.png" alt="" /></a>
+										<header class="second icon solid fa-brain">
+											<h3>Physics</h3>
+											<p>Matter, Energy, and Force</p>
+										</header>
+									</section>
+								</div>
+								<div class="col-12">
+									<p>
+										As an undergraduate student, I specialzied in GIS modeling after failing quantum mechanics twice. Instead of dropping Physics all together, 
+										I decided to combine my interests and walk the path of a geophysicist. I've added old presentations, statisitcal tutorials, and helpful tips 
+										that I've encountered over the course of my academic career.  Most the of this work is freely avaliable on my 
+										<a href="https://github.com/Ryan-Erickson911/" target='_blank'>Github</a> and has helped me evlove into the programmer I am today. My work 
+										with Dr. Cao mainly focused on leveraging computer science and statistical learning to advance geographic theory and research planning. My 
+										original interests aligned closly with Dr. Cao's work, and I was able to apply many topics from my undergraduate career while learning about 
+										it's applications to topics like food inscurity, urban health, and environmental justice. I have an extremly diverse skill set due to the 
+										multi-disiplinary tendencies of spatial-temporal research.</p>
+								</div>
+							</div>
+						</section>
 					</div>	
 				</div>
 				<div class="wrapper style2">
-					<div class="container">
-						<div class="inner">
-							<section>
-								<center><header class="first major">
-									<h2><br>Skills and Experience</h2>
+					<div class="inner">
+						<div class="container box feature2">
+							<div class="row aln-center">
+								<div class="col-12">
+									<header class="first major">
+										<h2>Skills and Experience</h2>
+										<p>
+											"Programming is like playing with Legos...except the instructions are often unclear and each brick must be handmade."
+										</p>
+									</header>
 									<p>
-										As a multi-disiplinary scholar, I have been fortunate enough to be apart of many research projects over the last decade. Many of them became inspiration 
-										for my research. My thesis uses Google Earth Engine, EPA monitor data, and statistical learning methods to model surface ozone for urban exposure analysis. 
+										As a multi-disiplinary scholar, I have been fortunate enough to be apart of many research projects over the last decade. My thesis uses Google Earth Engine, 
+										EPA monitor data, and statistical learning methods to model surface ozone for urban exposure analysis. My research would not be possible without the 
+										programming skills I gained at UCSB. Here are some helpful tutorials I've kept in mind over the years:
 									</p>
-								</header></center>
-							</section>
+								</div>
+							</div>
 						</div>
+						<section class="container box feature2">
+							<div class="row">
+								<div class="col-4 col-12-medium">
+									<section>
+										<header class="major">
+											<h2>Java</h2>
+											<p>Object-Oriented Programming</p>
+										</header>
+										<p>Applications, Webkits, and GUIs</p>
+										<footer>
+											<a href="#" class="button large icon solid" style="opacity: 90%;"><i class="fab fa-java fa-lg" style="color: red; opacity: 75%;"></i> Coming Soon!</a>
+										</footer>
+									</section>
+								</div>
+								<div class="col-4 col-12-medium">
+									<section>
+										<header class="major">
+											<h2>Python</h2>
+											<p>Data Science and Automation</p>
+										</header>
+										<p>The premier machine learning language</p>
+										<footer>
+											<a href="#" class="button large icon solid" style="opacity: 90%;"><i class="fab fa-python fa-lg" style="color: gold; opacity: 75%;"></i> Coming Soon!</a>
+										</footer>
+									</section>
+								</div>
+								<div class="col-4 col-12-medium">
+									<section>
+										<header class="major">
+											<h2>R</h2>
+											<p>The Statistician's Language</p>
+										</header>
+										<p>Easy, intuitive, and optimized for statistics</p>
+										<footer>
+											<a href="#" class="button medium icon solid" style="opacity: 90%;"><i class="fab fa-r-project fa-lg" style="color: blue; opacity: 75%;"></i> Coming Soon!</a>
+										</footer>
+									</section>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<p>
+										<br> My thesis focused on surface ozone modeling. Using Google Earth Engine, EPA Air Quality Data, GitHub, and Python, I started the skeleton of an ML air pollution
+										model with geospatially corrected residuals trained on monitoring locations. The motivation for this can be seen in my early research projects and posters before I 
+										started graduate school. Overall, I utilize a variety of programs to conduct spatial-temporal analyses in many disciplines: 
+									</p>
+								</div>
+							</div>
+						</section>
 					</div>
 					<div class="container">
 						<div id="myCarousel" class="carousel slide" data-interval="3000">
@@ -192,7 +298,7 @@
 								</ol>
 								<div class="carousel-inner">
 									<div class="item active">
-										<a href='https://www.rerickson.me/geog176A.html'><img src="https://www.rerickson.me/images/poster.png" class="d-block" alt="cartgis" width="460" height="350"/></a>
+										<a href='pages/no-sidebar.html'><img src="img/poster.png" class="d-block" alt="cartgis" width="460" height="350"/></a>
 										<div class="carousel-caption">
 											<div class="caption-bubble">
 												<h3>Cartography and GIS</h3>
@@ -201,7 +307,7 @@
 										</div>
 									</div>
 									<div class="item">
-										<a href='https://www.rerickson.me/no-sidebar.html'><img src="https://www.rerickson.me/images/maunaloa.png" alt="dem" width="460" height="350"/></a> 
+										<a href='pages/no-sidebar.html'><img src="img/maunaloa.png" alt="dem" width="460" height="350"/></a> 
 										<div class="carousel-caption">
 											<div class="caption-bubble">
 												<h3>Remote Sensing</h3>
@@ -210,7 +316,7 @@
 										</div>
 									</div>
 									<div class="item">
-										<a href='https://www.rerickson.me/geog176A.html'><img src="https://www.rerickson.me/img/smark_2021-07-01.png" alt="ozone" width="460" height="350"></a>
+										<a href='pages/no-sidebar.html'><img src="img/smark_2021-07-01.png" alt="ozone" width="460" height="350"></a>
 										<div class="carousel-caption">
 											<div class="caption-bubble">
 												<h3>Statistical Learning</h3>
@@ -219,7 +325,7 @@
 										</div>
 									</div>
 									<div class="item">
-										<a href='https://www.rerickson.me/no-sidebar.html'><img src="https://www.rerickson.me/images/test01.png" alt="trees" width="460" height="350"></a>
+										<a href='pages/no-sidebar.html'><img src="img/test01.png" alt="trees" width="460" height="350"></a>
 										<div class="carousel-caption">
 											<div class="caption-bubble">
 												<h3>Spatial-Temporal Analysis</h3>
@@ -228,11 +334,11 @@
 										</div>
 									</div>
 									<div class="item">
-										<a href='https://www.rerickson.me/no-sidebar.html'><img src="https://www.rerickson.me/img/AstroArtPhotoShop.png" alt="astroart" width="460" height="350"></a>
+										<a href='pages/no-sidebar.html'><img src="img/AstroArtPhotoShop.png" alt="astroart" width="460" height="350"></a>
 										<div class="carousel-caption">
 											<div class="caption-bubble">
 												<h3>Astrophysics</h3>
-												<p>A refined image of Messier 31 (the Andromeda Galaxy) using the <a href='https://www.rerickson.me/geog176A.html#astrostuff'>LCO</a> at UCSB.</p>
+												<p>A refined image of Messier 31 (the Andromeda Galaxy) using the <a href='pages/geog176A.html#astrostuff'>LCO</a> at UCSB.</p>
 											</div>
 										</div>
 									</div>
@@ -247,62 +353,43 @@
 								</a>
 							</section>
 						</div>
-					</div>
-					<div class="container">
-						<div class="inner">
-							<section class="container box feature1">
-								<div class="row">
-									<div class="col-12">
-										<p>
-											<br>I started my academic journey after community college. I attended Chaffey in Rancho Cucamonga and was later accepted into UCSB in 2017. I graduated in 
-											2020 with a double major in Geography and Physics. My Geography degree came with a specialization in GIS, and I wanted to further pursue it at the 
-											highest level. I was accepted into the Geography department at CU, Boulder as a Master's student under Dr. Guofeng Cao in 2021. At <a href="https://www.spatstat.com/people/">STARlab</a>, 
-											our work focused on leveraging computer science and statistical learning to advance geographic theory. Like Dr. Cao, my mentors inspired me to pursue 
-											topics like food inscurity, urban health, and environmental justice. As you may have noticed, all of these are sprinkled throughout my work in some manner. 
-										</p>
-									</div>
+						<section class="container box feature1">
+							<div class="row">
+								<div class="col-12">
+									<p>
+										<br> After developing a passion for GIS programming, I faced significant challenges with my physical and mental health, which led me to extend my graduate studies by two years to focus on recovery and growth. With newfound access to healthcare and several awarded funding opportunities, I was able to continue expanding my thesis and multidisciplinary skill set. During this time, I collaborated with prominent researchers who helped refine my technical and analytical abilities.
+									</p>
 								</div>
-							</section>
-						</div>
-					</div>	
+							</div>
+						</section>
+					</div>
 				</div>	
 				<div class="wrapper style1">
-					<div class="container">
-						<div class="inner">
+					<div class="inner">
+						<div class="container">
 							<section>
 								<center><header class="first major">
 									<h2>Accomplishments and Highlights</h2>
 								</header></center>
 							</section>
 						</div>
-					<div class="container">
-						<div class="inner">
-							<section class="container box feature1">
-								<div class="row">
-									<div class="col-12">
-										<p>
-											These are works and fun little side projects I've done in the past two years. I took a long time to finish my MA due to many trials and tribulations stemming from
-											a difficult upbrining. I was awarded assistantships and grants that allowed me to continue working on my mental health while developing my skills as a writer, 
-											researcher, and fellow team-member.<br>
-										</p>
-									</div>
-								</div>
-							</section>
-						</div>
-					</div>	
 						<div class="container">
 							<div class="row">
 								<div class="col-8 col-12-medium">
 									<section class="box article-list">
-										<h2 class="icon fa-file-alt">Publications</h2>
+										<h2><span class="icon fa-file-alt" style="opacity: 0.25;">
+											<i class="fa-rotate-by" style="--fa-rotate-angle: -45deg;"></i>
+										</span> Publications</h2>
+										
 										<article class="box excerpt">
-											<a href="https://www.rerickson.me/thesis1a2.html" class="image left"><img src="https://www.rerickson.me/images/test03.png" alt="" /></a>
+											<a href="pages/thesis1a2.html" class="image left"><img src="img/test03.png" alt="" /></a>
 											<div>
 												<header>
 													<span class="date">September, 2025</span>
-													<h3><a href="https://www.rerickson.me/thesis1a2.html">Thesis Excerpt</a></h3>
+													<h3><a href="pages/thesis1a2.html">Thesis Excerpt</a></h3>
 												</header>
-												<p>This will take you to an excerpt from my thesis. I only included the first two chapters due
+												<p>
+													This will take you to an excerpt from my thesis. I only included the first two chapters due
 													to the total length (163 pages). It was reduced from nearly 260 pages due to the many avenues I tried to 
 													take. After deciding to focusing on the machine learning and geostatistical applications of my work, I 
 													hope to apply the results to more human centric GIS work.
@@ -310,13 +397,14 @@
 											</div>
 										</article>
 										<article class="box excerpt">
-											<a href="https://nccasc.colorado.edu/index.php/blog/geographers-perspective-existence-topographic-signature-life" class="image left"><img src="images/test04.png" alt="" /></a>
+											<a href="https://nccasc.colorado.edu/index.php/blog/geographers-perspective-existence-topographic-signature-life" class="image left"><img src="img/test04.png" alt="" /></a>
 											<div>
 												<header>
 													<span class="date">August, 2025</span>
 													<h3><a href="https://nccasc.colorado.edu/index.php/blog/geographers-perspective-existence-topographic-signature-life">NC CASC Blog</a></h3>
 												</header>
-												<p>I had the pleasure of working with NC CASC as a CEST member to start my work
+												<p>
+													I had the pleasure of working with NC CASC as a CEST member to start my work
 													on the topographic signature of life project. For this work, I wrote a quite blog
 													detailing it's importance and furture directions. It's not yet avaliable, but it will be soon!
 													This was part of a program called the Climate Adaptation Scientists of Tomorrow which funded
@@ -325,13 +413,14 @@
 											</div>
 										</article>
 										<article class="box excerpt">
-											<a href="https://github.com/earthlab/firedpy" class="image left"><img src="images/test05.png" alt="" /></a>
+											<a href="https://github.com/earthlab/firedpy" class="image left"><img src="img/test05.png" alt="" /></a>
 											<div>
 												<header>
 													<span class="date">July, 2023</span>
 													<h3><a href="https://github.com/earthlab/firedpy">FIREDpy</a></h3>
 												</header>
-												<p>The FIRe Event Delineation tool (FIREDPY) created by Earth Lab at CU. I was briefly apart of some summer work
+												<p>
+													The FIRe Event Delineation tool (FIREDPY) created by Earth Lab at CU. I was briefly apart of some summer work
 													that fixed some edge-case issues on the program. It's a Python based CLI that classifies individual burn 
 													detections into discrete events from 2001 to near-present. It returns both a table and shapefiles of fire events 
 													for a time and place (Balch et. al., 2020).
@@ -342,24 +431,27 @@
 								</div>
 								<div class="col-4 col-12-medium">
 									<section class="box spotlight">
-										<h2 class="icon fa-file-alt">Travels</h2>
+										<h2>
+										<span class="fa fa-plane" style="display: inline-block; opacity: 0.25;">
+											<i class="fa-rotate-by" style="--fa-rotate-angle: -45deg;"></i>
+										</span> Travels</h2>
 										<article>
-											<a href="https://ryan-erickson911.github.io/IamRyanE.github.io/" class="image featured"><img src="images/pic07.jpg" alt=""></a>
+											<a href="https://ryan-erickson911.github.io/IamRyanE.github.io/" class="image featured"><img src="img/pic07.jpg" alt=""></a>
 											<header>
 												<h3>
-													<a href="https://ryan-erickson911.github.io/IamRyanE.github.io/">Travelling</a>
+													<a href="https://ryan-erickson911.github.io/IamRyanE.github.io/">I love road trips!</a>
 												</h3>
-												<p>I made a map of where I've been!
+												<p>
+													I made a map of where I've been and want to go.
 												</p>
 											</header>
 											<p>
-												Spoiler...you'll notice it's mainly in the US and surrounding nations. Most of the road trips I've taken across the US
-												were with my Grandparents when I was young. I hope to scan some old pictures and upload them into the POI summaries.
+												Most of the road trips I've taken have been across the contiguous US with my Grandparents. As my network and social life grows, I hope to expand 
+												this map with more international points. 
 											</p>
 											<p>
-												With the skills I've learned from UCSB and CUB, I hope to start working towards a financially stable life and travel 
-												like they did. When life and time permits, I hope to get my passport and travel to each of the major continents. Some of 
-												my favorite places and future destinations are on it as well!
+												Some of my favorite places and future destinations are on it as well! It's a little lack luster in it's current state given my skill set and is
+												more of a growing side project so stay tuned for more! 
 											</p>
 											<footer>
 												<a href="https://ryan-erickson911.github.io/IamRyanE.github.io/" class="button alt icon solid "><i class="fa-solid fa-map-location-dot"></i> Go to map</a>
@@ -379,15 +471,14 @@
 							<section>
 								<center><h2>Shortcuts</h2></center>
 								<ul class="divided">
-									<li><a href="https://anaconda.org/conda-forge/openai">Anaconda</a></li>
-									<li><a href="https://www.python.org/">Latest Python Version</a></li>
-									<li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
-									<li><a href="https://www.r-project.org/">Latest R Version</a></li>
-									<li><a href="https://posit.co/downloads/">RStudio</a></li>
-									<li><a href="https://positron.posit.co/">Positron</a></li>
-									<li><a href="https://earthengine.google.com/">Google Earth Engine</a></li>
-									<li><a href="https://geemap.org/">Dr. Wu's YouTube for geemap</a></li>
-									<li><a href="https://www.epa.gov/outdoor-air-quality-data">EPA Air Quality Data</a></li>
+									<li><a href="#about" target="_self">About Me</a></li>
+									<li><a href="https://anaconda.org/conda-forge/openai">Geography</a></li>
+									<li><a href="https://www.python.org/">Data Science</a></li>
+									<li><a href="https://code.visualstudio.com/">Physics</a></li>
+									<li><a href="https://code.visualstudio.com/">Experience</a></li>
+									<li><a href="https://www.r-project.org/">Python</a></li>
+									<li><a href="https://posit.co/downloads/">Java</a></li>
+									<li><a href="https://positron.posit.co/">R</a></li>
 								</ul>
 							</section>
 						</div>
@@ -414,10 +505,10 @@
 							<section>
 								<center><h2><strong>TL;DR</strong></h2></center>
 								<center><p>My name is Ryan Erickson, I'm a recent graduate from CU, Boulder and new to the greater Seattle area. I hope you liked my website! 
-									Please reach out should you have any quesitons about my work, future collaboration, linked material or resume.</p></center>
-								<center><a href="https://www.rerickson.me/resume.html" class="button alt icon solid fa-arrow-circle-right">Resume</a></center> 
+									Please reach out should you have any quesitons about my work, future collaboration, or linked materials.</p></center>
+								<center><a href="pages/resume.html" class="button alt icon solid fa-arrow-circle-right">Resume</a></center> 
 								<p></p>
-								<center><a href="https://www.rerickson.me/cv.html" class="button alt icon solid fa-arrow-circle-right">CV</a></center>
+								<center><a href="pages/cv.html" class="button alt icon solid fa-arrow-circle-right">CV</a></center>
 							</section>
 							<section>
 								<center><h2>Contact Information</h2></center>
