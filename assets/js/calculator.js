@@ -106,3 +106,15 @@ function keyboardInputHandler(e) {
     res.value = resultInput.substring(0, res.value.length - 1);
   }
 }
+
+let calculator = document.getElementById("calculator");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    calculator.style.display = "block";
+  } else {
+    calculator.style.display = "none";
+  }
+}
