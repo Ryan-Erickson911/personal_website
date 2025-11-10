@@ -1,26 +1,76 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Ryan Erickson</title>
+		<title>R. Erickson: Tutorials</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  		<meta name="description" content="An introduction to Java syntax created by Ryan Erickson" />
+		<link rel="icon" type="image/x-icon" href="../assets/imgs/icos/calculator.ico">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<script src="https://kit.fontawesome.com/a4631bf45a.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="../assets/css/light.css" id="calc-theme" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="../assets/css/main.css" />
 	</head>
-	<body class="homsepage is-preload">
+	<body class="left-sidebar is-preload">
 		<button onclick="topFunction()" id="myBtn" title="Go to top">
 			<i class="fa fa-arrow-up" style="color: lightgrey;"></i>
 		</button>
+		<button id="calc-toggle" class="calc-toggle">Calculator</button>
+		<div id="calc-container" class="calc-container">
+			<div class="cwrapper">
+				<div class="ccontainer">
+					<div class="cheader-container">
+						<h1 id="toast" style="color: goldenrod;">RE-97</h1>
+						<div class="ctop-buttons">
+							<a href="https://github.com/Ryan-Erickson911" target="_blank">
+								<img src="../assets/imgs/svgs/GitHubLight.svg" alt="GitHub" height="23" width="23" id="github-icon">
+							</a>
+							<button type="cbutton" onclick="changeTheme()" class="theme-button">
+								<img src="../assets/imgs/svgs/SunIcon.svg" alt="Theme Icon" height="20" width="20" id="theme-icon">
+							</button>
+						</div>
+					</div>
+					<div class="first-row">
+						<input type="ctext" name="result" id="result" placeholder="Result" readonly />
+						<input type="cbutton" value="C" onclick="result.value=''" id="clear-button" />
+					</div>
+					<div class="second-row">
+						<input type="cbutton" value="1" onclick="liveScreen(1)" />
+						<input type="cbutton" value="2" onclick="liveScreen(2)" />
+						<input type="cbutton" value="3" onclick="liveScreen(3)" />
+						<input type="cbutton" value="+" onclick="liveScreen('+')" />
+					</div>
+					<div class="third-row">
+						<input type="cbutton" value="4" onclick="liveScreen(4)" />
+						<input type="cbutton" value="5" onclick="liveScreen(5)" />
+						<input type="cbutton" value="6" onclick="liveScreen(6)" />
+						<input type="cbutton" value="-" onclick="liveScreen('-')" />
+					</div>
+					<div class="fourth-row">
+						<input type="cbutton" value="7" onclick="liveScreen(7)" />
+						<input type="cbutton" value="8" onclick="liveScreen(8)" />
+						<input type="cbutton" value="9" onclick="liveScreen(9)" />
+						<input type="cbutton" value="×" onclick="liveScreen('*')" />
+					</div>
+					<div class="fifth-row">
+						<input type="cbutton" value="/" onclick="liveScreen('/')" />
+						<input type="cbutton" value="0" onclick="liveScreen(0)" />
+						<input type="cbutton" value="." onclick="liveScreen('.')" />
+						<input type="cbutton" value="=" onclick="calculate(result.value)" />
+					</div>
+				</div>
+			</div>
+		</div>
 		<div id="page-wrapper">
 			<div id="header-wrapper">
 				<div class="container">
 					<header id="header">
 						<div class="inner">
 				    		<h1>
-								<a href="https://github.com/Ryan-Erickson911" target='_blank' id="logo">R. Erickson</a>
+								<a href="https://github.com/Ryan-Erickson911" target='_blank' id="logo"><i class="fa-brands fa-github"></i></a>			
+								<a href="../index.html" target='_parent' id="logo"><i class="fa fa-home"></i></a>
 							</h1>
 							<nav id="nav">
 				      	  		<ul>
@@ -68,14 +118,6 @@
 												</ul>
 											</li>
 											<li>
-												<a href="#">Java</a>
-												<ul>
-										    		<li><a href="https://www.oracle.com/java/technologies/downloads/" target='_blank'>Versions</a></li>
-										    		<li><a href="https://eclipseide.org/" target='_blank'>Eclipse</a></li>
-										    		<li><a href="https://medium.com/javarevisited/25-reasons-why-java-is-still-around-in-2024-452c582d55d0" target='_blank'>Why Java?</a></li>
-												</ul>
-											</li>
-											<li>
 												<a href="#">Data</a>
 												<ul>
 													<li><a href="https://www.epa.gov/outdoor-air-quality-data" target='_blank'>EPA Air Quality Data</a></li>
@@ -92,330 +134,130 @@
 					  		</nav>
 						</div>
 					</header>
-					<div id="banner">
-						<h2>
-							Hi, my name is Ryan <a href="#" class="faa-parent animated-hover"><i class="fa fa-smile-o faa-bounce" style="--faa-bounce-land-scale-x: 1.2;--faa-bounce-land-scale-y: .8;--faa-bounce-rebound: 5px;"></i></a>
-						</h2>
-						<h3>
-							I'm a GIS Developer with a Masters in Geography.<br><br>
-							<img src="../img/meinsf.png"  style="display: inline-block" alt="Test 1" width="250" height="255"/>
-						</h3>
-						<p>My thesis focuses on data science and urban ecology if you're interested!</p>
-						<a href="https://github.com/Ryan-Erickson911/surface_ozone" target='_blank' class="button large icon solid"><i class="fa-brands fa-github"></i> Surface Ozone</a>
-					</div>
-					<center>
-						<p style="color: #fff;">
-							P.S. I'm still working on formatting and the final css doc for this site. It may not look the best for now, but I'll be making updates as time goes on :D
-						</p>
-					</center>
 				</div>
 			</div>
 			<div id="main-wrapper">
 				<div class="wrapper style1">
 					<div class="inner">
-						<section class="container box feature1">
-							<div class="row aln-center">
-								<div class="col-12">
-									<header id="about" class="first major">
-										<h2>About Me</h2>
-										<p>
-											Recently graduated with an MA in Geography 
-										</p>
-									</header>
-									<div class="col-12">
-										<p>
-											I graduated from Chaffey Community College in Rancho Cucamonga in 2015. It introduced me to the world of academic policy and statues. I majored in 
-											a specialized AA that focused on material shared throughout the UC system in California. To be frank, I would have never considered this had I not 
-											had an outstanding academic counsular at the time. They helped me navigate the entire UC system, and their knowledge aided me well beyond 
-											undergraduate studies. After earning my AA, I applied, and was accepted, into the University of California, Santa Barbara in 2017. I spent 3 years
-											here and graduated in 2020 with a double major in Geography and Physics. My Geography degree came with a specialization in GIS, and I wanted to further 
-											pursue it at the highest level. I was accepted into the Geography department at CU, Boulder as a Master's student under Dr. Guofeng Cao in 2021 at 
-											<a href="https://www.spatstat.com/people/">STARlab</a>. This website is dedicated to a summary of my work and research interests.</p>
-									</div>
-								</div>
-								<div class="col-4 col-12-medium">
-									<section>
-										<a href="pages/left-sidebar.html" class="image featured"><img src="img/geography.png" alt="" /></a>
-										<header class="second icon solid fa-user">
-											<h3>Geography</h3>
-											<p>Space, Place, and Time</p>
-										</header>
-									</section>
-								</div>
-								<div class="col-4 col-12-medium">
-									<section>
-										<a href="pages/no-sidebar.html" class="image featured"><img src="img/datasiencefin.png" alt="" /></a>
-										<header class="second icon solid fa-gift">
-											<h3>Data Science</h3>
-											<p>Programming and Syntax</p>
-										</header>
-									</section>
-								</div>
-								<div class="col-4 col-12-medium">
-									<section>
-										<a href="pages/right-sidebar.html" class="image featured"><img src="img/physicsfin.png" alt="" /></a>
-										<header class="second icon solid fa-brain">
-											<h3>Physics</h3>
-											<p>Matter, Energy, and Force</p>
-										</header>
-									</section>
-								</div>
-								<div class="col-12">
-									<p>
-										As an undergraduate student, I specialzied in GIS modeling after failing quantum mechanics twice. Instead of dropping Physics all together, 
-										I decided to combine my interests and walk the path of a geophysicist. I've added old presentations, statisitcal tutorials, and helpful tips 
-										that I've encountered over the course of my academic career.  Most the of this work is freely avaliable on my 
-										<a href="https://github.com/Ryan-Erickson911/" target='_blank'>Github</a> and has helped me evlove into the programmer I am today. My work 
-										with Dr. Cao mainly focused on leveraging computer science and statistical learning to advance geographic theory and research planning. My 
-										original interests aligned closly with Dr. Cao's work, and I was able to apply many topics from my undergraduate career while learning about 
-										it's applications to topics like food inscurity, urban health, and environmental justice. I have an extremly diverse skill set due to the 
-										multi-disiplinary tendencies of spatial-temporal research.</p>
-								</div>
-							</div>
-						</section>
-					</div>	
-				</div>
-				<div class="wrapper style2">
-					<div class="inner">
-						<div class="container box feature2">
-							<div class="row aln-center">
-								<div class="col-12">
-									<header class="first major">
-										<h2>Skills and Experience</h2>
-										<p>
-											"Programming is like playing with Legos...except the instructions are often unclear and each brick must be handmade."
-										</p>
-									</header>
-									<p>
-										As a multi-disiplinary scholar, I have been fortunate enough to be apart of many research projects over the last decade. My thesis uses Google Earth Engine, 
-										EPA monitor data, and statistical learning methods to model surface ozone for urban exposure analysis. My research would not be possible without the 
-										programming skills I gained at UCSB. Here are some helpful tutorials I've kept in mind over the years:
-									</p>
-								</div>
-							</div>
-						</div>
-						<section class="container box feature2">
+						<div class="container" style="padding-bottom: 3em;">
 							<div class="row">
-								<div class="col-4 col-12-medium">
-									<section>
-										<header class="major">
-											<h2>Java</h2>
-											<p>Object-Oriented Programming</p>
-										</header>
-										<p>Applications, Webkits, and GUIs</p>
-										<footer>
-											<a href="#" class="button large icon solid" style="opacity: 90%;"><i class="fab fa-java fa-lg" style="color: red; opacity: 75%;"></i> Coming Soon!</a>
-										</footer>
-									</section>
-								</div>
-								<div class="col-4 col-12-medium">
-									<section>
-										<header class="major">
-											<h2>Python</h2>
-											<p>Data Science and Automation</p>
-										</header>
-										<p>The premier machine learning language</p>
-										<footer>
-											<a href="#" class="button large icon solid" style="opacity: 90%;"><i class="fab fa-python fa-lg" style="color: gold; opacity: 75%;"></i> Coming Soon!</a>
-										</footer>
-									</section>
-								</div>
-								<div class="col-4 col-12-medium">
-									<section>
-										<header class="major">
-											<h2>R</h2>
-											<p>The Statistician's Language</p>
-										</header>
-										<p>Easy, intuitive, and optimized for statistics</p>
-										<footer>
-											<a href="#" class="button medium icon solid" style="opacity: 90%;"><i class="fab fa-r-project fa-lg" style="color: blue; opacity: 75%;"></i> Coming Soon!</a>
-										</footer>
-									</section>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-12">
-									<p>
-										<br> My thesis focused on surface ozone modeling. Using Google Earth Engine, EPA Air Quality Data, GitHub, and Python, I started the skeleton of an ML air pollution
-										model with geospatially corrected residuals trained on monitoring locations. The motivation for this can be seen in my early research projects and posters before I 
-										started graduate school. Overall, I utilize a variety of programs to conduct spatial-temporal analyses in many disciplines: 
-									</p>
-								</div>
-							</div>
-						</section>
-					</div>
-					<div class="container">
-						<div id="myCarousel" class="carousel slide" data-interval="3000">
-							<section>
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel" data-slide-to="1"></li>
-									<li data-target="#myCarousel" data-slide-to="2"></li>
-									<li data-target="#myCarousel" data-slide-to="3"></li>
-									<li data-target="#myCarousel" data-slide-to="4"></li>
-								</ol>
-								<div class="carousel-inner">
-									<div class="item active">
-										<a href='pages/no-sidebar.html'><img src="img/poster.png" class="d-block" alt="cartgis" width="460" height="350"/></a>
-										<div class="carousel-caption">
-											<div class="caption-bubble">
-												<h3>Cartography and GIS</h3>
-												<p>A poster I made with some friends of mine for a class at UCSB.</p>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<a href='pages/no-sidebar.html'><img src="img/maunaloa.png" alt="dem" width="460" height="350"/></a> 
-										<div class="carousel-caption">
-											<div class="caption-bubble">
-												<h3>Remote Sensing</h3>
-												<p>Ditigal Elevation Model of Mauna Loa, HI overlayed with a hillshade created in GEE.</p>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<a href='pages/no-sidebar.html'><img src="img/smark_2021-07-01.png" alt="ozone" width="460" height="350"></a>
-										<div class="carousel-caption">
-											<div class="caption-bubble">
-												<h3>Statistical Learning</h3>
-												<p>Training variables and predictive results from the XGBoost model in my thesis.</p>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<a href='pages/no-sidebar.html'><img src="img/test01.png" alt="trees" width="460" height="350"></a>
-										<div class="carousel-caption">
-											<div class="caption-bubble">
-												<h3>Spatial-Temporal Analysis</h3>
-												<p>An 8-day simulation of growing tree density created for fire risk analysis.</p>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<a href='pages/no-sidebar.html'><img src="img/AstroArtPhotoShop.png" alt="astroart" width="460" height="350"></a>
-										<div class="carousel-caption">
-											<div class="caption-bubble">
-												<h3>Astrophysics</h3>
-												<p>A refined image of Messier 31 (the Andromeda Galaxy) using the <a href='pages/geog176A.html#astrostuff'>LCO</a> at UCSB.</p>
-											</div>
-										</div>
+								<div class="col-3 col-12-medium">
+									<div id="sidebar">
+										<section>
+											<header class="major">
+												<h2>Tutorials</h2>
+											</header>
+											<ul class="style2">
+												<li><a href="#install" target="_self">Installation and Programs</a></li>
+												<li><a href="#stats" target="_self">Statistics</a></li>
+												<li><a href="#datasci" target="_self">Data Science</a></li>
+												<li><a href="#gis" target="_self">GIS</a></li>
+												<li><a href="#pyvscd" target="_self">Python and VS Code</a></li>
+												<li><a href="#rstu" target="_self">R and RStudio</a></li>
+												<li><a href="#javaclipse" target="_self">Java and Eclispe</a></li>
+												<li><a href="#htmljs" target="_self">HTML and JavaScript</a></li>
+											</ul>
+											<footer>
+												<center><a href="../index.html" class="button icon solid fa-home">Home</a></center>
+											</footer>
+										</section>
 									</div>
 								</div>
-								<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-									<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-									<span class="sr-only">Previous</span>
-								</a>
-								<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-									<span class="sr-only">Next</span>
-								</a>
-							</section>
-						</div>
-						<section class="container box feature1">
-							<div class="row">
-								<div class="col-12">
-									<p>
-										<br> After developing a passion for GIS programming, I faced significant challenges with my physical and mental health, which led me to extend my graduate studies by two years to focus on recovery and growth. With newfound access to healthcare and several awarded funding opportunities, I was able to continue expanding my thesis and multidisciplinary skill set. During this time, I collaborated with prominent researchers who helped refine my technical and analytical abilities.
-									</p>
-								</div>
-							</div>
-						</section>
-					</div>
-				</div>	
-				<div class="wrapper style1">
-					<div class="inner">
-						<div class="container">
-							<section>
-								<center><header class="first major">
-									<h2>Accomplishments and Highlights</h2>
-								</header></center>
-							</section>
-						</div>
-						<div class="container">
-							<div class="row">
-								<div class="col-8 col-12-medium">
-									<section class="box article-list">
-										<h2><span class="icon fa-file-alt" style="opacity: 0.25;">
-											<i class="fa-rotate-by" style="--fa-rotate-angle: -45deg;"></i>
-										</span> Publications</h2>
-										
-										<article class="box excerpt">
-											<a href="pages/thesis1a2.html" class="image left"><img src="img/test03.png" alt="" /></a>
-											<div>
-												<header>
-													<span class="date">September, 2025</span>
-													<h3><a href="pages/thesis1a2.html">Thesis Excerpt</a></h3>
-												</header>
+								<div class="col-9 col-12-medium imp-medium">
+									<div id="content">
+										<article style="width: 95%;" id="install">
+											<header class="major">
+												<h2>Getting Started</h2>
 												<p>
-													This will take you to an excerpt from my thesis. I only included the first two chapters due
-													to the total length (163 pages). It was reduced from nearly 260 pages due to the many avenues I tried to 
-													take. After deciding to focusing on the machine learning and geostatistical applications of my work, I 
-													hope to apply the results to more human centric GIS work.
-												</p>
-											</div>
-										</article>
-										<article class="box excerpt">
-											<a href="https://nccasc.colorado.edu/index.php/blog/geographers-perspective-existence-topographic-signature-life" class="image left"><img src="img/test04.png" alt="" /></a>
-											<div>
-												<header>
-													<span class="date">August, 2025</span>
-													<h3><a href="https://nccasc.colorado.edu/index.php/blog/geographers-perspective-existence-topographic-signature-life">NC CASC Blog</a></h3>
-												</header>
-												<p>
-													I had the pleasure of working with NC CASC as a CEST member to start my work
-													on the topographic signature of life project. For this work, I wrote a quite blog
-													detailing it's importance and furture directions. It's not yet avaliable, but it will be soon!
-													This was part of a program called the Climate Adaptation Scientists of Tomorrow which funded
-													my final semester at CU.
-												</p>
-											</div>
-										</article>
-										<article class="box excerpt">
-											<a href="https://github.com/earthlab/firedpy" class="image left"><img src="img/test05.png" alt="" /></a>
-											<div>
-												<header>
-													<span class="date">July, 2023</span>
-													<h3><a href="https://github.com/earthlab/firedpy">FIREDpy</a></h3>
-												</header>
-												<p>
-													The FIRe Event Delineation tool (FIREDPY) created by Earth Lab at CU. I was briefly apart of some summer work
-													that fixed some edge-case issues on the program. It's a Python based CLI that classifies individual burn 
-													detections into discrete events from 2001 to near-present. It returns both a table and shapefiles of fire events 
-													for a time and place (Balch et. al., 2020).
-												</p>
-											</div>
-										</article>
-									</section>
-								</div>
-								<div class="col-4 col-12-medium">
-									<section class="box spotlight">
-										<h2>
-										<span class="fa fa-plane" style="display: inline-block; opacity: 0.25;">
-											<i class="fa-rotate-by" style="--fa-rotate-angle: -45deg;"></i>
-										</span> Travels</h2>
-										<article>
-											<a href="https://ryan-erickson911.github.io/IamRyanE.github.io/" class="image featured"><img src="img/pic07.jpg" alt=""></a>
-											<header>
-												<h3>
-													<a href="https://ryan-erickson911.github.io/IamRyanE.github.io/">I love road trips!</a>
-												</h3>
-												<p>
-													I made a map of where I've been and want to go.
+													Tutorials for installing programs.
 												</p>
 											</header>
+											<span class="image featured"><img src="../assets/imgs/main/stats.png" alt="" /></span>
 											<p>
-												Most of the road trips I've taken have been across the contiguous US with my Grandparents. As my network and social life grows, I hope to expand 
-												this map with more international points. 
+												These tutorials are dedicated to those wishing to become more aquainted with GIS. Since complex data science and statistical methods need to be displayed 
+												for cutting-edge research and public outreach, many of these tutorials are freely avaliable online. At it's core, stats often ends up with meaningful statments 
+												and displays rooted in probabilities. Understanding how these are made, analyzed, and overall translated for the topic of interest can help reduce the spread 
+												of misinformation. 
 											</p>
 											<p>
-												Some of my favorite places and future destinations are on it as well! It's a little lack luster in it's current state given my skill set and is
-												more of a growing side project so stay tuned for more! 
+												If you don't own/use any of the provided services requiring subscribed access, don't worry! While it may be a steep learning curve, you can accomplish the same task with freely avaliable software. It may be best 
+												to select a single language to understand how syntax and data structures can impact a program's behavior. 
 											</p>
-											<footer>
-												<a href="https://ryan-erickson911.github.io/IamRyanE.github.io/" class="button alt icon solid "><i class="fa-solid fa-map-location-dot"></i> Go to map</a>
-											</footer>
 										</article>
-									</section>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wrapper style3">
+						<div class="inner">
+							<div class="container">
+								<div class="row">
+									<div class="col-12-medium">
+										<div id="content">
+											<center>
+												<header class="major" href="#" id="Physics">
+													<h2>Geography</h2>
+													<p>Univeristy of California, Santa Barbara</p>
+												</header>
+											</center>
+											<article>
+												<header class="major" href="#" id="ArcMap">
+													<center><h2>ArcMap</h2>
+													<p>Maps I created in ArcMap Pro, by ESRI</p></center>
+												<h3>Geog 199</h3>
+												<p1>This is from the independent studies class I took with Kostas Goulias. Here I had to go through NHTS data to 
+												create a spatial distribution of telecommuters and commuters.</p1>
+												<center><span class="image featured" style="width: 75%;"><img src="../assets/imgs/maps/CommuterMap.jpg" alt=""/></span></center>
+												<p1>The second map isn't much different, depicting telecommuters and their travelling habbits throughout the US.</p1>
+												<center><span class="image featured" style="width: 75%;"><img src="../assets/imgs/maps/TelecommuterMap.jpg" alt=""/></span></center>
+												<p1>I did these in ArcMap, and I would have loved to revisit these maps and the data in R, however the COVID 19 
+												pandemic cut the time I was supposed to meet and interact with my adviser.</p1>
+												
+												<h3>London Pump Analysis</h3>
+												
+												<center><span class="image featured" style="width: 75%;"><img src="../assets/imgs/maps/Layout.png" alt=""/></span></center>
+												<p1>Here is a map I created in a class at UCSB in which we digitally replicated the Broad Street cholera outbreak, 
+												a severe outbreak of cholera that occurred in 1854 near Broad Street in the Soho district of the City of Westminster, 
+												London, England. This was an assignment to get us used to the idea of solving problems using the power of GIS. After
+												displaying the locations and numbers of deaths due to cholera, we deduced that the number of these deaths were 
+												exceptionally higher near sewage pumps, leading to the theory that these pumps were mismanaged/poorly inspected. 
+												These same deductions were the same found by John Snow (not the GOT version) who at that time had found the same 
+												results.</p1>
+												
+												<h3>Geog 176 Series Result</h3>
+												<center><span class="image featured" style="width: 75%;"><img src="../assets/imgs/geog/Project_Poster.png" alt=""/></span></center>
+												<p1>A poster I created with a fantastic group for my Geography 176C class, the final course in a Geographic Informational
+												Sciences series. Here we had to collect all our own data and come up with a GIS related question/theory, display, and 
+												present our findings to our peers. All edits were done in ArcGIS Pro 2.3.x</p1>
+												</header>
+												
+												<header class="major" href="#" id="RStudio">
+													<h2>R and RStudio</h2>
+													<p>Introduction to Geographic Research</p>
+												<h3>California COVID-19 Transmission Rate vs Income Display</h3>
+												<center><span class="image featured" style="width: 75%;"><img src="../assets/imgs/geog/fourcombinedmaps.png" alt=""/></span></center>
+												<p1>This is a basic bi-variate map displaying the case and death relationships to average county income. Here 
+												anything that is more red indicates a higher average income, and low average deaths while anything more blue 
+												indicates a higher death and case count in areas that have lower average income. There are two types of income data, 
+												household income and per capita income to see if there's any variation in results. The case and death counts have 
+												also been normalized to 100,000 people, which makes areas such as LA and San Francisco (areas with high counts but 
+												due to extremely high populations)</p1>
+												
+												<h3>Flooding Analysis Start Map</h3>
+												<center><span class="image featured" style="width: 75%;"><img src="../assets/imgs/geog/russian_river.png" alt=""/></span></center>
+												<p1>Here you see the beginnings of a flooding analysis raster. For fear accidentally sharing confidential resources 
+												and out of respect for my peers, I did not want to display data that [was] in the process of being published. This
+												is a basic map consisting of a DEM Raster and Poly lines representing the Russian River in California that is the 
+												beginning for flood prediction and analysis.</p1>
+												</header>
+												
+												<center><footer>
+												<center><p><a href="../index.html" class="button icon solid fa-home">Home Page</a></p></center>
+											</footer></center>
+											</article>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -514,5 +356,12 @@
 			<script src="../assets/js/button.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
+			<script>
+			const toggleBtn = document.getElementById('calc-toggle');
+			const calcContainer = document.getElementById('calc-container');
+			toggleBtn.addEventListener('click', () => {
+				calcContainer.classList.toggle('hidden');
+			});
+		</script>
 	</body>
 </html>

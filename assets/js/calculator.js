@@ -1,15 +1,21 @@
-const lightTheme = "styles/light.css";
-const darkTheme = "styles/dark.css";
-const sunIcon = "assets/SunIcon.svg";
-const moonIcon = "assets/MoonIcon.svg";
+const lightTheme = "../assets/css/light.css";
+const darkTheme = "../assets/css/dark.css";
+const sunIcon = "../assets/imgs/svgs/SunIcon.svg";
+const moonIcon = "../assets/imgs/svgs/MoonIcon.svg";
 const themeIcon = document.getElementById("theme-icon");
 const res = document.getElementById("result");
 const toast = document.getElementById("toast");
+const toggleBtn = document.getElementById('calc-toggle');
+const calcContainer = document.getElementById('calc-container');
+
+toggleBtn.addEventListener('click', () => {
+  calcContainer.classList.toggle('hidden');
+});
 
 function calculate(value) {
   const calculatedValue = eval(value || null);
   if (isNaN(calculatedValue)) {
-    res.value = "Can't divide 0 with 0";
+    res.value = "Divide 0 by 0, I cannot";
     setTimeout(() => {
       res.value = "";
     }, 1300);
@@ -20,18 +26,18 @@ function calculate(value) {
 
 // Swaps the stylesheet to achieve dark mode.
 function changeTheme() {
-  const theme = document.getElementById("theme");
+  const theme = document.getElementById("calc-theme");
   setTimeout(() => {
-    toast.innerHTML = "Calculator";
+    toast.innerHTML = "RE-97";
   }, 1500);
   if (theme.getAttribute("href") === lightTheme) {
     theme.setAttribute("href", darkTheme);
     themeIcon.setAttribute("src", sunIcon);
-    toast.innerHTML = "Dark Mode 🌙";
+    toast.innerHTML = "Dark ";
   } else {
     theme.setAttribute("href", lightTheme);
     themeIcon.setAttribute("src", moonIcon);
-    toast.innerHTML = "Light Mode ☀️";
+    toast.innerHTML = "Light";
   }
 }
 
@@ -104,17 +110,5 @@ function keyboardInputHandler(e) {
     const resultInput = res.value;
     //remove the last element in the string
     res.value = resultInput.substring(0, res.value.length - 1);
-  }
-}
-
-let calculator = document.getElementById("calculator");
-
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-    calculator.style.display = "block";
-  } else {
-    calculator.style.display = "none";
   }
 }

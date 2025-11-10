@@ -1,0 +1,120 @@
+/* CSS Reset & Global Styles */
+* {
+  box-sizing: fixed;
+  padding: 5;
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+::placeholder {
+  color: rgb(221, 221, 221);
+}
+
+.cwrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(101, 186, 255, 1);
+  border-color: rgba(0, 0, 0, 1);
+  transition: 0.8s all;
+  border-radius: 20px;
+  padding-bottom: 24px;
+}
+
+h1 {
+  margin-bottom: 1.5%;
+  color: #fff;
+  font-weight: normal;
+}
+
+.ccontainer {
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+}
+
+.cheader-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.ctop-buttons {
+  display: flex;
+  align-items: center;
+}
+
+input {
+  color: rgb(87, 87, 87);
+  font-size: 1em;
+  cursor: pointer;
+  width: 6em;
+  height: 7em;
+  background-color: #e6e6e6ff;
+  border: none;
+  outline: none;
+  border-radius: 75px;
+}
+
+.first-row{
+  margin-bottom: 8px;
+}
+
+.second-row,
+.third-row,
+.fourth-row,
+.fifth-row {
+  margin-bottom: 4px;
+}
+
+input[type="ctext"] {
+  background-color: rgba(255, 255, 255, 1);
+  width: 200px;
+  height: 40px;
+  padding-left: 20px;
+}
+
+input[type="cbutton"] {
+  color: rgb(122, 122, 122);
+  width: 50px;
+  height: 60px;
+  padding-left: 20px;
+}
+
+input[type="cbutton"]:hover {
+  background-color: rgba(243, 201, 14, 1);
+  color: #fff;
+  opacity: 70%;
+}
+
+#clear-button {
+  color: #fff;
+  background-color: rgb(255, 25, 25);
+  width: 42px;
+  height: 42px;
+  padding-left: 16px;
+}
+
+#clear-button:hover {
+  color: #fff;
+  background-color: rgba(144, 0, 173, 1);
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#github-icon {
+  margin-right: 12px;
+}
+
+.theme-button {
+  all: unset;
+  cursor: pointer;
+}
