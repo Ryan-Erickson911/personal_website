@@ -9,61 +9,13 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<script src="https://kit.fontawesome.com/a4631bf45a.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 		<link rel="stylesheet" href="../assets/css/light.css" id="calc-theme" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="../assets/css/main.css" />
 	</head>
 	<body class="left-sidebar is-preload">
-		<button onclick="topFunction()" id="myBtn" title="Go to top">
-			<i class="fa fa-arrow-up" style="color: lightgrey;"></i>
-		</button>
-		<button id="calc-toggle" class="calc-toggle">Calculator</button>
-		<div id="calc-container" class="calc-container">
-			<div class="cwrapper">
-				<div class="ccontainer">
-					<div class="cheader-container">
-						<h1 id="toast" style="color: goldenrod;">RE-97</h1>
-						<div class="ctop-buttons">
-							<a href="https://github.com/Ryan-Erickson911" target="_blank">
-								<img src="../assets/imgs/svgs/GitHubLight.svg" alt="GitHub" height="23" width="23" id="github-icon">
-							</a>
-							<button type="cbutton" onclick="changeTheme()" class="theme-button">
-								<img src="../assets/imgs/svgs/SunIcon.svg" alt="Theme Icon" height="20" width="20" id="theme-icon">
-							</button>
-						</div>
-					</div>
-					<div class="first-row">
-						<input type="ctext" name="result" id="result" placeholder="Result" readonly />
-						<input type="cbutton" value="C" onclick="result.value=''" id="clear-button" />
-					</div>
-					<div class="second-row">
-						<input type="cbutton" value="1" onclick="liveScreen(1)" />
-						<input type="cbutton" value="2" onclick="liveScreen(2)" />
-						<input type="cbutton" value="3" onclick="liveScreen(3)" />
-						<input type="cbutton" value="+" onclick="liveScreen('+')" />
-					</div>
-					<div class="third-row">
-						<input type="cbutton" value="4" onclick="liveScreen(4)" />
-						<input type="cbutton" value="5" onclick="liveScreen(5)" />
-						<input type="cbutton" value="6" onclick="liveScreen(6)" />
-						<input type="cbutton" value="-" onclick="liveScreen('-')" />
-					</div>
-					<div class="fourth-row">
-						<input type="cbutton" value="7" onclick="liveScreen(7)" />
-						<input type="cbutton" value="8" onclick="liveScreen(8)" />
-						<input type="cbutton" value="9" onclick="liveScreen(9)" />
-						<input type="cbutton" value="×" onclick="liveScreen('*')" />
-					</div>
-					<div class="fifth-row">
-						<input type="cbutton" value="/" onclick="liveScreen('/')" />
-						<input type="cbutton" value="0" onclick="liveScreen(0)" />
-						<input type="cbutton" value="." onclick="liveScreen('.')" />
-						<input type="cbutton" value="=" onclick="calculate(result.value)" />
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="page-wrapper">
+		<div id="rjes-wrapper">
 			<div id="header-wrapper">
 				<div class="container">
 					<header id="header">
@@ -133,129 +85,133 @@
 								</ul>
 					  		</nav>
 						</div>
+						<div class="col-3 col-12-medium">
+							<nav gclass="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:1; position: fixed; padding-top: 3%;" id="mySidebar">
+								<div class="w3-container">
+									<a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+										<i class="fa fa-remove"></i>
+									</a>
+									<img src="../assets/imgs/main/meinsf.png" style="width:25%;" class="w3-round"><br><br>
+									<h4><b>Tutorials</b></h4>
+								</div>
+								<div class="w3-bar-block">
+									<ul class="style2">
+										<li><a href="#top" target="_self">Introduction</a></li>
+										<li><a href="#stats" target="_self">Statistics</a></li>
+										<li><a href="#datasci" target="_self">Data Science</a></li>
+										<li><a href="#gis" target="_self">GIS</a></li>
+										<li><a href="#pyvscd" target="_self">Python and VS Code</a></li>
+										<li><a href="#rstu" target="_self">R and RStudio</a></li>
+										<li><a href="#javaclipse" target="_self">Java and Eclispe</a></li>
+										<li><a href="#htmljs" target="_self">HTML and JavaScript</a></li>
+									</ul>
+								</div>
+								<div class="w3-panel w3-large">
+									<i class="fa fa-instagram w3-hover-opacity"></i>
+									<i class="fa fa-snapchat w3-hover-opacity"></i>
+									<i class="fa fa-pinterest-p w3-hover-opacity"></i>
+									<i class="fa fa-twitter w3-hover-opacity"></i>
+									<i class="fa fa-linkedin w3-hover-opacity"></i>
+								</div>
+								<a href="../index.html" class="button icon solid fa-home">Home</a>
+							</nav>
+						</div>
+						<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 					</header>
 				</div>
 			</div>
 			<div id="main-wrapper">
 				<div class="wrapper style1">
 					<div class="inner">
-						<div class="container" style="padding-bottom: 3em;">
+						<div class="container">
 							<div class="row">
-								<div class="col-3 col-12-medium">
-									<div id="sidebar">
-										<section>
-											<header class="major">
-												<h2>Tutorials</h2>
-											</header>
-											<ul class="style2">
-												<li><a href="#install" target="_self">Installation and Programs</a></li>
-												<li><a href="#stats" target="_self">Statistics</a></li>
-												<li><a href="#datasci" target="_self">Data Science</a></li>
-												<li><a href="#gis" target="_self">GIS</a></li>
-												<li><a href="#pyvscd" target="_self">Python and VS Code</a></li>
-												<li><a href="#rstu" target="_self">R and RStudio</a></li>
-												<li><a href="#javaclipse" target="_self">Java and Eclispe</a></li>
-												<li><a href="#htmljs" target="_self">HTML and JavaScript</a></li>
-											</ul>
-											<footer>
-												<center><a href="../index.html" class="button icon solid fa-home">Home</a></center>
-											</footer>
-										</section>
-									</div>
+								<div class="col-2 col-12-medium">
 								</div>
-								<div class="col-9 col-12-medium imp-medium">
+								<div class="col-10 col-12-medium imp-medium">
 									<div id="content">
-										<article style="width: 95%;" id="install">
+										<article style="width: 95%;" id="top">
 											<header class="major">
-												<h2>Getting Started</h2>
+												<h2>Introduction to Research</h2>
 												<p>
-													Tutorials for installing programs.
+													Brief tutorials that introduce my background and capabilities.
 												</p>
 											</header>
-											<span class="image featured"><img src="../assets/imgs/main/stats.png" alt="" /></span>
 											<p>
-												These tutorials are dedicated to those wishing to become more aquainted with GIS. Since complex data science and statistical methods need to be displayed 
-												for cutting-edge research and public outreach, many of these tutorials are freely avaliable online. At it's core, stats often ends up with meaningful statments 
-												and displays rooted in probabilities. Understanding how these are made, analyzed, and overall translated for the topic of interest can help reduce the spread 
-												of misinformation. 
+												These tutorials are dedicated to those wishing to become more aquainted with Data Science and programming software. I've been called many things,
+												but I feel that "teacher" comes to mind as the most frequently used adjective. 
 											</p>
 											<p>
-												If you don't own/use any of the provided services requiring subscribed access, don't worry! While it may be a steep learning curve, you can accomplish the same task with freely avaliable software. It may be best 
-												to select a single language to understand how syntax and data structures can impact a program's behavior. 
-											</p>
+												If you don't own/use any of the provided services requiring subscribed access, don't worry! While it may be a steep learning curve, you can 
+												accomplish the same task with freely avaliable software. These are basically light versions of old classwork and <a href="//www.w3schools.com/">w3schools</a>
+												tutorials. It may be best to select a single language to understand how syntax and data structures can impact a program's behavior. 
+											</p>											
+										</article>
+										<header class="major" href="#" id="stats">
+											<h2>Statistics</h2>
+											<p>The heart of Machine Learning and Artificial Intelligence</p>
+										</header>
+										<p1>
+											This is from the independent studies class I took with Kostas Goulias. Here I had to go through NHTS data to 
+											create a spatial distribution of telecommuters and commuters.
+										</p1>
+										<article>
+											<header class="major" href="#" id="ArcMap">
+												<h2>ArcMap</h2>
+												<p>Maps I created in ArcMap Pro, by ESRI</p>
+											<h3>Geog 199</h3>
+											<span class="image featured" style="width: 50%;"><img src="../assets/imgs/maps/CommuterMap.jpg" alt=""/></span>
+											<p1>The second map isn't much different, depicting telecommuters and their travelling habbits throughout the US.</p1>
+											<span class="image featured" style="width: 50%;"><img src="../assets/imgs/maps/TelecommuterMap.jpg" alt=""/></span>
+											<p1>I did these in ArcMap, and I would have loved to revisit these maps and the data in R, however the COVID 19 
+											pandemic cut the time I was supposed to meet and interact with my adviser.</p1>
+											
+											<h3>London Pump Analysis</h3>
+											
+											<span class="image featured" style="width: 75%;"><img src="../assets/imgs/maps/Layout.png" alt=""/></span>
+											<p1>Here is a map I created in a class at UCSB in which we digitally replicated the Broad Street cholera outbreak, 
+											a severe outbreak of cholera that occurred in 1854 near Broad Street in the Soho district of the City of Westminster, 
+											London, England. This was an assignment to get us used to the idea of solving problems using the power of GIS. After
+											displaying the locations and numbers of deaths due to cholera, we deduced that the number of these deaths were 
+											exceptionally higher near sewage pumps, leading to the theory that these pumps were mismanaged/poorly inspected. 
+											These same deductions were the same found by John Snow (not the GOT version) who at that time had found the same 
+											results.</p1>
+											
+											<h3>Geog 176 Series Result</h3>
+											<span class="image featured" style="width: 75%;"><img src="../assets/imgs/geog/Project_Poster.png" alt=""/></span>
+											<p1>A poster I created with a fantastic group for my Geography 176C class, the final course in a Geographic Informational
+											Sciences series. Here we had to collect all our own data and come up with a GIS related question/theory, display, and 
+											present our findings to our peers. All edits were done in ArcGIS Pro 2.3.x</p1>
+											</header>
+											
+											<header class="major" href="#" id="RStudio">
+												<h2>R and RStudio</h2>
+												<p>Introduction to Geographic Research</p>
+											<h3>California COVID-19 Transmission Rate vs Income Display</h3>
+											<span class="image featured" style="width: 75%;"><img src="../assets/imgs/geog/fourcombinedmaps.png" alt=""/></span>
+											<p1>This is a basic bi-variate map displaying the case and death relationships to average county income. Here 
+											anything that is more red indicates a higher average income, and low average deaths while anything more blue 
+											indicates a higher death and case count in areas that have lower average income. There are two types of income data, 
+											household income and per capita income to see if there's any variation in results. The case and death counts have 
+											also been normalized to 100,000 people, which makes areas such as LA and San Francisco (areas with high counts but 
+											due to extremely high populations)</p1>
+											
+											<h3>Flooding Analysis Start Map</h3>
+											<span class="image featured" style="width: 75%;"><img src="../assets/imgs/geog/russian_river.png" alt=""/></span>
+											<p1>Here you see the beginnings of a flooding analysis raster. For fear accidentally sharing confidential resources 
+											and out of respect for my peers, I did not want to display data that [was] in the process of being published. This
+											is a basic map consisting of a DEM Raster and Poly lines representing the Russian River in California that is the 
+											beginning for flood prediction and analysis.</p1>
+											</header>
+											
+											<footer>
+											<p><a href="../index.html" class="button icon solid fa-home">Home Page</a></p>
+										</footer>
 										</article>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="wrapper style3">
-						<div class="inner">
-							<div class="container">
-								<div class="row">
-									<div class="col-12-medium">
-										<div id="content">
-											<center>
-												<header class="major" href="#" id="Physics">
-													<h2>Geography</h2>
-													<p>Univeristy of California, Santa Barbara</p>
-												</header>
-											</center>
-											<article>
-												<header class="major" href="#" id="ArcMap">
-													<center><h2>ArcMap</h2>
-													<p>Maps I created in ArcMap Pro, by ESRI</p></center>
-												<h3>Geog 199</h3>
-												<p1>This is from the independent studies class I took with Kostas Goulias. Here I had to go through NHTS data to 
-												create a spatial distribution of telecommuters and commuters.</p1>
-												<center><span class="image featured" style="width: 75%;"><img src="../assets/imgs/maps/CommuterMap.jpg" alt=""/></span></center>
-												<p1>The second map isn't much different, depicting telecommuters and their travelling habbits throughout the US.</p1>
-												<center><span class="image featured" style="width: 75%;"><img src="../assets/imgs/maps/TelecommuterMap.jpg" alt=""/></span></center>
-												<p1>I did these in ArcMap, and I would have loved to revisit these maps and the data in R, however the COVID 19 
-												pandemic cut the time I was supposed to meet and interact with my adviser.</p1>
-												
-												<h3>London Pump Analysis</h3>
-												
-												<center><span class="image featured" style="width: 75%;"><img src="../assets/imgs/maps/Layout.png" alt=""/></span></center>
-												<p1>Here is a map I created in a class at UCSB in which we digitally replicated the Broad Street cholera outbreak, 
-												a severe outbreak of cholera that occurred in 1854 near Broad Street in the Soho district of the City of Westminster, 
-												London, England. This was an assignment to get us used to the idea of solving problems using the power of GIS. After
-												displaying the locations and numbers of deaths due to cholera, we deduced that the number of these deaths were 
-												exceptionally higher near sewage pumps, leading to the theory that these pumps were mismanaged/poorly inspected. 
-												These same deductions were the same found by John Snow (not the GOT version) who at that time had found the same 
-												results.</p1>
-												
-												<h3>Geog 176 Series Result</h3>
-												<center><span class="image featured" style="width: 75%;"><img src="../assets/imgs/geog/Project_Poster.png" alt=""/></span></center>
-												<p1>A poster I created with a fantastic group for my Geography 176C class, the final course in a Geographic Informational
-												Sciences series. Here we had to collect all our own data and come up with a GIS related question/theory, display, and 
-												present our findings to our peers. All edits were done in ArcGIS Pro 2.3.x</p1>
-												</header>
-												
-												<header class="major" href="#" id="RStudio">
-													<h2>R and RStudio</h2>
-													<p>Introduction to Geographic Research</p>
-												<h3>California COVID-19 Transmission Rate vs Income Display</h3>
-												<center><span class="image featured" style="width: 75%;"><img src="../assets/imgs/geog/fourcombinedmaps.png" alt=""/></span></center>
-												<p1>This is a basic bi-variate map displaying the case and death relationships to average county income. Here 
-												anything that is more red indicates a higher average income, and low average deaths while anything more blue 
-												indicates a higher death and case count in areas that have lower average income. There are two types of income data, 
-												household income and per capita income to see if there's any variation in results. The case and death counts have 
-												also been normalized to 100,000 people, which makes areas such as LA and San Francisco (areas with high counts but 
-												due to extremely high populations)</p1>
-												
-												<h3>Flooding Analysis Start Map</h3>
-												<center><span class="image featured" style="width: 75%;"><img src="../assets/imgs/geog/russian_river.png" alt=""/></span></center>
-												<p1>Here you see the beginnings of a flooding analysis raster. For fear accidentally sharing confidential resources 
-												and out of respect for my peers, I did not want to display data that [was] in the process of being published. This
-												is a basic map consisting of a DEM Raster and Poly lines representing the Russian River in California that is the 
-												beginning for flood prediction and analysis.</p1>
-												</header>
-												
-												<center><footer>
-												<center><p><a href="../index.html" class="button icon solid fa-home">Home Page</a></p></center>
-											</footer></center>
-											</article>
 										</div>
 									</div>
 								</div>
@@ -269,7 +225,7 @@
 					<div class="row">
 						<div class="col-3 col-6-medium col-12-small">
 							<section>
-								<center><h2>Shortcuts</h2></center>
+								<h2>Shortcuts</h2>
 								<ul class="divided">
 									<li><a href="#about" target="_self">About Me</a></li>
 									<li><a href="https://anaconda.org/conda-forge/openai">Geography</a></li>
@@ -284,7 +240,7 @@
 						</div>
 						<div class="col-3 col-6-medium col-12-small">
 							<section>
-								<center><h2>Institutions and Research Labs</h2></center>
+								<h2>Institutions and Research Labs</h2>
 								<ul class="divided">
 									<li><a href="https://ibs.colorado.edu/">Institute of Behavioral Sciences</a></li>
 									<li><a href="https://hazards.colorado.edu/">Natural Hazards Center</a></li>
@@ -293,7 +249,7 @@
 								</ul>
 							</section>
 							<section>
-								<center><h2>Online Profiles</h2></center>
+								<h2>Online Profiles</h2>
 								<ul class="divided">
 									<li><a href="https://www.colorado.edu/geography/ryan-erickson">CU Profile</a></li>
 									<li><a href="https://www.linkedin.com/in/ryan-ericksons-profile/">Linkedin</a></li>
@@ -303,15 +259,15 @@
 						</div>
 						<div class="col-6 col-12-medium imp-medium">
 							<section>
-								<center><h2><strong>TL;DR</strong></h2></center>
-								<center><p>My name is Ryan Erickson, I'm a recent graduate from CU, Boulder and new to the greater Seattle area. I hope you liked my website! 
-									Please reach out should you have any quesitons about my work, future collaboration, or linked materials.</p></center>
-								<center><a href="pages/resume.html" class="button alt icon solid fa-arrow-circle-right">Resume</a></center> 
+								<h2><strong>TL;DR</strong></h2>
+								<p>My name is Ryan Erickson, I'm a recent graduate from CU, Boulder and new to the greater Seattle area. I hope you liked my website! 
+									Please reach out should you have any quesitons about my work, future collaboration, or linked materials.</p>
+								<a href="pages/resume.html" class="button alt icon solid fa-arrow-circle-right">Resume</a> 
 								<p></p>
-								<center><a href="pages/cv.html" class="button alt icon solid fa-arrow-circle-right">CV</a></center>
+								<a href="pages/cv.html" class="button alt icon solid fa-arrow-circle-right">CV</a>
 							</section>
 							<section>
-								<center><h2>Contact Information</h2></center>
+								<h2>Contact Information</h2>
 								<div>
 									<div class="row">
 										<div class="col-7-small col-12-small" id="contact">

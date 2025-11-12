@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>R. Erickson: Tutorials</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  		<meta name="description" content="An introduction to Java syntax created by Ryan Erickson" />
+		<link rel="icon" type="image/x-icon" href="../assets/imgs/icos/calculator.ico">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script src="https://kit.fontawesome.com/a4631bf45a.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="../assets/css/light.css" id="calc-theme" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../assets/css/main.css" id="main-theme"/>
+	</head>
+	<body class="left-sidebar is-preload">
+		<button onclick="topFunction()" id="myBtn" title="Go to top">
+			<i class="fa fa-arrow-up" style="color: lightgrey;"></i>
+		</button>
+		<button id="calc-toggle" class="calc-toggle">Calculator</button>
+		<div id="calc-container" class="calc-container">
+			<div class="cwrapper">
+				<div class="ccontainer">
+					<div class="cheader-container">
+						<h1 id="toast" style="color: goldenrod;">RE-97</h1>
+						<div class="ctop-buttons">
+							<a href="https://github.com/Ryan-Erickson911" target="_blank">
+								<img src="../assets/imgs/svgs/GitHubLight.svg" alt="GitHub" height="23" width="23" id="github-icon">
+							</a>
+							<button type="cbutton" onclick="changeTheme()" class="theme-button">
+								<img src="../assets/imgs/svgs/SunIcon.svg" alt="Theme Icon" height="20" width="20" id="theme-icon">
+							</button>
+						</div>
+					</div>
+					<div class="first-row">
+						<input type="ctext" name="result" id="result" placeholder="Result" readonly />
+						<input type="cbutton" value="C" onclick="result.value=''" id="clear-button" />
+					</div>
+					<div class="second-row">
+						<input type="cbutton" value="1" onclick="liveScreen(1)" />
+						<input type="cbutton" value="2" onclick="liveScreen(2)" />
+						<input type="cbutton" value="3" onclick="liveScreen(3)" />
+						<input type="cbutton" value="+" onclick="liveScreen('+')" />
+					</div>
+					<div class="third-row">
+						<input type="cbutton" value="4" onclick="liveScreen(4)" />
+						<input type="cbutton" value="5" onclick="liveScreen(5)" />
+						<input type="cbutton" value="6" onclick="liveScreen(6)" />
+						<input type="cbutton" value="-" onclick="liveScreen('-')" />
+					</div>
+					<div class="fourth-row">
+						<input type="cbutton" value="7" onclick="liveScreen(7)" />
+						<input type="cbutton" value="8" onclick="liveScreen(8)" />
+						<input type="cbutton" value="9" onclick="liveScreen(9)" />
+						<input type="cbutton" value="x" onclick="liveScreen('*')" />
+					</div>
+					<div class="fifth-row">
+						<input type="cbutton" value="/" onclick="liveScreen('/')" />
+						<input type="cbutton" value="0" onclick="liveScreen(0)" />
+						<input type="cbutton" value="." onclick="liveScreen('.')" />
+						<input type="cbutton" value="=" onclick="calculate(result.value)" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="page-wrapper">
+			<div id="header-wrapper">
+				<div class="container">
+					<header id="header">
+						<div class="inner">
+				    		<h1>
+								<a href="https://github.com/Ryan-Erickson911" target='_blank' id="logo"><i class="fa-brands fa-github"></i></a>			
+								<a href="../index.html" target='_parent' id="logo"><i class="fa fa-home"></i></a>
+							</h1>
+							<nav id="nav">
+				      	  		<ul>
+									<li>
+										<a href="#">Affiliations</a>
+										<ul>
+											<li><a href="https://www.colorado.edu/geography/ryan-erickson" target='_blank'>CU Profile</a></li>
+											<li><a href="https://www.spatstat.com/people/" target='_blank'>STAR Lab</a></li>
+											<li><a href="https://ibs.colorado.edu/people/ryan-erickson/">CUPC</a></li>
+											<li><a href="https://cires.colorado.edu/people/ryan-erickson#ceca">CECA</a></li>
+										</ul>
+									</li>
+				      				<li><a href="https://www.linkedin.com/in/ryan-ericksons-profile/" target='_blank'>Linkedin</a></li>
+									<li><a href="https://boulder.joinhandshake.com/profiles/rerickson" target='_blank'>Handshake</a></li>
+									<li><a href="#contact" target='_self'>Contact</a></li>
+									<li style="width: min-content;">
+										<a href="#sitemenu"><i class="fa fa-bars"></i></a>
+										<ul>
+											<li><a href="pages/resume.html" target='_self'>Resume</a></li>
+											<li><a href="pages/cv.html" target='_self'>CV</a></li>
+											<li>
+												<a href="#">GIS</a>
+												<ul>
+													<li><a href="labs/lab_index.html">Labs and Tutorials</a></li>
+										    		<li><a href="https://geemap.org/" target='_blank'>Dr. Wu's YouTube for geemap</a></li>
+										    		<li><a href="https://www.arcgis.com/index.html" target='_blank'>Esri</a></li>
+										    		<li><a href="https://qgis.org/" target='_blank'>QGIS</a></li>
+										    		<li><a href="https://grass.osgeo.org/" target='_blank'>GRASS</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="#">Python</a>
+												<ul>
+													<li><a href="https://www.python.org/downloads/" target='_blank'>Versions</a></li>
+													<li><a href="https://anaconda.org/conda-forge/openai" target='_blank'>Anaconda</a></li>
+													<li><a href="https://code.visualstudio.com/" target='_blank'>VS Code</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="#">R</a>
+												<ul>
+										    		<li><a href="https://www.r-project.org/" target='_blank'>Versions</a></li>
+										    		<li><a href="https://posit.co/downloads/" target='_blank'>RStudio</a></li>
+										    		<li><a href="https://positron.posit.co/" target='_blank'>Positron</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="#">Data</a>
+												<ul>
+													<li><a href="https://www.epa.gov/outdoor-air-quality-data" target='_blank'>EPA Air Quality Data</a></li>
+													<li><a href="https://epsg.io/" target='_blank'>Epsg.io</a></li>
+										    		<li><a href="https://developers.google.com/earth-engine/datasets/" target='_blank'>Google Earth Engine</a></li>
+										    		<li><a href="https://www.openstreetmap.org/#map=5/38.01/-95.84" target='_blank'>OpenStreetMap</a></li>
+										    		<li><a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html" target='_blank'>TIGER/Line</a></li>
+										    		<li><a href="https://www.unep.org/publications-data" target='_blank'>UNEP</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+					  		</nav>
+						</div>
+					</header>
+				</div>
+			</div>
+			<div id="main-wrapper">
+				<div class="wrapper style1">
+					<div class="inner">
+						<div class="container" style="padding-bottom: 3em;">
+							<div class="row">
+								<div class="col-3 col-12-medium">
+									<div id="sidebar">
+										<section>
+											<header class="major">
+												<h2>Tutorials</h2>
+											</header>
+											<ul class="style2">
+												<li><a href="#install" target="_self">Installation and Programs</a></li>
+												<li><a href="#stats" target="_self">Statistics</a></li>
+												<li><a href="#datasci" target="_self">Data Science</a></li>
+												<li><a href="#gis" target="_self">GIS</a></li>
+												<li><a href="#pyvscd" target="_self">Python and VS Code</a></li>
+												<li><a href="#rstu" target="_self">R and RStudio</a></li>
+												<li><a href="#javaclipse" target="_self">Java and Eclispe</a></li>
+												<li><a href="#htmljs" target="_self">HTML and JavaScript</a></li>
+											</ul>
+											<footer>
+												<center><a href="../index.html" class="button icon solid fa-home">Home</a></center>
+											</footer>
+										</section>
+									</div>
+								</div>
+								<div class="col-9 col-12-medium imp-medium">
+									<div id="content">
+										<article style="width: 95%;" id="install">
+											<header class="major">
+												<h2>Getting Started</h2>
+												<p>
+													Tutorials for installing programs.
+												</p>
+											</header>
+											<span class="image featured"><img src="../assets/imgs/main/stats.png" alt="" /></span>
+											<p>
+												These tutorials are dedicated to those wishing to become more aquainted with GIS. Since complex data science and statistical methods need to be displayed 
+												for cutting-edge research and public outreach, many of these tutorials are freely avaliable online. At it's core, stats often ends up with meaningful statments 
+												and displays rooted in probabilities. Understanding how these are made, analyzed, and overall translated for the topic of interest can help reduce the spread 
+												of misinformation. 
+											</p>
+											<p>
+												If you don't own/use any of the provided services requiring subscribed access, don't worry! While it may be a steep learning curve, you can accomplish the same task with freely avaliable software. It may be best 
+												to select a single language to understand how syntax and data structures can impact a program's behavior. 
+											</p>
+										</article>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wrapper style3">
+						<div class="inner">
+							<div class="container">
+								<div class="row">
+									<div class="col-12-medium">
+										<div id="content">
+											<center>
+												<header class="major" href="#" id="Physics">
+													<h2>Geography</h2>
+													<p>Univeristy of California, Santa Barbara</p>
+												</header>
+											</center>
+											<article>
+												<header class="major" href="#" id="ArcMap">
+													<center><h2>ArcMap</h2>
+													<p>Maps I created in ArcMap Pro, by ESRI</p></center>
+												<h3>Geog 199</h3>
+												<p1>This is from the independent studies class I took with Kostas Goulias. Here I had to go through NHTS data to 
+												create a spatial distribution of telecommuters and commuters.</p1>
+												<center><span class="image featured" style="width: 75%;"><img src="../assets/imgs/maps/CommuterMap.jpg" alt=""/></span></center>
+												<p1>The second map isn't much different, depicting telecommuters and their travelling habbits throughout the US.</p1>
+												<center><span class="image featured" style="width: 75%;"><img src="../assets/imgs/maps/TelecommuterMap.jpg" alt=""/></span></center>
+												<p1>I did these in ArcMap, and I would have loved to revisit these maps and the data in R, however the COVID 19 
+												pandemic cut the time I was supposed to meet and interact with my adviser.</p1>
+												
+												<h3>London Pump Analysis</h3>
+												
+												<center><span class="image featured" style="width: 75%;"><img src="../assets/imgs/maps/Layout.png" alt=""/></span></center>
+												<p1>Here is a map I created in a class at UCSB in which we digitally replicated the Broad Street cholera outbreak, 
+												a severe outbreak of cholera that occurred in 1854 near Broad Street in the Soho district of the City of Westminster, 
+												London, England. This was an assignment to get us used to the idea of solving problems using the power of GIS. After
+												displaying the locations and numbers of deaths due to cholera, we deduced that the number of these deaths were 
+												exceptionally higher near sewage pumps, leading to the theory that these pumps were mismanaged/poorly inspected. 
+												These same deductions were the same found by John Snow (not the GOT version) who at that time had found the same 
+												results.</p1>
+												
+												<h3>Geog 176 Series Result</h3>
+												<center><span class="image featured" style="width: 75%;"><img src="../assets/imgs/geog/Project_Poster.png" alt=""/></span></center>
+												<p1>A poster I created with a fantastic group for my Geography 176C class, the final course in a Geographic Informational
+												Sciences series. Here we had to collect all our own data and come up with a GIS related question/theory, display, and 
+												present our findings to our peers. All edits were done in ArcGIS Pro 2.3.x</p1>
+												</header>
+												
+												<header class="major" href="#" id="RStudio">
+													<h2>R and RStudio</h2>
+													<p>Introduction to Geographic Research</p>
+												<h3>California COVID-19 Transmission Rate vs Income Display</h3>
+												<center><span class="image featured" style="width: 75%;"><img src="../assets/imgs/geog/fourcombinedmaps.png" alt=""/></span></center>
+												<p1>This is a basic bi-variate map displaying the case and death relationships to average county income. Here 
+												anything that is more red indicates a higher average income, and low average deaths while anything more blue 
+												indicates a higher death and case count in areas that have lower average income. There are two types of income data, 
+												household income and per capita income to see if there's any variation in results. The case and death counts have 
+												also been normalized to 100,000 people, which makes areas such as LA and San Francisco (areas with high counts but 
+												due to extremely high populations)</p1>
+												
+												<h3>Flooding Analysis Start Map</h3>
+												<center><span class="image featured" style="width: 75%;"><img src="../assets/imgs/geog/russian_river.png" alt=""/></span></center>
+												<p1>Here you see the beginnings of a flooding analysis raster. For fear accidentally sharing confidential resources 
+												and out of respect for my peers, I did not want to display data that [was] in the process of being published. This
+												is a basic map consisting of a DEM Raster and Poly lines representing the Russian River in California that is the 
+												beginning for flood prediction and analysis.</p1>
+												</header>
+												
+												<center><footer>
+												<center><p><a href="../index.html" class="button icon solid fa-home">Home Page</a></p></center>
+											</footer></center>
+											</article>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="footer-wrapper">
+				<footer id="footer" class="container">
+					<div class="row">
+						<div class="col-3 col-6-medium col-12-small">
+							<section>
+								<center><h2>Shortcuts</h2></center>
+								<ul class="divided">
+									<li><a href="#about" target="_self">About Me</a></li>
+									<li><a href="https://anaconda.org/conda-forge/openai">Geography</a></li>
+									<li><a href="https://www.python.org/">Data Science</a></li>
+									<li><a href="https://code.visualstudio.com/">Physics</a></li>
+									<li><a href="https://code.visualstudio.com/">Experience</a></li>
+									<li><a href="https://www.r-project.org/">Python</a></li>
+									<li><a href="https://posit.co/downloads/">Java</a></li>
+									<li><a href="https://positron.posit.co/">R</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-3 col-6-medium col-12-small">
+							<section>
+								<center><h2>Institutions and Research Labs</h2></center>
+								<ul class="divided">
+									<li><a href="https://ibs.colorado.edu/">Institute of Behavioral Sciences</a></li>
+									<li><a href="https://hazards.colorado.edu/">Natural Hazards Center</a></li>
+									<li><a href="https://cupc.colorado.edu/">Colorado University Population Center</a></li>
+									<li><a href="https://cires.colorado.edu/">Cooperative Institute for Research and Environmental Sciences</a></li>
+								</ul>
+							</section>
+							<section>
+								<center><h2>Online Profiles</h2></center>
+								<ul class="divided">
+									<li><a href="https://www.colorado.edu/geography/ryan-erickson">CU Profile</a></li>
+									<li><a href="https://www.linkedin.com/in/ryan-ericksons-profile/">Linkedin</a></li>
+									<li><a href="https://github.com/Ryan-Erickson911">GitHub</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-6 col-12-medium imp-medium">
+							<section>
+								<center><h2><strong>TL;DR</strong></h2></center>
+								<center><p>My name is Ryan Erickson, I'm a recent graduate from CU, Boulder and new to the greater Seattle area. I hope you liked my website! 
+									Please reach out should you have any quesitons about my work, future collaboration, or linked materials.</p></center>
+								<center><a href="pages/resume.html" class="button alt icon solid fa-arrow-circle-right">Resume</a></center> 
+								<p></p>
+								<center><a href="pages/cv.html" class="button alt icon solid fa-arrow-circle-right">CV</a></center>
+							</section>
+							<section>
+								<center><h2>Contact Information</h2></center>
+								<div>
+									<div class="row">
+										<div class="col-7-small col-12-small" id="contact">
+											<dl class="contact">
+												<dt>Email</dt>
+												<dd><a href="mailto:ryanerickson407@gmail.com">ryanerickson407@gmail.com</a></dd>
+											</dl>
+											<dl class="contact">
+												<dt>School</dt>
+												<dd><a href="mailto:ryer7052@colorado.edu">ryer7052@colorado.edu</a></dd>
+												<dd><a href="mailto:ryan.erickson-1@colorado.edu">ryan.erickson-1@colorado.edu</a></dd>
+											</dl>
+										</div>
+										<div class="col-5 col-12-small">
+											<dl class="contact">
+												<dt>Address</dt>
+												<dd>
+													Seattle, WA 98144<br />
+												</dd>
+												<dt>Phone</dt>
+												<dd>(909) 835-3952</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+					<div id="copyright">
+						<ul class="menu">
+							<li>&copy; R.Erickson. All rights reserved</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li><li>Base: <a href="https://html5up.net/zerofour">ZeroFour</a></li>
+						</ul>
+					</div>
+				</footer>
+			</div>
+		</div>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.dropotron.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/calculator.js"></script>
+			<script src="../assets/js/button.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script>
+			const toggleBtn = document.getElementById('calc-toggle');
+			const calcContainer = document.getElementById('calc-container');
+			toggleBtn.addEventListener('click', () => {
+				calcContainer.classList.toggle('hidden');
+			});
+		</script>
+	</body>
+</html>

@@ -67,11 +67,7 @@ input, select, textarea {
 }
 
 #myBtn {
-  display: none; 
-  position: fixed;
-  bottom: 15dvh; 
-  left: 20dvw; 
-  z-index: 99; 
+  z-index: 4; 
   border: none; 
   outline: none; 
   background-color: #696969;
@@ -89,6 +85,53 @@ input, select, textarea {
   outline: rgba(0, 0, 0, 1); /* Remove outline */
   color: red; /* Text color */
   opacity: 75%;
+}
+
+#mainmenu{
+	padding: 0%;
+	position: fixed; 
+	top: 0%;
+	max-width: calc(100% + 100px);
+	width: 100%;
+	z-index: 11;
+	opacity: 1;
+	background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35)), url("images/bg02.png");
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35)), url("images/bg02.png");
+	background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35)), url("images/bg02.png");
+	background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35)), url("images/bg02.png");
+	background-color: #3B3E45;
+	background-color: rgba(59, 62, 69, 0.9);
+	border-radius: 100px;
+	box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.48), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.15);
+	text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+}
+
+#mainSidebar{
+	padding: 3%;
+	position: fixed; 
+	width: 15%;
+	height: 100dvh;
+	left: 5dvw;
+	top: 0;
+	padding-top: 15em;
+	opacity: 1;
+	z-index: 10;
+	box-shadow: inset 0.5dvw 0 0 0 rgba(207, 184, 124, 1), inset 1dvw 0 0 0 rgba(254, 188, 17, 1), inset 1.5dvw 0 0 0 rgba(0, 54, 96, 1), inset 2dvw 0 0 0 rgba(0, 0, 0, 1), inset -0.5dvw 0 0 0 rgba(207, 184, 124, 1), inset -1dvw 0 0 0 rgba(254, 188, 17, 1), inset -1.5dvw 0 0 0 rgba(0, 54, 96, 1), inset -2dvw 0 0 0 rgba(0, 0, 0, 1);
+	background-color: rgba(220, 225, 229, 1);
+}
+
+.scrollheader {
+	width: 100dvw;
+	text-align: center;
+	transition: top 0.5s ease;
+	padding: 3em 0 1em;
+	z-index: 9;
+	background: #ffffffff;
+	background-image: url("images/bg03.png"), url("images/bg04.png"), url("images/bg02.png");
+	background-repeat: no-repeat, no-repeat, repeat;
+	background-size: 100% 15em, 100% 15em, auto auto;
+	background-position: top center, bottom center, top left;
+	box-shadow: inset 0px 0px 0px 2px rgba(207, 184, 124, 1), inset 0px 0px 0px -2px rgba(207, 184, 124, 1); 
 }
 
 /* Calculator */
@@ -143,6 +186,113 @@ input, select, textarea {
 	}
 }
 
+::placeholder {
+  color: rgb(221, 221, 221);
+}
+
+.cwrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(101, 186, 255, 1);
+  border-color: rgba(0, 0, 0, 1);
+  transition: 0.8s all;
+  border-radius: 20px;
+  padding-bottom: 24px;
+}
+
+h1 {
+  margin-bottom: 1.5%;
+  color: #fff;
+  font-weight: normal;
+}
+
+.ccontainer {
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+}
+
+.cheader-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.ctop-buttons {
+  display: flex;
+  align-items: center;
+}
+
+input {
+  color: rgb(87, 87, 87);
+  font-size: 1em;
+  cursor: pointer;
+  width: 6em;
+  height: 7em;
+  background-color: #e6e6e6ff;
+  border: none;
+  outline: none;
+  border-radius: 75px;
+}
+
+.first-row{
+  margin-bottom: 8px;
+}
+
+.second-row,
+.third-row,
+.fourth-row,
+.fifth-row {
+  margin-bottom: 4px;
+}
+
+input[type="ctext"] {
+  background-color: rgba(255, 255, 255, 1);
+  width: 200px;
+  height: 40px;
+  padding-left: 20px;
+}
+
+input[type="cbutton"] {
+  color: rgb(122, 122, 122);
+  width: 50px;
+  height: 60px;
+  padding-left: 20px;
+}
+
+input[type="cbutton"]:hover {
+  background-color: rgba(243, 201, 14, 1);
+  color: #fff;
+  opacity: 70%;
+}
+
+#clear-button {
+  color: #fff;
+  background-color: rgb(255, 25, 25);
+  width: 42px;
+  height: 42px;
+  padding-left: 16px;
+}
+
+#clear-button:hover {
+  color: #fff;
+  background-color: rgba(144, 0, 173, 1);
+}
+
+#github-icon {
+  margin-right: 12px;
+}
+
+.theme-button {
+  all: unset;
+  cursor: pointer;
+}
 /* Basic */
 
 	html {
@@ -270,12 +420,18 @@ input, select, textarea {
 		margin: 0 0 0.25em 0;
 	}
 
-	hr {position: center; min-width: 30%; width: 80%}
+	hr {
+		position: center; 
+		min-width: 30%; 
+		width: 80%
+	}
+
 	.carousel-inner > .item > img,
 	.carousel-inner > .item > a > img {
 		width: 80%;
 		margin: auto;
 	}
+
 	.carousel-caption {
 		position: absolute;
 		left: 50%;
@@ -283,6 +439,7 @@ input, select, textarea {
     	transform: translateX(-50%); /* center horizontally */
     	text-align: center;
     }
+
     .caption-bubble {
 		display: inline-block;
 		background: rgba(55, 55, 55, 0.5);
@@ -291,23 +448,28 @@ input, select, textarea {
 		border-radius: 5px;
 		text-align: center;
     }
+
     .caption-bubble h3 {
 		margin: 0 0 15px 0;
 		color: gold;
     }
+
     .caption-bubble p {
 		margin: 0;
     }
+
     .carousel-indicators {
 		bottom: 14.5%;
 		position: absolute;
-		z-index: 9999; /* make sure it's the topmost layer */
+		z-index: 6;
     }
+
     .carousel-indicators li {
-		background-color: #fff;  /* optional: make dots white */
+		background-color: #fff;
     }
+
     .carousel-indicators .active {
-		background-color: blue;  /* optional: active dot highlight */
+		background-color: blue;
 	}
 
 	@media screen and (max-width: 1280px) {
@@ -371,7 +533,7 @@ input, select, textarea {
 	.container {
 		margin: 0 auto;
 		max-width: calc(100% - 100px);
-		width: 1200px;
+		width: 60%;
 	}
 
 		@media screen and (max-width: 1280px) {
@@ -411,7 +573,7 @@ input, select, textarea {
 		.row > * {
 			box-sizing: border-box;
 		}
-
+		
 		.row.gtr-uniform > * > :last-child {
 			margin-bottom: 0;
 		}
@@ -1916,7 +2078,7 @@ input, select, textarea {
 		background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0)), url("images/bg02.png");
 		background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0)), url("images/bg02.png");
 		background-image: linear-gradient(top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0)), url("images/bg02.png");
-		position: relative;
+		position: fixed;
 		background-color: #3B3E45;
 		background-color: rgba(59, 62, 69, 0.9);
 		border-radius: 8px;
@@ -1946,7 +2108,6 @@ input, select, textarea {
 
 		.dropotron li:hover > a, .dropotron li:hover > span {
 			color: rgba(233, 201, 24, 1);
-			padding-inline: 5%;
 		}
 
 /* Banner */
@@ -2079,7 +2240,8 @@ input, select, textarea {
 		.wrapper.style1 {
 			position: relative;
 			text-shadow: 1px 1px 0 #fff;
-			background-color: #fff;
+			color: #3D4952;
+			background-color: #DCE1E5;
 			background-image: url("images/bg03.png"), url("images/bg04.png"), url("images/bg02.png");
 			background-repeat: no-repeat, no-repeat, repeat;
 			background-size: 100% 15em, 100% 15em, auto auto;
@@ -2100,8 +2262,7 @@ input, select, textarea {
 
 	#header {
 		position: relative;
-		border-radius: 10px;
-		background: rgba(131, 28, 28, 0.5);
+		background: rgba(207, 184, 124, 1);
 		padding: 0.75em;
 		margin-bottom: 0;
 	}
@@ -2115,7 +2276,7 @@ input, select, textarea {
 			height: 5.5em;
 			background-color: #3B3E45;
 			background-color: rgba(59, 62, 69, 0.9);
-			border-radius: 8px;
+			border-radius: 100px;
 			box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.48), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.15);
 			text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
 		}
@@ -2273,7 +2434,7 @@ input, select, textarea {
 
 		/* Nav */
 
-			#page-wrapper {
+			#rjes-wrapper {
 				-moz-backface-visibility: hidden;
 				-webkit-backface-visibility: hidden;
 				-ms-backface-visibility: hidden;
@@ -2307,7 +2468,7 @@ input, select, textarea {
 				text-shadow: -1px -1px 0 black;
 				top: 0;
 				width: 100%;
-				z-index: 10001;
+				z-index: 2;
 			}
 
 				#titleBar .title {
@@ -2315,7 +2476,7 @@ input, select, textarea {
 					text-transform: uppercase;
 					font-weight: 800;
 					letter-spacing: 0.04em;
-					color: #fff;
+					color: #ff0000ff;
 					line-height: 44px;
 					text-align: center;
 				}
@@ -2385,7 +2546,7 @@ input, select, textarea {
 				position: fixed;
 				top: 0;
 				width: 275px;
-				z-index: 10002;
+				z-index: 3;
 			}
 
 				#navPanel .link {
@@ -2440,7 +2601,7 @@ input, select, textarea {
 					color: #fff;
 				}
 
-			body.navPanel-visible #page-wrapper {
+			body.navPanel-visible #rjes-wrapper {
 				-moz-transform: translateX(275px);
 				-webkit-transform: translateX(275px);
 				-ms-transform: translateX(275px);

@@ -8,22 +8,38 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<script src="https://kit.fontawesome.com/a4631bf45a.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/main.css" id="doc-theme"/>
 	</head>
 	<body class="homepage is-preload">
-		<button onclick="topFunction()" id="myBtn" title="Go to top">
-			<i class="fa fa-arrow-up" style="color: lightgrey;"></i>
-		</button>
-		<div id="page-wrapper">
-			<div id="header-wrapper" style="padding-bottom: 1%;">
-				<div class="container">
+		<div id="rjes-wrapper">
+			<div id="header-wrapper">
+				<nav gclass="w3-sidebar w3-collapse w3-white w3-animate-left">
+					<div class="inner" id="mainSidebar">
+						<div class="w3-container">
+							<a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+								<i class="fa fa-remove"></i>
+							</a>
+							<h2><b><a href="#top" target="_self">About Me</a></b></h2>
+							<p>I like building things, here's how and why:</p>
+						</div>
+						<div class="w3-bar-block">
+							<ul class="style2">
+								<li><a href="#inquisitive" target="_self">Inquisitive</a></li>
+								<li><a href="#experience" target="_self">Experienced</a></li>
+								<li><a href="#accomplishments" target="_self">Accomplishments</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<div class="container" id="mainmenu">
 					<header id="header">
 						<div class="inner">
-				    		<h1>
-								<a href="https://github.com/Ryan-Erickson911" target='_blank' id="logo"><i class="fa-brands fa-github"></i></a>
+							<h1>
+								<a href="https://github.com/Ryan-Erickson911" target='_blank' id="logo"><i class="fa-brands fa-github" width="20px" height="20px"></i></a>
+								<a href="#" onclick="changeDocTheme();return false;"><img src="assets/imgs/svgs/cloud.svg" id="doc-icon" width="20px" height="20px"></a>
 							</h1>
 							<nav id="nav">
-				      	  		<ul>
+								<ul>
 									<li>
 										<a href="#">Affiliations</a>
 										<ul>
@@ -33,7 +49,7 @@
 											<li><a href="https://cires.colorado.edu/people/ryan-erickson#ceca">CECA</a></li>
 										</ul>
 									</li>
-				      				<li><a href="https://www.linkedin.com/in/ryan-ericksons-profile/" target='_blank'>Linkedin</a></li>
+									<li><a href="https://www.linkedin.com/in/ryan-ericksons-profile/" target='_blank'>Linkedin</a></li>
 									<li><a href="https://boulder.joinhandshake.com/profiles/rerickson" target='_blank'>Handshake</a></li>
 									<li><a href="#contact" target='_self'>Contact</a></li>
 									<li style="width: min-content;">
@@ -45,10 +61,10 @@
 												<a href="#">GIS</a>
 												<ul>
 													<li><a href="tutorial_pages/re_tutorials_index.html">Tutorials</a></li>
-										    		<li><a href="https://geemap.org/" target='_blank'>Dr. Wu's YouTube for geemap</a></li>
-										    		<li><a href="https://www.arcgis.com/index.html" target='_blank'>Esri</a></li>
-										    		<li><a href="https://qgis.org/" target='_blank'>QGIS</a></li>
-										    		<li><a href="https://grass.osgeo.org/" target='_blank'>GRASS</a></li>
+													<li><a href="https://geemap.org/" target='_blank'>Dr. Wu's YouTube for geemap</a></li>
+													<li><a href="https://www.arcgis.com/index.html" target='_blank'>Esri</a></li>
+													<li><a href="https://qgis.org/" target='_blank'>QGIS</a></li>
+													<li><a href="https://grass.osgeo.org/" target='_blank'>GRASS</a></li>
 												</ul>
 											</li>
 											<li>
@@ -56,25 +72,25 @@
 												<ul>
 													<li><a href="https://www.epa.gov/outdoor-air-quality-data" target='_blank'>EPA Air Quality Data</a></li>
 													<li><a href="https://epsg.io/" target='_blank'>Epsg.io</a></li>
-										    		<li><a href="https://developers.google.com/earth-engine/datasets/" target='_blank'>Google Earth Engine</a></li>
-										    		<li><a href="https://www.openstreetmap.org/#map=5/38.01/-95.84" target='_blank'>OpenStreetMap</a></li>
-										    		<li><a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html" target='_blank'>TIGER/Line</a></li>
-										    		<li><a href="https://www.unep.org/publications-data" target='_blank'>UNEP</a></li>
+													<li><a href="https://developers.google.com/earth-engine/datasets/" target='_blank'>Google Earth Engine</a></li>
+													<li><a href="https://www.openstreetmap.org/#map=5/38.01/-95.84" target='_blank'>OpenStreetMap</a></li>
+													<li><a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html" target='_blank'>TIGER/Line</a></li>
+													<li><a href="https://www.unep.org/publications-data" target='_blank'>UNEP</a></li>
 												</ul>
 											</li>
 											<li>
 												<a href="#">Java</a>
 												<ul>
-										    		<li><a href="tutorial_pages/Java/rejava_index.html">Tutorials</a></li>
-										    		<li><a href="https://www.oracle.com/java/technologies/downloads/" target='_blank'>Download</a></li>
-										    		<li><a href="https://eclipseide.org/" target='_blank'>Eclipse</a></li>
-										    		<li><a href="https://medium.com/javarevisited/25-reasons-why-java-is-still-around-in-2024-452c582d55d0" target='_blank'>Why Java?</a></li>
+													<li><a href="tutorial_pages/Java/rejava_index.html">Tutorials</a></li>
+													<li><a href="https://www.oracle.com/java/technologies/downloads/" target='_blank'>Download</a></li>
+													<li><a href="https://eclipseide.org/" target='_blank'>Eclipse</a></li>
+													<li><a href="https://medium.com/javarevisited/25-reasons-why-java-is-still-around-in-2024-452c582d55d0" target='_blank'>Why Java?</a></li>
 												</ul>
 											</li>
 											<li>
 												<a href="#">Python</a>
 												<ul>
-										    		<li><a href="tutorial_pages/Python/repython_index.html">Tutorials</a></li>
+													<li><a href="tutorial_pages/Python/repython_index.html">Tutorials</a></li>
 													<li><a href="https://www.python.org/downloads/" target='_blank'>Download</a></li>
 													<li><a href="https://anaconda.org/conda-forge/openai" target='_blank'>Anaconda</a></li>
 													<li><a href="https://code.visualstudio.com/" target='_blank'>VS Code</a></li>
@@ -83,365 +99,394 @@
 											<li>
 												<a href="#">R</a>
 												<ul>
-										    		<li><a href="tutorial_pages/R/rer_index.html">Tutorials</a></li>
-										    		<li><a href="https://www.r-project.org/" target='_blank'>Download</a></li>
-										    		<li><a href="https://posit.co/downloads/" target='_blank'>RStudio</a></li>
-										    		<li><a href="https://positron.posit.co/" target='_blank'>Positron</a></li>
+													<li><a href="tutorial_pages/R/rer_index.html">Tutorials</a></li>
+													<li><a href="https://www.r-project.org/" target='_blank'>Download</a></li>
+													<li><a href="https://posit.co/downloads/" target='_blank'>RStudio</a></li>
+													<li><a href="https://positron.posit.co/" target='_blank'>Positron</a></li>
 												</ul>
 											</li>
 										</ul>
 									</li>
 								</ul>
-					  		</nav>
+							</nav>
 						</div>
 					</header>
-				</div>			
-				<div style="padding-top: 1%;">
-					<center>
-						<a href='https://cvhs.redlandsusd.net/'><img src="assets/imgs/logos/cvhs.png" style="display: inline-block" alt="Test 1" height="100"/></a>
-						<a href='https://www.chaffey.edu/'><img src="assets/imgs/logos/chaffey.png" style="display: inline-block" alt="Test 1" height="100"/></a>
-						<a href='https://www.ucsb.edu/'><img src="assets/imgs/logos/ucsb.png" style="display: inline-block" alt="Test 1" height="100"/></a>
-						<a href='https://www.colorado.edu/'><img src="assets/imgs/logos/cuboulder.png" style="display: inline-block" alt="Test 1" height="100"/></a>
-					</center>
+				</div>
+				<div class="row aln-center">
+					<div class="col-12">
+						<div id="banner">
+							<h3>
+								<a href='https://cvhs.redlandsusd.net/'><img src="assets/imgs/logos/cvhs.png" style="display: inline-block" alt="Test 1" height="100"/></a>
+								<a href='https://www.chaffey.edu/'><img src="assets/imgs/logos/chaffey.png" style="display: inline-block" alt="Test 1" height="100"/></a>
+								<a href='https://www.ucsb.edu/'><img src="assets/imgs/logos/ucsb.png" style="display: inline-block" alt="Test 1" height="100"/></a>
+								<a href='https://www.colorado.edu/'><img src="assets/imgs/logos/cuboulder.png" style="display: inline-block" alt="Test 1" height="100"/></a>
+							</h3>
+							<h3>
+								Hi, my name is Ryan <i class="fa fa-smile-o fa-parent fa-bounce" style="--fa-bounce-land-scale-x: 1.2;--fa-bounce-land-scale-y: .8;--fa-bounce-rebound: 5px;"></i>
+							</h3>
+							<h3>
+								<img src="assets/imgs/main/meinsf.png"  style="position:static;" alt="Test 1" width="292" height="300"/><br><br> I have a Masters in Geography <i class="fa fa-arrow-down fa-flip" style="--fa-animation-duration: 2s;"></i>
+							</h3>
+							<p>My thesis focused on applying data science to urban ecology!</p>
+							<a href="https://github.com/Ryan-Erickson911/surface_ozone" target='_blank' class="button large icon solid"><i class="fa-brands fa-github"></i> Check it out!</a>
+						</div>
+						<center>
+							<p style="color: #fff;">
+								P.S. I'm still working on formatting and the css doc for this site. It may not look the best for now, I'll be making updates as time goes on :D
+							</p>
+						</center>
+					</div>
 				</div>
 			</div>
-			<div id="banner" style="padding-top: 2%;">
-				<h2>
-					Hi, my name is Ryan <i class="fa fa-smile-o faa-parent fa-bounce" style="--faa-bounce-land-scale-x: 1.2;--faa-bounce-land-scale-y: .8;--faa-bounce-rebound: 5px;"></i>
-				</h2>
-				<h3>
-					I'm a GIS Developer with a Masters in Geography.<br><br>
-					<img src="assets/imgs/main/meinsf.png"  style="display: inline-block" alt="Test 1" width="292" height="300"/>
-				</h3>
-				<p>My thesis focuses on data science and urban ecology if you're interested!</p>
-				<a href="https://github.com/Ryan-Erickson911/surface_ozone" target='_blank' class="button large icon solid"><i class="fa-brands fa-github"></i> Surface Ozone</a>
+			<div class="row aln-center" id="inquisitive">
+				<div class="col-12">
+					<div class="scrollheader">
+						<header class="first major">
+							<h2>Biography</h2>
+							<p>
+								Recently graduated MA in Geography 
+							</p>
+						</header>
+					</div>
+				</div>
 			</div>
-			<center>
-				<p style="color: #fff;">
-					P.S. I'm still working on formatting and the final css doc for this site. It may not look the best for now, but I'll be making updates as time goes on :D
-				</p>
-			</center>
 			<div id="main-wrapper">
-				<div class="wrapper style1">
-					<div class="inner">
-						<section class="container box feature1">
-							<div class="row aln-center">
-								<div class="col-12">
-									<header id="about" class="first major">
-										<h2>About Me</h2>
-										<p>
-											Recently graduated with an MA in Geography 
-										</p>
-									</header>
-									<div class="col-12">
-										<p>
-											I graduated from Chaffey Community College in Rancho Cucamonga in 2015. It introduced me to the world of academic policy and statues. I majored in 
-											a specialized AA that focused on material shared throughout the UC system in California. To be frank, I would have never considered this had I not 
-											had an outstanding academic counsular at the time. They helped me navigate the entire UC system, and their knowledge aided me well beyond 
-											undergraduate studies. After earning my AA, I applied, and was accepted, into the University of California, Santa Barbara in 2017. I spent 3 years
-											here and graduated in 2020 with a double major in Geography and Physics. My Geography degree came with a specialization in GIS, and I wanted to further 
-											pursue it at the highest level. I was accepted into the Geography department at CU, Boulder as a Master's student under Dr. Guofeng Cao in 2021 at 
-											<a href="https://www.spatstat.com/people/">STARlab</a>. This website is dedicated to a summary of my work and research interests.</p>
-									</div>
-								</div>
-								<div class="col-4 col-12-medium">
-									<section>
-										<a href="main_pages/left-sidebar.html" class="image featured"><img src="assets/imgs/main/geography.png" alt="" /></a>
-										<header class="second icon solid fa-user">
-											<h3>Geography</h3>
-											<p>Space, Place, and Time</p>
-										</header>
-									</section>
-								</div>
-								<div class="col-4 col-12-medium">
-									<section>
-										<a href="main_pages/no-sidebar.html" class="image featured"><img src="assets/imgs/main/datasiencefin.png" alt="" /></a>
-										<header class="second icon solid fa-gift">
-											<h3>Data Science</h3>
-											<p>Programming and Syntax</p>
-										</header>
-									</section>
-								</div>
-								<div class="col-4 col-12-medium">
-									<section>
-										<a href="main_pages/right-sidebar.html" class="image featured"><img src="assets/imgs/main/physicsfin.png" alt="" /></a>
-										<header class="second icon solid fa-brain">
-											<h3>Physics</h3>
-											<p>Matter, Energy, and Force</p>
-										</header>
-									</section>
-								</div>
-								<div class="col-12">
-									<p>
-										As an undergraduate student, I specialzied in GIS modeling after failing quantum mechanics twice. Instead of dropping Physics all together, 
-										I decided to combine my interests and walk the path of a geophysicist. I've added old presentations, statisitcal tutorials, and helpful tips 
-										that I've encountered over the course of my academic career.  Most the of this work is freely avaliable on my 
-										<a href="https://github.com/Ryan-Erickson911/" target='_blank'>Github</a> and has helped me evlove into the programmer I am today. My work 
-										with Dr. Cao mainly focused on leveraging computer science and statistical learning to advance geographic theory and research planning. My 
-										original interests aligned closly with Dr. Cao's work, and I was able to apply many topics from my undergraduate career while learning about 
-										it's applications to topics like food inscurity, urban health, and environmental justice. I have an extremly diverse skill set due to the 
-										multi-disiplinary tendencies of spatial-temporal research.</p>
-								</div>
-							</div>
-						</section>
-					</div>	
-				</div>
-				<div class="wrapper style2" id="experience">
-					<div class="inner">
-						<div class="container box feature2">
-							<div class="row aln-center">
-								<div class="col-12">
-									<header class="first major">
-										<h2>Skills and Experience</h2>
-										<p>
-											"Programming is like playing with Legos...except the instructions are often unclear and each brick must be handmade."
-										</p>
-									</header>
-									<p>
-										As a multi-disiplinary scholar, I have been fortunate enough to be apart of many research projects over the last decade. My thesis uses Google Earth Engine, 
-										EPA monitor data, and statistical learning methods to model surface ozone for urban exposure analysis. My research would not be possible without the 
-										programming skills I gained at UCSB. Here are some helpful tutorials I've kept in mind over the years:
-									</p>
-								</div>
-							</div>
-						</div>
-						<section class="container box feature2">
-							<div class="row">
-								<div class="col-4 col-12-medium">
-									<section>
-										<header class="major">
-											<h2>Java</h2>
-											<p>Object-Oriented Programming</p>
-										</header>
-										<p>Applications, Webkits, and GUIs</p>
-										<footer>
-											<a href="#" class="button large icon solid" style="opacity: 90%;"><i class="fab fa-java fa-lg" style="color: red; opacity: 75%;"></i> Coming Soon!</a>
-										</footer>
-									</section>
-								</div>
-								<div class="col-4 col-12-medium">
-									<section>
-										<header class="major">
-											<h2>Python</h2>
-											<p>Data Science and Automation</p>
-										</header>
-										<p>The premier machine learning language</p>
-										<footer>
-											<a href="#" class="button large icon solid" style="opacity: 90%;"><i class="fab fa-python fa-lg" style="color: gold; opacity: 75%;"></i> Coming Soon!</a>
-										</footer>
-									</section>
-								</div>
-								<div class="col-4 col-12-medium">
-									<section>
-										<header class="major">
-											<h2>R</h2>
-											<p>The Statistician's Language</p>
-										</header>
-										<p>Easy, intuitive, and optimized for statistics</p>
-										<footer>
-											<a href="#" class="button medium icon solid" style="opacity: 90%;"><i class="fab fa-r-project fa-lg" style="color: blue; opacity: 75%;"></i> Coming Soon!</a>
-										</footer>
-									</section>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-12">
-									<p>
-										<br> My thesis focused on surface ozone modeling. Using Google Earth Engine, EPA Air Quality Data, GitHub, and Python, I started the skeleton of an ML air pollution
-										model with geospatially corrected residuals trained on monitoring locations. The motivation for this can be seen in my early research projects and posters before I 
-										started graduate school. Overall, I utilize a variety of programs to conduct spatial-temporal analyses in many disciplines: 
-									</p>
-								</div>
-							</div>
-						</section>
-					</div>
-					<div class="container">
-						<div id="myCarousel" class="carousel slide" data-interval="3000">
-							<section>
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel" data-slide-to="1"></li>
-									<li data-target="#myCarousel" data-slide-to="2"></li>
-									<li data-target="#myCarousel" data-slide-to="3"></li>
-									<li data-target="#myCarousel" data-slide-to="4"></li>
-								</ol>
-								<div class="carousel-inner">
-									<div class="item active">
-										<a href='main_pages/posters.html'><img src="assets/imgs/crsl/poster.png" class="d-block" alt="cartgis" /></a>
-										<div class="carousel-caption">
-											<div class="caption-bubble">
-												<h3>Cartography and GIS</h3>
-												<p>A poster I made with some friends of mine for a class at UCSB.</p>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<a href='main_pages/posters.html'><img src="assets/imgs/crsl/maunaloa.png" alt="dem" /></a> 
-										<div class="carousel-caption">
-											<div class="caption-bubble">
-												<h3>Remote Sensing</h3>
-												<p>Ditigal Elevation Model of Mauna Loa, HI overlayed with a hillshade created in GEE.</p>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<a href='main_pages/posters.html'><img src="assets/imgs/crsl/smark_2021-07-01.png" alt="ozone" ></a>
-										<div class="carousel-caption">
-											<div class="caption-bubble">
-												<h3>Statistical Learning</h3>
-												<p>Training variables and predictive results from the XGBoost model in my thesis.</p>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<a href='main_pages/posters.html'><img src="assets/imgs/crsl/spattemp.png" alt="trees" ></a>
-										<div class="carousel-caption">
-											<div class="caption-bubble">
-												<h3>Spatial-Temporal Analysis</h3>
-												<p>An 8-day simulation of growing tree density created for fire risk analysis.</p>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<a href='main_pages/posters.html'><img src="assets/imgs/crsl/AstroArtPhotoShop.png" alt="astroart" ></a>
-										<div class="carousel-caption">
-											<div class="caption-bubble">
-												<h3>Astrophysics</h3>
-												<p>A refined image of Messier 31 (the Andromeda Galaxy) using the <a href='main_pages/posters.html#astrostuff'>LCO</a> at UCSB.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-									<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-									<span class="sr-only">Previous</span>
-								</a>
-								<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-									<span class="sr-only">Next</span>
-								</a>
-							</section>
-						</div>
-						<section class="container box feature1">
-							<div class="row">
-								<div class="col-12">
-									<p>
-										<br> After developing a passion for GIS programming, I faced significant challenges with my physical and mental health, which led me to extend my graduate studies by two years to focus on recovery and growth. With newfound access to healthcare and several awarded funding opportunities, I was able to continue expanding my thesis and multidisciplinary skill set. During this time, I collaborated with prominent researchers who helped refine my technical and analytical abilities.
-									</p>
-								</div>
-							</div>
-						</section>
-					</div>
-				</div>	
-				<div class="wrapper style1" id="accomplishments">
-					<div class="inner">
-						<div class="container">
-							<section>
-								<center><header class="first major">
-									<h2>Accomplishments and Highlights</h2>
-								</header></center>
-							</section>
-						</div>
-						<div class="container">
-							<div class="row">
-								<div class="col-8 col-12-medium">
-									<section class="box article-list">
-										<h2 class="icon fa-file-alt">Publications</h2>
-										<article class="box excerpt">
-											<a href="https://nccasc.colorado.edu/index.php/blog/geographers-perspective-existence-topographic-signature-life" class="image left"><img src="assets/imgs/logos/nccasc.png" alt="" style="width: 180px;"/></a>
-											<div>
-												<header>
-													<span class="date">August, 2025</span>
-													<h3><a href="https://nccasc.colorado.edu/index.php/blog/geographers-perspective-existence-topographic-signature-life">NC CASC Blog</a></h3>
-												</header>
-												<p>
-													I had the pleasure of working with NC CASC as a CEST member to start my work on the topographic signature of life project. For this work, 
-													I wrote blog detailing it's importance and furture directions. This was part of a program called the Climate Adaptation Scientists
-													of Tomorrow which funded my final semester at CU.
-												</p>
-											</div>
-										</article>
-										<article class="box excerpt">
-											<a href="https://github.com/earthlab/firedpy" class="image left"><img src="assets/imgs/logos/firedpy.png" alt="" style="width: 180px;"/></a>
-											<div>
-												<header>
-													<span class="date">July, 2023</span>
-													<h3><a href="https://github.com/earthlab/firedpy">FIREDpy</a></h3>
-												</header>
-												<p>
-													The FIRe Event Delineation tool (FIREDPY) created by Earth Lab at CU. I was briefly apart of some summer work that fixed some edge-case 
-													issues on the program. It's classifies individual burn detections into discrete events for further analysis (Balch et. al., 2020).
-												</p>
-											</div>
-										</article>
-									</section>
-									<section class="box article-list" style="padding-top: 0;">
-										<h2 class="icon fa-solid fa-brain">Research</h2>
-										<article class="box excerpt">
-											<a href="main_pages/thesis1a2.html" class="image left"><img src="assets/imgs/geog/county.png" alt="" style="width: 180px;"/></a>
-											<div>
-												<header>
-													<span class="date">January, 2026</span>
-													<h3><a href="main_pages/thesis1a2.html">Thesis - Excerpt</a></h3>
-												</header>
-												<p>
-													This will take you to an excerpt from my thesis. I only included the first three chapters After focusing on the 
-													machine learning and geostatistical applications of my work, I hope to apply my findings to more human centric 
-													research.
-												</p>
-											</div>
-										</article>
-										<article class="box excerpt">
-											<a href="main_pages/thesis1a2.html" class="image left"><img src="assets/imgs/stock/pic04.jpg" alt="" style="width: 180px;"/></a>
-											<div>
-												<header>
-													<span class="date">In Progress</span>
-													<h3><a href="main_pages/thesis1a2.html">Thesis - State Model</a></h3>
-												</header>
-												<p>
-													Eventually, this will take you to a GitHub that I created to begin translating my script into a more user friendly function.
-													For now, this will take you to my thesis excerpt.
-												</p>
-											</div>
-										</article>
-										<article class="box excerpt">
-											<a href="main_pages/topolife.html" class="image left"><img src="assets/imgs/geog/olympusmonsmol.png" alt="" style="width: 180px;"/></a>
-											<div>
-												<header>
-													<span class="date">In Progress</span>
-													<h3><a href="main_pages/thesis1a2.html">Topographical Signature of Life</a></h3>
-												</header>
-												<p>
-													A potential biosignature is a substance or structure that might have a biological origin but requires 
-													more data or further study before reaching a conclusion about the absence or presence of life. Do they
-													exist? If so, can we detect them in the topographic scape of Earth?
-												</p>
-											</div>
-										</article>
-									</section>
-								</div>
-								<div class="col-4 col-12-medium">
-									<section class="box article-list">
-										<h2><i class="fa fa-plane" style="display: inline-block; opacity: 35%;"></i> Hobbies</h2>
-										<article>
-											<a href="https://ryan-erickson911.github.io/IamRyanE.github.io/" class="image featured"><img src="assets/imgs/main/pic07.jpg" alt=""></a>
-											<header>
-												<h3>
-													<a href="https://ryan-erickson911.github.io/IamRyanE.github.io/">Road Trips</a>
-												</h3>
-												<p>
-													A map of fun points of interest.
-												</p>
-											</header>
+				<div class="row aln-center">
+					<div class="col-12">
+						<div class="wrapper style1">
+							<div class="inner">
+								<section class="container box feature1">
+									<div class="row aln-center">
+										<div class="col-12">
 											<p>
-											  As my network and social life grows, I hope to expand this map with more international points. Most of the road trips I've taken have been 
-											  across the contiguous US with my Grandparents. Some of my favorite places and future destinations are on it as well!
+												I graduated from Chaffey Community College in Rancho Cucamonga in 2015. It introduced me to the world of academic policy and statues. I majored in 
+												a specialized AA that focused on material shared throughout the UC system in California. To be frank, I would have never considered this had I not 
+												had an outstanding academic counsular at the time. They helped me navigate the entire UC system, and their knowledge aided me well beyond 
+												undergraduate studies. After earning my AA, I applied, and was accepted, into the University of California, Santa Barbara in 2017. I spent 3 years
+												here and graduated in 2020 with a double major in Geography and Physics. My Geography degree came with a specialization in GIS, and I wanted to further 
+												pursue it at the highest level. I was accepted into the Geography department at CU, Boulder as a Master's student under Dr. Guofeng Cao in 2021 at 
+												<a href="https://www.spatstat.com/people/">STARlab</a>. This website is dedicated to a summary of my work and research interests.
 											</p>
-											<center><footer>
-												<a href="https://ryan-erickson911.github.io/IamRyanE.github.io/" class="button alt icon solid "><i class="fa-solid fa-map-location-dot"></i> Go to map</a>
-											</footer></center>
-										</article>
-									</section>
+										</div>
+										<div class="col-4 col-12-medium">
+											<section>
+												<a href="main_pages/left-sidebar.html" class="image featured"><img src="assets/imgs/main/geography.png" alt="" /></a>
+												<header class="second icon solid fa-user">
+													<h3>Geography</h3>
+													<p>Space, Place, and Time</p>
+												</header>
+											</section>
+										</div>
+										<div class="col-4 col-12-medium">
+											<section>
+												<a href="main_pages/no-sidebar.html" class="image featured"><img src="assets/imgs/main/datasiencefin.png" alt="" /></a>
+												<header class="second icon solid fa-gift">
+													<h3>Data Science</h3>
+													<p>Programming and Syntax</p>
+												</header>
+											</section>
+										</div>
+										<div class="col-4 col-12-medium">
+											<section>
+												<a href="main_pages/right-sidebar.html" class="image featured"><img src="assets/imgs/main/physicsfin.png" alt="" /></a>
+												<header class="second icon solid fa-brain">
+													<h3>Physics</h3>
+													<p>Matter, Energy, and Force</p>
+												</header>
+											</section>
+										</div>
+										<div class="col-12-medium">
+											<section>
+												<p>
+													As an undergraduate student, I specialzied in GIS modeling after failing quantum mechanics twice. Instead of dropping Physics all together, 
+													I decided to combine my interests and walk the path of a geophysicist. I've added old presentations, statisitcal tutorials, and helpful tips 
+													that I've encountered over the course of my academic career.  Most the of this work is freely avaliable on my 
+													<a href="https://github.com/Ryan-Erickson911/" target='_blank'>Github</a> and has helped me evlove into the programmer I am today. My work 
+													with Dr. Cao mainly focused on leveraging computer science and statistical learning to advance geographic theory and research planning. My 
+													original interests aligned closly with Dr. Cao's work, and I was able to apply many topics from my undergraduate career while learning about 
+													it's applications to topics like food inscurity, urban health, and environmental justice. I have an extremly diverse skill set due to the 
+													multi-disiplinary tendencies of spatial-temporal research.</p>
+											</section>
+										</div>
+									</div>
+								</section>
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row aln-center" id="experience">
+				<div class="col-12">
+					<div class="scrollheader">
+						<header class="first major">
+							<h2>Skills and Experience</h2>
+							<p>
+								"Programming is like playing with Legos...except the instructions are often unclear and each brick must be handmade."
+							</p>
+						</header>
+					</div>
+				</div>
+			</div>
+			<div id="main-wrapper">
+				<div class="row aln-center">
+					<div class="col-12">
+						<div class="wrapper style2">
+							<div class="inner">
+								<section class="container box feature1">
+									<div class="row aln-center">
+										<div class="col-12">
+											<p>
+												As a multi-disiplinary scholar, I have been fortunate enough to be apart of many research projects over the last decade. My thesis uses Google Earth Engine, 
+												EPA monitor data, and statistical learning methods to model surface ozone for urban exposure analysis. My research would not be possible without the 
+												programming skills I gained at UCSB. Here are some helpful tutorials I've kept in mind over the years:
+											</p>
+										</div>
+										<div class="col-4 col-12-medium">
+											<section>
+												<header class="major">
+													<h2>Java</h2>
+													<p>Object-Oriented Programming</p>
+												</header>
+												<p>Applications, Webkits, and GUIs</p>
+												<footer>
+													<a href="#" class="button large icon solid" style="opacity: 90%;"><i class="fab fa-java fa-lg" style="color: red; opacity: 75%;"></i> Coming Soon!</a>
+												</footer>
+											</section>
+										</div>
+										<div class="col-4 col-12-medium">
+											<section>
+												<header class="major">
+													<h2>Python</h2>
+													<p>Data Science and Automation</p>
+												</header>
+												<p>The premier machine learning language</p>
+												<footer>
+													<a href="#" class="button large icon solid" style="opacity: 90%;"><i class="fab fa-python fa-lg" style="color: gold; opacity: 75%;"></i> Coming Soon!</a>
+												</footer>
+											</section>
+										</div>
+										<div class="col-4 col-12-medium">
+											<section>
+												<header class="major">
+													<h2>R</h2>
+													<p>The Statistician's Language</p>
+												</header>
+												<p>Easy, intuitive, and optimized for statistics</p>
+												<footer>
+													<a href="#" class="button medium icon solid" style="opacity: 90%;"><i class="fab fa-r-project fa-lg" style="color: blue; opacity: 75%;"></i> Coming Soon!</a>
+												</footer>
+											</section>
+										</div>
+										<div class="col-12">
+											<p>
+												<br> My thesis focused on surface ozone modeling. Using Google Earth Engine, EPA Air Quality Data, GitHub, and Python, I started the skeleton of an ML air pollution
+												model with geospatially corrected residuals trained on monitoring locations. The motivation for this can be seen in my early research projects and posters before I 
+												started graduate school. Overall, I utilize a variety of programs to conduct spatial-temporal analyses in many disciplines: 
+											</p>
+										</div>
+									</div>
+								</section>
+								<div class="container">
+									<div id="myCarousel" class="carousel slide" data-interval="3000">
+										<section>
+											<ol class="carousel-indicators">
+												<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+												<li data-target="#myCarousel" data-slide-to="1"></li>
+												<li data-target="#myCarousel" data-slide-to="2"></li>
+												<li data-target="#myCarousel" data-slide-to="3"></li>
+												<li data-target="#myCarousel" data-slide-to="4"></li>
+											</ol>
+											<div class="carousel-inner">
+												<div class="item active">
+													<a href='main_pages/posters.html'><img src="assets/imgs/crsl/poster.png" class="d-block" alt="cartgis" /></a>
+													<div class="carousel-caption">
+														<div class="caption-bubble">
+															<h3>Cartography and GIS</h3>
+															<p>A poster I made with some friends of mine for a class at UCSB.</p>
+														</div>
+													</div>
+												</div>
+												<div class="item">
+													<a href='main_pages/posters.html'><img src="assets/imgs/crsl/maunaloa.png" alt="dem" /></a> 
+													<div class="carousel-caption">
+														<div class="caption-bubble">
+															<h3>Remote Sensing</h3>
+															<p>Ditigal Elevation Model of Mauna Loa, HI overlayed with a hillshade created in GEE.</p>
+														</div>
+													</div>
+												</div>
+												<div class="item">
+													<a href='main_pages/posters.html'><img src="assets/imgs/crsl/smark_2021-07-01.png" alt="ozone" ></a>
+													<div class="carousel-caption">
+														<div class="caption-bubble">
+															<h3>Statistical Learning</h3>
+															<p>Training variables and predictive results from the XGBoost model in my thesis.</p>
+														</div>
+													</div>
+												</div>
+												<div class="item">
+													<a href='main_pages/posters.html'><img src="assets/imgs/crsl/spattemp.png" alt="trees" ></a>
+													<div class="carousel-caption">
+														<div class="caption-bubble">
+															<h3>Spatial-Temporal Analysis</h3>
+															<p>An 8-day simulation of growing tree density created for fire risk analysis.</p>
+														</div>
+													</div>
+												</div>
+												<div class="item">
+													<a href='main_pages/posters.html'><img src="assets/imgs/crsl/AstroArtPhotoShop.png" alt="astroart" ></a>
+													<div class="carousel-caption">
+														<div class="caption-bubble">
+															<h3>Astrophysics</h3>
+															<p>A refined image of Messier 31 (the Andromeda Galaxy) using the <a href='main_pages/posters.html#astrostuff'>LCO</a> at UCSB.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+												<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+												<span class="sr-only">Previous</span>
+											</a>
+											<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+												<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+												<span class="sr-only">Next</span>
+											</a>
+										</section>
+									</div>
+								</div>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+			<div class="row aln-center" id="accomplishments">
+				<div class="col-12">
+					<div class="scrollheader">
+						<header class="first major">
+							<h2>Accomplishments and Interests</h2>
+							<p>
+								Blogs, Programs and Additional Works
+							</p>
+						</header>
+					</div>
+				</div>
+			</div>
+			<div id="main-wrapper">
+				<div class="row aln-center">
+					<div class="col-12">
+						<div class="wrapper style3">
+							<div class="inner">
+								<section class="container box feature1">
+									<div class="row aln-center">
+										<div class="col-12">
+											<p>
+												<br> After developing a passion for GIS programming, I faced significant challenges with my physical and mental health, which led me to extend my graduate studies by two years to focus on recovery and growth. With newfound access to healthcare and several awarded funding opportunities, I was able to continue expanding my thesis and multidisciplinary skill set. During this time, I collaborated with prominent researchers who helped refine my technical and analytical abilities.
+											</p>
+										</div>
+									</div>
+								</section>
+								<div class="container">
+									<div class="row">
+										<div class="col-8 col-12-medium">
+											<section class="box article-list">
+												<h2 class="icon fa-file-alt">Publications</h2>
+												<article class="box excerpt">
+													<a href="https://nccasc.colorado.edu/index.php/blog/geographers-perspective-existence-topographic-signature-life" class="image left"><img src="assets/imgs/logos/nccasc.png" alt="" style="width: 180px;"/></a>
+													<div>
+														<header>
+															<span class="date">August, 2025</span>
+															<h3><a href="https://nccasc.colorado.edu/index.php/blog/geographers-perspective-existence-topographic-signature-life">NC CASC Blog</a></h3>
+														</header>
+														<p>
+															I had the pleasure of working with NC CASC as a CEST member to start my work on the topographic signature of life project. For this work, 
+															I wrote blog detailing it's importance and furture directions. This was part of a program called the Climate Adaptation Scientists
+															of Tomorrow which funded my final semester at CU.
+														</p>
+													</div>
+												</article>
+												<article class="box excerpt">
+													<a href="https://github.com/earthlab/firedpy" class="image left"><img src="assets/imgs/logos/firedpy.png" alt="" style="width: 180px;"/></a>
+													<div>
+														<header>
+															<span class="date">July, 2023</span>
+															<h3><a href="https://github.com/earthlab/firedpy">FIREDpy</a></h3>
+														</header>
+														<p>
+															The FIRe Event Delineation tool (FIREDPY) created by Earth Lab at CU. I was briefly apart of some summer work that fixed some edge-case 
+															issues on the program. It's classifies individual burn detections into discrete events for further analysis (Balch et. al., 2020).
+														</p>
+													</div>
+												</article>
+											</section>
+											<section class="box article-list" style="padding-top: 0;">
+												<h2 class="icon fa-solid fa-brain">Research</h2>
+												<article class="box excerpt">
+													<a href="main_pages/thesis1a2.html" class="image left"><img src="assets/imgs/geog/county.png" alt="" style="width: 180px;"/></a>
+													<div>
+														<header>
+															<span class="date">January, 2026</span>
+															<h3><a href="main_pages/thesis1a2.html">Thesis - Excerpt</a></h3>
+														</header>
+														<p>
+															This will take you to an excerpt from my thesis. I only included the first three chapters After focusing on the 
+															machine learning and geostatistical applications of my work, I hope to apply my findings to more human centric 
+															research.
+														</p>
+													</div>
+												</article>
+												<article class="box excerpt">
+													<a href="main_pages/thesis1a2.html" class="image left"><img src="assets/imgs/stock/pic04.jpg" alt="" style="width: 180px;"/></a>
+													<div>
+														<header>
+															<span class="date">In Progress</span>
+															<h3><a href="main_pages/thesis1a2.html">Thesis - State Model</a></h3>
+														</header>
+														<p>
+															Eventually, this will take you to a GitHub that I created to begin translating my script into a more user friendly function.
+															For now, this will take you to my thesis excerpt.
+														</p>
+													</div>
+												</article>
+												<article class="box excerpt">
+													<a href="main_pages/topolife.html" class="image left"><img src="assets/imgs/geog/olympusmonsmol.png" alt="" style="width: 180px;"/></a>
+													<div>
+														<header>
+															<span class="date">In Progress</span>
+															<h3><a href="main_pages/thesis1a2.html">Topographical Signature of Life</a></h3>
+														</header>
+														<p>
+															A potential biosignature is a substance or structure that might have a biological origin but requires 
+															more data or further study before reaching a conclusion about the absence or presence of life. Do they
+															exist? If so, can we detect them in the topographic scape of Earth?
+														</p>
+													</div>
+												</article>
+											</section>
+										</div>
+										<div class="col-4 col-12-medium">
+											<section class="box article-list">
+												<h2><i class="fa fa-plane" style="display: inline-block; opacity: 35%;"></i> Hobbies</h2>
+												<article>
+													<a href="https://ryan-erickson911.github.io/IamRyanE.github.io/" class="image featured"><img src="assets/imgs/main/pic07.jpg" alt=""></a>
+													<header>
+														<h3>
+															<a href="https://ryan-erickson911.github.io/IamRyanE.github.io/">Road Trips</a>
+														</h3>
+														<p>
+															A map of fun points of interest.
+														</p>
+													</header>
+													<p>
+													As my network and social life grows, I hope to expand this map with more international points. Most of the road trips I've taken have been 
+													across the contiguous US with my Grandparents. Some of my favorite places and future destinations are on it as well!
+													</p>
+													<center><footer>
+														<a href="https://ryan-erickson911.github.io/IamRyanE.github.io/" class="button alt icon solid "><i class="fa-solid fa-map-location-dot"></i> Go to map</a>
+													</footer></center>
+												</article>
+											</section>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -538,6 +583,7 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/button.js"></script>
+			<script src="assets/js/headers.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 	</body>
