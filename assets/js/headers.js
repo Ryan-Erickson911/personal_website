@@ -63,23 +63,23 @@ function handleScroll() {
                     });
                 }
 
-                $('body').css({ "padding-top": elementHeight + nextHeight });
+                $('body').css({ "padding-top": elementHeight + nextHeight - menuHeight});
                 return false;
             }
 
             $this.css({
                 position: "fixed",
-                top: menuHeight,
+                top: menuHeight-0.5,
                 width: elementWidth
             });
 
             if ($next) {
-                $next.css({ position: "static", width: "", left: "", right: "" });
+                $next.css({ position: "static",top: menuHeight, width: "", left: "", right: "" });
             }
 
-            $('body').css({ "padding-top": elementHeight });
+            $('body').css({ "padding-top": elementHeight + menuHeight });
         } else {
-            $this.css({ position: "static", width: "", left: "", right: "" });
+            $this.css({ position: "static",top: menuHeight, width: "", left: "", right: "" });
         }
     });
 

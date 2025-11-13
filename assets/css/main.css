@@ -66,27 +66,6 @@ input, select, textarea {
 	appearance: none;
 }
 
-#myBtn {
-  z-index: 4; 
-  border: none; 
-  outline: none; 
-  background-color: #696969;
-  color: grey; 
-  cursor: pointer; 
-  padding: 15px;
-  border-radius: 10px;
-  font-size: 18px;
-  opacity: 50%;
-}
-
-#myBtn:hover {
-  background-color: rgba(207, 184, 124, 1); /* Add a dark-grey background on hover */
-  border: rgba(0, 0, 0, 1); /* Remove borders */
-  outline: rgba(0, 0, 0, 1); /* Remove outline */
-  color: red; /* Text color */
-  opacity: 75%;
-}
-
 #mainmenu{
 	padding: 0%;
 	position: fixed; 
@@ -106,21 +85,21 @@ input, select, textarea {
 #mainSidebar{
 	padding: 3%;
 	position: fixed; 
-	width: 20dvw;
-	height: 100dvh;
-	top: 0;
+	width: 17.5dvw;
+	height: 99dvh;
+	top: 1dvh;
 	padding-top: 15em;
 	opacity: 1;
 	z-index: 10;
 	box-shadow: inset 0.5dvw 0 0 0 rgba(207, 184, 124, 1), inset 1dvw 0 0 0 rgba(0, 0, 0, 1), inset -0.5dvw 0 0 0 rgba(207, 184, 124, 1), inset -1dvw 0 0 0 rgba(0, 0, 0, 1);
-	background-color: rgba(220, 225, 229, 1);
+	background-color: rgba(255, 255, 255, 1);
 }
 
 .scrollheader {
 	width: 100dvw;
 	text-align: center;
 	transition: top 0.5s ease;
-	padding: 3dvh 0 1dvh;
+	padding: 3dvh 0 2dvh;
 	z-index: 9;
 	background: #ffffffff;
 	background-image: url("images/bg03.png"), url("images/bg04.png"), url("images/bg02.png");
@@ -154,7 +133,7 @@ input, select, textarea {
 	padding: 5px 10px;
 	border: none;
 	border-radius: 50px;
-	background-color: #007bff;
+	background-color: rgba(207, 184, 124, 1);
 	color: white;
 	cursor: pointer;
 	font-size: 12px;
@@ -165,7 +144,7 @@ input, select, textarea {
 }
 
 .calc-toggle:hover {
-	background-color: #0056b3;
+	background-color: rgba(207, 184, 124, 1);
   	opacity: 90%;
 }
 
@@ -182,16 +161,12 @@ input, select, textarea {
 	}
 }
 
-::placeholder {
-  color: rgb(221, 221, 221);
-}
-
 .cwrapper {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(101, 186, 255, 1);
+  background-color: rgba(207, 184, 124, 1);
   border-color: rgba(0, 0, 0, 1);
   transition: 0.8s all;
   border-radius: 20px;
@@ -257,7 +232,7 @@ input[type="cbutton"] {
 }
 
 input[type="cbutton"]:hover {
-  background-color: rgba(243, 201, 14, 1);
+  background-color: rgba(207, 184, 124, 1);
   color: #fff;
   opacity: 70%;
 }
@@ -298,7 +273,8 @@ html {
 }
 
 body {
-	background: #303238 url("images/bg01.png");
+	background: #3a3a3aff url("images/bg01.png");
+	max-width: 100dvw;
 }
 	body.is-preload * {
 		-moz-transition: none !important;
@@ -312,7 +288,7 @@ body {
 	}
 body, input, select, textarea {
 	font-family: 'Open Sans', sans-serif;
-	color: #7b818c;
+	color: #999999ff;
 	font-weight: 400;
 	font-size: 11pt;
 	line-height: 1.85em;
@@ -329,7 +305,7 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 	font-weight: 800;
 	letter-spacing: 0.04em;
-	color: #404248;
+	color: #4b4b4bff;
 	margin: 0 0 1em 0;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -433,7 +409,7 @@ hr {
 	background-color: #fff;
 }
 .carousel-indicators .active {
-	background-color: blue;
+	background-color: rgba(207, 184, 124, 1);
 }
 @media screen and (max-width: 1280px) {
 	.carousel-inner > .item > img,
@@ -687,7 +663,7 @@ form input[type="email"]:focus,
 form input[type="password"]:focus,
 form select:focus,
 form textarea:focus {
-	box-shadow: 0 0 2px 1px #4091bf;
+	box-shadow: 0 0 2px 1px rgba(207, 184, 124, 1);
 }
 form input[type="text"],
 form input[type="email"],
@@ -832,7 +808,7 @@ button,
 	input[type="reset"]:hover,
 	button:hover,
 	.button:hover {
-		background-color: rgba(25, 27, 167, 1);
+		background-color: rgba(207, 184, 124, 1);
 	}
 	input[type="button"]:active,
 	input[type="submit"]:active,
@@ -869,7 +845,7 @@ button,
 	input[type="reset"].alt:hover,
 	button.alt:hover,
 	.button.alt:hover {
-		background-color: rgba(25, 27, 167, 1);
+		background-color: rgba(207, 184, 124, 1);
 	}
 	
 	input[type="button"].alt:active,
@@ -1190,7 +1166,7 @@ ol.default {
 /* Wrappers */
 
 	#header-wrapper {
-		background: url("images/bg01.png"), url("../imgs/stock/header.jpg");
+		background: url("images/bgplain.png"), url("../imgs/stock/header1.jpg");
 		background-position: top left, center center;
 		background-size: auto, cover;
 		padding: 3em 0;
@@ -1223,7 +1199,8 @@ ol.default {
 
 		.wrapper.style1 {
 			position: relative;
-			text-shadow: 1px 1px 0 #fff;
+			color: rgba(80, 80, 80, 1);
+			text-shadow: 0.5px 1px 0 #888888ff;
 			background-color: #ddddddff;
 			background-image: url("images/bg03.png"), url("images/bg04.png"), url("images/bg02.png");
 			background-repeat: no-repeat, no-repeat, repeat;
@@ -1231,8 +1208,16 @@ ol.default {
 			background-position: top center, bottom center, top left;
 		}
 
+		.wrapper.style2 {
+			position: relative;
+			color: rgba(80, 80, 80, 1);
+			text-shadow: 1px 1px 0 #fff;
+			background-color: #fff;
+		}
+
 		.wrapper.style3 {
 			position: relative;
+			color: rgba(80, 80, 80, 1);
 			text-shadow: 1px 1px 0 #fff;
 			background-color: #fff;
 			background-image: url("images/bg03.png"), url("images/bg02.png");
@@ -1417,7 +1402,7 @@ ol.default {
 
 		/* Nav */
 
-			#rjes-wrapper {
+			#page-wrapper {
 				-moz-backface-visibility: hidden;
 				-webkit-backface-visibility: hidden;
 				-ms-backface-visibility: hidden;
@@ -1426,7 +1411,6 @@ ol.default {
 				-webkit-transition: -webkit-transform 0.5s ease;
 				-ms-transition: -ms-transform 0.5s ease;
 				transition: transform 0.5s ease;
-				padding-bottom: 1px;
 			}
 
 			#titleBar {
@@ -1584,7 +1568,7 @@ ol.default {
 					color: #fff;
 				}
 
-			body.navPanel-visible #rjes-wrapper {
+			body.navPanel-visible #page-wrapper {
 				-moz-transform: translateX(275px);
 				-webkit-transform: translateX(275px);
 				-ms-transform: translateX(275px);
