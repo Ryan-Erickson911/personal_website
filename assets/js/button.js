@@ -5,10 +5,6 @@ const sunIcon = "assets/imgs/svgs/SunIcon.svg";
 const moonIcon = "assets/imgs/svgs/MoonIcon.svg";
 const cloudIcon = "assets/imgs/svgs/cloud.svg";
 const themeIcon = document.getElementById("doc-icon");
-const res = document.getElementById("result");
-const toast = document.getElementById("toast");
-const toggleBtn = document.getElementById('calc-toggle');
-const calcContainer = document.getElementById('calc-container');
 let mybutton = document.getElementById("myBtn");
 
 function ButtonScrollFunction() {

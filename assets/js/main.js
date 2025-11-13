@@ -29,7 +29,7 @@
 			mode: 'fade',
 			noOpenerFade: true,
 			speed: 300,
-			detach: false
+			detach: true
 		});
 
 	// Nav.

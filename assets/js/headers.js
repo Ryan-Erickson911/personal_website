@@ -1,4 +1,3 @@
-// Cache offsets
 let topOffset = [];
 const $headers = $('.scrollheader');
 const menu = document.getElementById("mainmenu");
@@ -9,18 +8,36 @@ function updateOffsets() {
         topOffset.push($(this).offset().top);
     });
 }
-
-function scrollFunction() {
+function handleScroll() {
     const menuHeight = menu ? menu.offsetHeight : 0;
     const scrollTop = $(window).scrollTop();
     const headerCount = $headers.length;
     let scrolled = false;
 
+    const scrollY = window.scrollY || window.pageYOffset;
+    const windowHeight = window.innerHeight;
+    const docHeight = document.documentElement.scrollHeight;
+    const atBottom = scrollY + windowHeight >= docHeight - 5;
+
+    if (atBottom) {
+        $headers.css({
+            transform: "translateY(-100%)",
+            opacity: "0",
+            transition: "transform 0.4s ease, opacity 0.4s ease"
+        });
+        return;
+    } else {
+        $headers.css({
+            transform: "translateY(0)",
+            opacity: "1",
+            transition: "transform 0.4s ease, opacity 0.4s ease"
+        });
+    }
+
     $headers.each(function (index) {
         const $this = $(this);
         const elementHeight = $this.outerHeight();
         const elementWidth = $this.outerWidth();
-        const elementLeft = $this.offset().left;
 
         const $next = index < headerCount - 1 ? $headers.eq(index + 1) : null;
         const nextHeight = $next ? $next.outerHeight() : 0;
@@ -46,7 +63,7 @@ function scrollFunction() {
                     });
                 }
 
-                $('body').css({ "padding-top": elementHeight + nextHeight});
+                $('body').css({ "padding-top": elementHeight + nextHeight });
                 return false;
             }
 
@@ -57,20 +74,22 @@ function scrollFunction() {
             });
 
             if ($next) {
-                $next.css({ position: "static", width: "", left: "" , right: ""});
+                $next.css({ position: "static", width: "", left: "", right: "" });
             }
 
             $('body').css({ "padding-top": elementHeight });
         } else {
-            $this.css({ position: "static", width: "", left: "", right: ""});
+            $this.css({ position: "static", width: "", left: "", right: "" });
         }
     });
+
     if (!scrolled) {
         $('body').css({ "padding-top": 0 });
     }
 }
+
 $(function () {
     updateOffsets();
     $(window).on('resize', updateOffsets);
-    $(window).on('scroll', scrollFunction);
+    $(window).on('scroll', handleScroll);
 });
