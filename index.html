@@ -3,27 +3,27 @@
 	<head>
 		<title>Ryan Erickson</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<script src="https://kit.fontawesome.com/a4631bf45a.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="assets/css/carousel.css"/>
 		<link rel="stylesheet" href="assets/css/main.css" id="doc-theme"/>
 	</head>
-	<body class="homepage is-preload">
-		<nav class="w3-sidebar w3-collapse w3-animate-left" id="mainSidebar">
-			<div class="w3-container" style="color: rgb(56, 56, 56);">
+	<body class="homepage is-preload" style="max-width:device-width">
+		<nav class="sidebar collapse animate-left" id="mainSidebar">
+			<div class="container" style="color:rgba(56, 56, 56,1);">
 				<h2><b><a href="#top" target="_self">About Me</a></b></h2>
 				<p>"Master of Geography, Jack of all trades"</p>
 				<p>A combination of dyslexica and ADHD:</p>
-				<div class="w3-bar-block">
+				<div class="bar-block">
 					<li><a href="#inquisitive" target="_self">Inquisitive</a></li>
 					<li><a href="#experience" target="_self">Experienced</a></li>
 					<li><a href="#accomplishments" target="_self">Diverse</a></li>
 				</div>
 				<h2><a href="#contact" target="_self"><br>Contact</a></h2>
-				<div class="w3-bar-block">
+				<div class="bar-block">
 					<li><a href="main_pages/resume.html" target='_self'>Resume</a></li>
 					<li><a href="main_pages/cv.html" target='_self'>CV</a></li>
 					<li><a href="https://www.linkedin.com/in/ryan-ericksons-profile/" target='_blank'>Linkedin</a></li>
@@ -31,7 +31,7 @@
 				</div>
 			</div>
 		</nav>
-		<div class="container" id="mainmenu">
+		<div id="mainmenu">
 			<header id="header">
 				<div class="inner">
 					<h1>
@@ -104,25 +104,23 @@
 		</div>
 		<div id="page-wrapper">
 			<div id="header-wrapper">
-				<div class="row aln-center">
-					<div class="col-12">
-						<div id="banner">
-							<h3>
-								<a href='https://cvhs.redlandsusd.net/'><img src="assets/imgs/logos/cvhs.png" style="display: inline-block" alt="Test 1" height="100"/></a>
-								<a href='https://www.chaffey.edu/'><img src="assets/imgs/logos/chaffey.png" style="display: inline-block" alt="Test 1" height="100"/></a>
-								<a href='https://www.ucsb.edu/'><img src="assets/imgs/logos/ucsb.png" style="display: inline-block" alt="Test 1" height="100"/></a>
-								<a href='https://www.colorado.edu/'><img src="assets/imgs/logos/cuboulder.png" style="display: inline-block" alt="Test 1" height="100"/></a>
-							</h3>
-							<h3>
-								Hi, my name is Ryan <i class="fa fa-smile-o fa-parent fa-bounce" style="--fa-bounce-land-scale-x: 1.2;--fa-bounce-land-scale-y: .8;--fa-bounce-rebound: 5px;"></i>
-							</h3>
-							<img src="assets/imgs/main/meinsf.png"  style="position:static;" alt="Test 1" width="292" height="300"/>
-							<h3>
-								<br><br> I have a Masters in Geography <i class="fa fa-arrow-down fa-flip" style="--fa-animation-duration: 2s;"></i>
-							</h3>
-							<p>My thesis focused on applying data science to urban ecology!</p>
-							<a href="https://github.com/Ryan-Erickson911/surface_ozone" target='_blank' class="button large icon solid"><i class="fa-brands fa-github"></i> Check it out!</a>
-						</div>
+				<div class="inner">
+					<div id="banner">
+						<h3>
+							<a href='https://cvhs.redlandsusd.net/'><img src="assets/imgs/logos/cvhs.png" style="display: inline-block" alt="Test 1" height="100"/></a>
+							<a href='https://www.chaffey.edu/'><img src="assets/imgs/logos/chaffey.png" style="display: inline-block" alt="Test 1" height="100"/></a>
+							<a href='https://www.ucsb.edu/'><img src="assets/imgs/logos/ucsb.png" style="display: inline-block" alt="Test 1" height="100"/></a>
+							<a href='https://www.colorado.edu/'><img src="assets/imgs/logos/cuboulder.png" style="display: inline-block" alt="Test 1" height="100"/></a>
+						</h3>
+						<h3>
+							Hi, my name is Ryan <i class="fa fa-smile-o fa-parent fa-bounce" style="--fa-bounce-land-scale-x: 1.2;--fa-bounce-land-scale-y: .8;--fa-bounce-rebound: 5px;"></i>
+						</h3>
+						<img src="assets/imgs/main/meinsf.png"  style="position:static;" alt="Test 1" width="292" height="300"/>
+						<h3>
+							<br><br> I have a Masters in Geography <i class="fa fa-arrow-down fa-flip" style="--fa-animation-duration: 2s;"></i>
+						</h3>
+						<p>My thesis focused on applying data science to urban ecology!</p>
+						<a href="https://github.com/Ryan-Erickson911/surface_ozone" target='_blank' class="button large icon solid"><i class="fa-brands fa-github"></i> Check it out!</a>
 					</div>
 				</div>
 			</div>
@@ -273,58 +271,21 @@
 								<div class="container">
 									<div id="myCarousel" class="carousel slide" data-interval="3000">
 										<section>
-											<ol class="carousel-indicators">
-												<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-												<li data-target="#myCarousel" data-slide-to="1"></li>
-												<li data-target="#myCarousel" data-slide-to="2"></li>
-												<li data-target="#myCarousel" data-slide-to="3"></li>
-												<li data-target="#myCarousel" data-slide-to="4"></li>
-											</ol>
 											<div class="carousel-inner">
 												<div class="item active">
 													<a href='main_pages/posters.html'><img src="assets/imgs/crsl/poster.png" class="d-block" alt="cartgis" /></a>
-													<div class="carousel-caption">
-														<div class="caption-bubble">
-															<h3>Cartography and GIS</h3>
-															<p>A poster I made with some friends of mine for a class at UCSB.</p>
-														</div>
-													</div>
 												</div>
 												<div class="item">
 													<a href='main_pages/posters.html'><img src="assets/imgs/crsl/maunaloa.png" alt="dem" /></a> 
-													<div class="carousel-caption">
-														<div class="caption-bubble">
-															<h3>Remote Sensing</h3>
-															<p>Ditigal Elevation Model of Mauna Loa, HI overlayed with a hillshade created in GEE.</p>
-														</div>
-													</div>
 												</div>
 												<div class="item">
 													<a href='main_pages/posters.html'><img src="assets/imgs/crsl/smark_2021-07-01.png" alt="ozone" ></a>
-													<div class="carousel-caption">
-														<div class="caption-bubble">
-															<h3>Statistical Learning</h3>
-															<p>Training variables and predictive results from the XGBoost model in my thesis.</p>
-														</div>
-													</div>
 												</div>
 												<div class="item">
 													<a href='main_pages/posters.html'><img src="assets/imgs/crsl/spattemp.png" alt="trees" ></a>
-													<div class="carousel-caption">
-														<div class="caption-bubble">
-															<h3>Spatial-Temporal Analysis</h3>
-															<p>An 8-day simulation of growing tree density created for fire risk analysis.</p>
-														</div>
-													</div>
 												</div>
 												<div class="item">
 													<a href='main_pages/posters.html'><img src="assets/imgs/crsl/AstroArtPhotoShop.png" alt="astroart" ></a>
-													<div class="carousel-caption">
-														<div class="caption-bubble">
-															<h3>Astrophysics</h3>
-															<p>A refined image of Messier 31 (the Andromeda Galaxy) using the <a href='main_pages/posters.html#astrostuff'>LCO</a> at UCSB.</p>
-														</div>
-													</div>
 												</div>
 											</div>
 											<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">

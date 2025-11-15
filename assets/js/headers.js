@@ -1,6 +1,7 @@
 let topOffset = [];
 const $headers = $('.scrollheader');
 const menu = document.getElementById("mainmenu");
+const smallmenu = document.getElementById("titleBar");
 
 function updateOffsets() {
     topOffset = [];
@@ -8,7 +9,7 @@ function updateOffsets() {
         topOffset.push($(this).offset().top);
     });
 }
-function handleScroll() {
+function handleScroll() {   
     const menuHeight = menu ? menu.offsetHeight : 0;
     const scrollTop = $(window).scrollTop();
     const headerCount = $headers.length;
