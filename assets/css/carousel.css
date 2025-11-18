@@ -1,5 +1,93 @@
-.carousel-inner>.item>img,
-.carousel-inner>.item>a>img{width:80%;margin:auto;}
-@media screen and (max-width:1280px){.carousel-inner>.item>img,.carousel-inner>.item>a>img{width: 85%;}}
-@media screen and (max-width:980px){.carousel-inner>.item>img,.carousel-inner>.item>a>img{width:90%;}}
-@media screen and (max-width:736px){.carousel-inner >.item>img,.carousel-inner>.item>a>img{width: 100%;}}
+hr {position: center; min-width: 30%; width: 80%}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+	width: 80%;
+	margin: auto;
+}
+.carousel-caption {
+	position: absolute;
+	left: 50%;
+	bottom: 5.5%;
+	transform: translateX(-50%);
+	text-align: center;
+}
+.caption-bubble {
+	display: inline-block;
+	background: rgba(55, 55, 55, 0.5);
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 5px;
+	text-align: center;
+}
+.caption-bubble h3 {
+	margin: 0 0 15px 0;
+	color: gold;
+}
+.caption-bubble p {
+	margin: 0;
+}
+.carousel-indicators {
+	bottom: 14.5%;
+	position: absolute;
+	z-index: 9999; 
+}
+.carousel-indicators li {
+	background-color: #fff; 
+}
+.carousel-indicators .active {
+	background-color: blue;
+}
+@media screen and (max-width: 1280px) {
+	.carousel-inner > .item > img,
+	.carousel-inner > .item > a > img {
+		width: 85%;
+	}
+	.caption-bubble h3 {
+		font-size: 1.5em;
+	}
+}
+@media screen and (max-width: 980px) {
+	.carousel-inner > .item > img,
+	.carousel-inner > .item > a > img {
+		width: 90%;
+	}
+	.carousel-caption {
+		bottom: 8%;
+	}
+	.caption-bubble {
+		padding: 6px 8px;
+	}
+	.caption-bubble h3 {
+		font-size: 1.25em;
+	}
+	.caption-bubble p {
+		font-size: 0.9em;
+	}
+}
+@media screen and (max-width: 736px) {
+	.carousel-inner > .item > img,
+	.carousel-inner > .item > a > img {
+		width: 100%;
+	}
+	.carousel-caption {
+		position: static; /* place below the image */
+		transform: none;
+		margin-top: 0.5em;
+	}
+	.caption-bubble {
+		display: block;
+		width: 90%;
+		margin: 0 auto;
+		background: rgba(0, 0, 0, 0.6);
+	}
+	.caption-bubble h3 {
+		font-size: 1.1em;
+		margin-bottom: 0.5em;
+	}
+	.caption-bubble p {
+		font-size: 0.85em;
+	}
+	.carousel-indicators {
+		bottom: 0;
+	}
+}

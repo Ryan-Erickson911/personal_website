@@ -59,7 +59,6 @@ function handleScroll() {
                 if ($next) {
                     $next.css({
                         position: "fixed",
-                        top: nextTop - scrollTop - menuHeight,
                         width: $next.outerWidth()
                     });
                 }
