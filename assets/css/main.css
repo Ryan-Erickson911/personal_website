@@ -2009,7 +2009,7 @@ input, select, textarea {
 
 	.sidebar#mainSidebar p {
 		text-align: center;
-		padding: 5% 2.5%;
+		padding: 2.5% 5%;
 	}
 	
 	.sidebar#mainSidebar li {
@@ -2497,7 +2497,7 @@ input, select, textarea {
 
 		/* Header */
 
-			#header, #nav, #mainSidebar, #motionbutton{
+			#header, #nav, .sidebar#mainSidebar, button#motionbutton{
 				display: none;
 			}
 			
@@ -2536,12 +2536,6 @@ input, select, textarea {
 				#banner br {
 					display: none;
 				}
-
-		/* Sidebar */
-
-			#sidebar {
-				margin-top: 1em;
-			}
 
 	}
 
@@ -2662,17 +2656,17 @@ input, select, textarea {
 					font-size:16pt !important;
 				}
 
-		/* Sidebar */
-
-			#sidebar {
-				margin-top: 2em;
-			}
-
 		/* Footer */
 
 			#copyright {
 				margin-top: 0;
 				padding: 3em 0 1em 0;
+			}
+
+		/* Sidebar */
+
+			.sidebar#mainSidebar, button#motionbutton{
+				display: none;
 			}
 
 	}
