@@ -3,119 +3,121 @@
     	<title>Ryan Erickson</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<script src="https://kit.fontawesome.com/a4631bf45a.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/main.css" id="doc-theme"/>
 	</head>
 	<body class="homepage is-preload">
-		<form action="https://www.rerickson.me">
-			<button id="myBtn" title="Go to top"><i class="fa fa-home" style="opacity: 75%; color: lightgrey;"></i></button>
-		</form>
+		<nav class="sidebar collapse animate-left" id="mainSidebar">
+			<h2><b><a href="../index.html#top" target="_self">About Me</a></b></h2>
+			<p>"Master of Geography, Jack of all trades"</p>
+			<div class="bar-block">
+				<li><a href="#inquisitive" target="_self">Inquisitive</a></li>
+				<li><a href="#experience" target="_self">Experienced</a></li>
+				<li><a href="#accomplishments" target="_self">Diverse</a></li>
+			</div>
+			<p>
+				<br>Co-morbid dyslexica and ADHD drives ability to tackle any 
+				challenge. Need technical help with a project?</p>
+			<h2><b><a href="#contact" target="_self">Contact</a></b></h2>
+			<div class="bar-block">
+				<li><a href="main_pages/resume.html" target='_self'>Resume</a></li>
+				<li><a href="main_pages/cv.html" target='_self'>CV</a></li>
+				<li><a href="https://www.linkedin.com/in/ryan-ericksons-profile/" target='_blank'>Linkedin</a></li>
+				<li><a href="https://boulder.joinhandshake.com/profiles/rerickson" target='_blank'>Handshake</a></li>
+			</div>
+		</nav>
 		<div id="page-wrapper">
-			<div id="header-wrapper" style="padding-bottom: 1%;">
+			<div id="header-wrapper">
 				<div class="container">
 					<header id="header">
 						<div class="inner">
-				    		<h1>
-								<i class="fa-brands fa-github"></i>
-							</h1>
+							<h1><a href="https://github.com/Ryan-Erickson911" target='_blank' id="logo"><i class="fa-brands fa-github" width="20px" height="20px"></i></a><a href="index.html" id="logo2"><i class="fa fa-home" width="20px" height="20px"></i></a></h1> 
+							<!-- <img src="assets/imgs/svgs/cloud.svg" id="doc-icon" onclick="changeDocTheme();return false;" width="20px" height="20px"> -->
 							<nav id="nav">
-				      	  		<ul>
+							
+								<ul>
+									<li>
+										<a href="#">GIS</a>
+										<ul>
+											<li><a href="tutorial_pages/re_tutorials_index.html">Tutorials</a></li>
+											<li><a href="https://geemap.org/" target='_blank'>geemap (Dr. WU)</a></li>
+											<li><a href="https://www.arcgis.com/index.html" target='_blank'>Esri</a></li>
+											<li><a href="https://qgis.org/" target='_blank'>QGIS</a></li>
+											<li><a href="https://grass.osgeo.org/" target='_blank'>GRASS</a></li>
+										</ul>
+									</li>
 									<li>
 										<a href="#">Affiliations</a>
 										<ul>
 											<li><a href="https://www.colorado.edu/geography/ryan-erickson" target='_blank'>CU Profile</a></li>
 											<li><a href="https://www.spatstat.com/people/" target='_blank'>STAR Lab</a></li>
-											<li><a href="https://ibs.colorado.edu/people/ryan-erickson/">CUPC</a></li>
-											<li><a href="https://cires.colorado.edu/people/ryan-erickson#ceca">CECA</a></li>
+											<li><a href="https://ibs.colorado.edu/people/ryan-erickson/" target='_blank'>CUPC</a></li>
+											<li><a href="https://cires.colorado.edu/people/ryan-erickson#ceca" target='_blank'>CECA</a></li>
 										</ul>
 									</li>
-				      				<li><a href="https://www.linkedin.com/in/ryan-ericksons-profile/" target='_blank'>Linkedin</a></li>
-									<li><a href="https://boulder.joinhandshake.com/profiles/rerickson" target='_blank'>Handshake</a></li>
-									<li><a href="#contact" target='_self'>Contact</a></li>
-									<li style="width: min-content;">
-										<a href="#sitemenu"><i class="fa fa-bars"></i></a>
+									<li>
+										<a href="#">Data</a>
 										<ul>
-											<li><a href="https://www.rerickson.me">Home</a></li>
-											<li><a href="cv.html" target="_self">CV</a></li>
-											<li>
-												<a href="#">GIS</a>
-												<ul>
-													<li><a href="labs/lab_index.html">Labs and Tutorials</a></li>
-										    		<li><a href="https://geemap.org/" target='_blank'>Dr. Wu's YouTube for geemap</a></li>
-										    		<li><a href="https://www.arcgis.com/index.html" target='_blank'>Esri</a></li>
-										    		<li><a href="https://qgis.org/" target='_blank'>QGIS</a></li>
-										    		<li><a href="https://grass.osgeo.org/" target='_blank'>GRASS</a></li>
-												</ul>
-											</li>
-											<li>
-												<a href="#">Data</a>
-												<ul>
-													<li><a href="https://www.epa.gov/outdoor-air-quality-data" target='_blank'>EPA Air Quality Data</a></li>
-													<li><a href="https://epsg.io/" target='_blank'>Epsg.io</a></li>
-										    		<li><a href="https://developers.google.com/earth-engine/datasets/" target='_blank'>Google Earth Engine</a></li>
-										    		<li><a href="https://www.openstreetmap.org/#map=5/38.01/-95.84" target='_blank'>OpenStreetMap</a></li>
-										    		<li><a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html" target='_blank'>TIGER/Line</a></li>
-										    		<li><a href="https://www.unep.org/publications-data" target='_blank'>UNEP</a></li>
-												</ul>
-											</li>
-											<li>
-												<a href="#">Java</a>
-												<ul>
-										    		<li><a href="tutorial_pages/Java/rejava_index.html">Tutorials</a></li>
-										    		<li><a href="https://www.oracle.com/java/technologies/downloads/" target='_blank'>Download</a></li>
-										    		<li><a href="https://eclipseide.org/" target='_blank'>Eclipse</a></li>
-										    		<li><a href="https://medium.com/javarevisited/25-reasons-why-java-is-still-around-in-2024-452c582d55d0" target='_blank'>Why Java?</a></li>
-												</ul>
-											</li>
-											<li>
-												<a href="#">Python</a>
-												<ul>
-										    		<li><a href="tutorial_pages/Python/repython_index.html">Tutorials</a></li>
-													<li><a href="https://www.python.org/downloads/" target='_blank'>Download</a></li>
-													<li><a href="https://anaconda.org/conda-forge/openai" target='_blank'>Anaconda</a></li>
-													<li><a href="https://code.visualstudio.com/" target='_blank'>VS Code</a></li>
-												</ul>
-											</li>
-											<li>
-												<a href="#">R</a>
-												<ul>
-										    		<li><a href="tutorial_pages/R/rer_index.html">Tutorials</a></li>
-										    		<li><a href="https://www.r-project.org/" target='_blank'>Download</a></li>
-										    		<li><a href="https://posit.co/downloads/" target='_blank'>RStudio</a></li>
-										    		<li><a href="https://positron.posit.co/" target='_blank'>Positron</a></li>
-												</ul>
-											</li>
+											<li><a href="https://www.epa.gov/outdoor-air-quality-data" target='_blank'>EPA Air Quality Data</a></li>
+											<li><a href="https://epsg.io/" target='_blank'>Epsg.io</a></li>
+											<li><a href="https://developers.google.com/earth-engine/datasets/" target='_blank'>Google Earth Engine</a></li>
+											<li><a href="https://www.openstreetmap.org/#map=5/38.01/-95.84" target='_blank'>OpenStreetMap</a></li>
+											<li><a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html" target='_blank'>TIGER/Line</a></li>
+											<li><a href="https://www.unep.org/publications-data" target='_blank'>UNEP</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Java</a>
+										<ul>
+											<li><a href="tutorial_pages/Java/rejava_index.html">Tutorials</a></li>
+											<li><a href="https://www.oracle.com/java/technologies/downloads/" target='_blank'>Download</a></li>
+											<li><a href="https://eclipseide.org/" target='_blank'>Eclipse</a></li>
+											<li><a href="https://medium.com/javarevisited/25-reasons-why-java-is-still-around-in-2024-452c582d55d0" target='_blank'>Why Java?</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Python</a>
+										<ul>
+											<li><a href="tutorial_pages/Python/repython_index.html">Tutorials</a></li>
+											<li><a href="https://www.python.org/downloads/" target='_blank'>Download</a></li>
+											<li><a href="https://anaconda.org/conda-forge/openai" target='_blank'>Anaconda</a></li>
+											<li><a href="https://code.visualstudio.com/" target='_blank'>VS Code</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">R</a>
+										<ul>
+											<li><a href="tutorial_pages/R/rer_index.html">Tutorials</a></li>
+											<li><a href="https://www.r-project.org/" target='_blank'>Download</a></li>
+											<li><a href="https://posit.co/downloads/" target='_blank'>RStudio</a></li>
+											<li><a href="https://positron.posit.co/" target='_blank'>Positron</a></li>
 										</ul>
 									</li>
 								</ul>
-					  		</nav>
+							</nav>
 						</div>
 					</header>
-				</div>			
-				<div style="padding-top: 1%;">
-					<center>
-						<a href='https://cvhs.redlandsusd.net/'><img src="../assets/imgs/logos/cvhs.png" style="display: inline-block" alt="Test 1" height="100"/></a>
-						<a href='https://www.chaffey.edu/'><img src="../assets/imgs/logos/chaffey.png" style="display: inline-block" alt="Test 1" height="100"/></a>
-						<a href='https://www.ucsb.edu/'><img src="../assets/imgs/logos/ucsb.png" style="display: inline-block" alt="Test 1" height="100"/></a>
-						<a href='https://www.colorado.edu/'><img src="../assets/imgs/logos/cuboulder.png" style="display: inline-block" alt="Test 1" height="100"/></a>
-					</center>
 				</div>
 			</div>
-			<div id="banner">
-				<h2>
-					Resume
-				</h2>
-				<center>
-					<object data="../assets/docs/RyanErickson_Resume.pdf" type="application/pdf" width="850px" height="1100px">
-						<br><embed src="../assets/docs/RyanErickson_Resume.pdf#toolbar=0&navpanes=0&scrollbar=0&statusbar=0&messages=0&scrollbar=0"></embed>
-					</object>
-				</center>
-				<center>
-					<h3 style="color: whitesmoke; font-size: large;"><br>Download my resume <a href="../assets/docs/RyanErickson_Resume.pdf" style="color: lightblue" download>here</a>!</h3>
-				</center>
+			<div id="main-wrapper">
+				<div id="resume"></div>
+				<div class="row aln-center" id="scrollheader">
+					<header class="col-11 first major">
+						<h2>Resume</h2>
+					</header>
+				</div>
+				<div class="wrapper style4">
+					<center>
+						<object data="../assets/docs/RyanErickson_Resume.pdf" type="application/pdf" width="850px" height="1100px">
+							<br><embed src="../assets/docs/RyanErickson_Resume.pdf#toolbar=0&navpanes=0&scrollbar=0&statusbar=0&messages=0&scrollbar=0"></embed>
+						</object>
+					</center>
+					<center>
+						<h3 style="color: whitesmoke; font-size: large;"><br>Download my resume <a href="../assets/docs/RyanErickson_Resume.pdf" style="color: lightblue" download>here</a>!</h3>
+					</center>
+				</div>
 			</div>
 			<div id="footer-wrapper">
 				<footer id="footer" class="container">

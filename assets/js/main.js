@@ -31,9 +31,9 @@
 
 		// Title Bar.
 			$(
-				'<div id="titleBar">' +
+				'<div id="titleBar">' + 
 					'<a href="#navPanel" class="toggle"></a>' +
-					'<span class="title">' + $('#logo').html() + " " + $('#doc-icon').html() + '</span>' +
+					'<span class="title"> ' + '<a href="https://github.com/Ryan-Erickson911"  target="_blank">'+$('#logo').html()+ "</a>  " + $('#logo2').html() + '</span>' +
 				'</div>'
 			)
 				.appendTo($body);

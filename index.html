@@ -10,35 +10,51 @@
 		<link rel="stylesheet" href="assets/css/main.css" id="doc-theme"/>
 	</head>
 	<body class="homepage is-preload">
-		<nav class="sidebar collapse animate-left" id="mainSidebar">
-			<h2><b><a href="#top" target="_self">About Me</a></b></h2>
-			<p>"Master of Geography, Jack of all trades"</p>
-			<div class="bar-block">
-				<li><a href="#inquisitive" target="_self">Inquisitive</a></li>
-				<li><a href="#experience" target="_self">Experienced</a></li>
-				<li><a href="#accomplishments" target="_self">Diverse</a></li>
-			</div>
-			<p>
-				<br>Co-morbid dyslexica and ADHD drives ability to tackle any 
-				challenge. Need technical help with a project?</p>
-			<h2><b><a href="#contact" target="_self">Contact</a></b></h2>
-			<div class="bar-block">
-				<li><a href="main_pages/resume.html" target='_self'>Resume</a></li>
-				<li><a href="main_pages/cv.html" target='_self'>CV</a></li>
-				<li><a href="https://www.linkedin.com/in/ryan-ericksons-profile/" target='_blank'>Linkedin</a></li>
-				<li><a href="https://boulder.joinhandshake.com/profiles/rerickson" target='_blank'>Handshake</a></li>
-			</div>
-		</nav>
 		<div id="page-wrapper">
+			<div class="sidebar" id="mainSidebar">
+				<h2><a href="#top" target="_self">About Me</a></h2>
+				<p>"Master of Geography, Jack of all trades"</p>
+					<li><a href="#inquisitive" target="_self">Inquisitive</a></li>
+					<li><a href="#experience" target="_self">Experienced</a></li>
+					<li><a href="#accomplishments" target="_self">Diverse</a></li>
+				<p>
+					I use many programs for research and fun!
+				</p>
+				<h2><a href="#contact" target="_self" style="top: 20%;">Contact</a></h2>
+					<li><a href="main_pages/resume.html" target='_self'>Resume</a></li>
+					<li><a href="main_pages/cv.html" target='_self'>CV</a></li>
+					<li><a href="https://www.linkedin.com/in/ryan-ericksons-profile/" target='_blank'>Linkedin</a></li>
+					<li><a href="https://boulder.joinhandshake.com/profiles/rerickson" target='_blank'>Handshake</a></li>
+			</div>
+			<button onclick="NavControl()" id="motionbutton">&times;</button>
 			<div id="header-wrapper">
 				<div class="container">
 					<header id="header">
 						<div class="inner">
-							<h1><a href="https://github.com/Ryan-Erickson911" target='_blank' id="logo"><i class="fa-brands fa-github" width="20px" height="20px"></i></a><a href="index.html" id="logo2"><i class="fa fa-home" width="20px" height="20px"></i></a></h1> 
-							<!-- <img src="assets/imgs/svgs/cloud.svg" id="doc-icon" onclick="changeDocTheme();return false;" width="20px" height="20px"> -->
-							<nav id="nav">
-							
+							<h1>
+								<a href="https://github.com/Ryan-Erickson911" target='_blank' id="logo"><i class="fa-brands fa-github" width="20px" height="20px"></i></a>
+								<!-- <a href="index.html" id="logo2"><i class="fa fa-home" width="20px" height="20px"></i></a> -->
+								<a href="javascript:void(0);" id="logo2"><img src="assets/imgs/svgs/cloud.svg" id="doc-icon" onclick="changeTheme();return false;" width="20px" height="20px">
+							</h1> 
+							<nav id="nav">			
 								<ul>
+									<li style="display: none;">
+										<a href="#">About</a>
+										<ul>
+											<li><a href="#inquisitive" target="_self">Inquisitive</a></li>
+											<li><a href="#experience" target="_self">Experienced</a></li>
+											<li><a href="#accomplishments" target="_self">Diverse</a></li>
+										</ul>
+									</li>
+									<li style="display: none;">
+										<a href="#">Contact</a>
+										<ul>
+											<li><a href="main_pages/resume.html" target='_self'>Resume</a></li>
+											<li><a href="main_pages/cv.html" target='_self'>CV</a></li>
+											<li><a href="https://www.linkedin.com/in/ryan-ericksons-profile/" target='_blank'>Linkedin</a></li>
+											<li><a href="https://boulder.joinhandshake.com/profiles/rerickson" target='_blank'>Handshake</a></li>
+										</ul>
+									</li>
 									<li>
 										<a href="#">GIS</a>
 										<ul>
@@ -61,11 +77,12 @@
 									<li>
 										<a href="#">Data</a>
 										<ul>
-											<li><a href="https://www.epa.gov/outdoor-air-quality-data" target='_blank'>EPA Air Quality Data</a></li>
+											<li><a href="https://www.epa.gov/outdoor-air-quality-data" target='_blank'>EPA AQS</a></li>
 											<li><a href="https://epsg.io/" target='_blank'>Epsg.io</a></li>
-											<li><a href="https://developers.google.com/earth-engine/datasets/" target='_blank'>Google Earth Engine</a></li>
-											<li><a href="https://www.openstreetmap.org/#map=5/38.01/-95.84" target='_blank'>OpenStreetMap</a></li>
+											<li><a href="https://developers.google.com/earth-engine/datasets/" target='_blank'>Google EE</a></li>
+											<li><a href="https://www.openstreetmap.org/#map=5/38.01/-95.84" target='_blank'>OSM</a></li>
 											<li><a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html" target='_blank'>TIGER/Line</a></li>
+											<li><a href="https://www.ccacoalition.org/resources/toar-data-portal-home-tropospheric-ozone-data" target='_blank'>T.O.A.R</a></li>
 											<li><a href="https://www.unep.org/publications-data" target='_blank'>UNEP</a></li>
 										</ul>
 									</li>
@@ -370,7 +387,7 @@
 										</article>
 									</section>
 									<section class="box article-list" style="padding-top: 0;">
-										<h2 class="icon fa-solid fa-brain">Research</h2>
+										<h2 class="icon solid fa-brain">Research</h2>
 										<article class="box excerpt">
 											<a href="main_pages/thesis1a2.html" class="image left"><img src="assets/imgs/geog/county.png" alt="" style="width: 180px;"/></a>
 											<div>
@@ -416,7 +433,7 @@
 								</div>
 								<div class="col-4 col-12-medium">
 									<section class="box spotlight">
-										<h2 class="icon fa-plane">Hobbies</h2>
+										<h2 class="icon solid fa-wifi">Hobbies</h2>
 										<article>
 											<a href="https://ryan-erickson911.github.io/IamRyanE.github.io/" class="image featured"><img src="assets/imgs/main/pic07.jpg" alt=""></a>
 											<header>

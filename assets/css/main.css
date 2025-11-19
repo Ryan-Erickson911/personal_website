@@ -122,7 +122,7 @@ input, select, textarea {
 		text-transform: uppercase;
 		font-weight: 800;
 		letter-spacing: 0.04em;
-		color: #404248;
+		color: rgba(68, 68, 68, 1); 
 		margin: 0 0 1em 0;
 	}
 
@@ -155,7 +155,7 @@ input, select, textarea {
 	}
 
 	b, strong {
-		color: #404248;
+		color: rgba(68, 68, 68, 1);
 		font-weight: 700;
 	}
 
@@ -239,7 +239,7 @@ input, select, textarea {
 	.carousel-indicators {
 		bottom: 14.5%;
 		position: absolute;
-		z-index: 9999; 
+		z-index: 9; 
 	}
 	.carousel-indicators li {
 		background-color: #fff; 
@@ -1358,7 +1358,7 @@ input, select, textarea {
 		}
 
 			header p strong {
-				color: #404248;
+				color: rgba(68, 68, 68, 1);
 				font-weight: 800;
 			}
 
@@ -1395,7 +1395,7 @@ input, select, textarea {
 		text-transform: uppercase;
 		font-weight: 800;
 		letter-spacing: 0.04em;
-		color: #404248;
+		color: rgba(68, 68, 68, 1);
 		margin: 0 0 1em 0;
 		font-size: 0.8em;
 	}
@@ -1416,7 +1416,7 @@ input, select, textarea {
 	form input[type="password"]:focus,
 	form select:focus,
 	form textarea:focus {
-		box-shadow: 0 0 2px 1px #4091bf;
+		box-shadow: 0 0 2px 1px #808080ff;
 	}
 
 	form input[type="text"],
@@ -1480,7 +1480,7 @@ input, select, textarea {
 			}
 
 			table.default thead {
-				background: #404248;
+				background: rgba(68, 68, 68, 1);
 				color: #fff;
 			}
 
@@ -1552,7 +1552,7 @@ input, select, textarea {
 		transition: background-color 0.2s ease-in-out;
 		position: relative;
 		display: inline-block;
-		background-color: #4091bf;
+		background-color: #808080ff;
 		border-radius: 8px;
 		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.35), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.35);
 		text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
@@ -1585,7 +1585,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #50a1cf;
+			background-color: rgba(207, 184, 124, 1);
 		}
 
 		input[type="button"]:active,
@@ -1593,7 +1593,7 @@ input, select, textarea {
 		input[type="reset"]:active,
 		button:active,
 		.button:active {
-			background-color: #3081af;
+			background-color: rgba(255, 255, 255, 1);
 		}
 
 		input[type="button"].medium,
@@ -1853,23 +1853,19 @@ input, select, textarea {
 				display: none;
 			}
 
-		
-	.animate-left{position:relative;animation:animateleft 0.4s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
-
 	.dropotron {
 		background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0)), url("images/bg02.png");
 		background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0)), url("images/bg02.png");
 		background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0)), url("images/bg02.png");
 		background-image: linear-gradient(top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0)), url("images/bg02.png");
 		position: relative;
-		background-color: #3B3E45;
-		background-color: rgba(59, 62, 69, 0.9);
+		background-color: rgba(70, 70, 70, 0.9);
 		border-radius: 8px;
 		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 0px 0px 2px rgba(255, 255, 255, 0.075), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.2), 0px 2px 14px 0px rgba(0, 0, 0, 0.4);
 		text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
 		padding: 1.5em;
 		line-height: 2.5em;
-		min-width: 15em;
+		min-width: 10em;
 	}
 
 		.dropotron.level-0 {
@@ -1983,13 +1979,17 @@ input, select, textarea {
 
 	.sidebar{
 		position:fixed; 
+ 		transition: 0.5s;
+		overflow-x: hidden;
 	}
 
-	#mainSidebar{
+	.sidebar#mainSidebar{
 		height: 100%;
 		box-sizing: border-box;
-		width: 18%;
-		padding: 3px;
+		width: 16%;
+		padding: 1px;
+		top: 0;
+		left: 0;
 		padding-top:15em;
 		opacity:1;
 		z-index:10;
@@ -1997,19 +1997,47 @@ input, select, textarea {
 		background-color:rgba(255, 255, 255, 1);
 	}
 
-	#mainSidebar h2 {
+	.sidebar#mainSidebar h2 {
 		text-align: center;
+		max-width: auto;
 		font-size: 1.75em;
 	}	
 
-	#mainSidebar p {
+	.sidebar#mainSidebar h2:hover {
+		color: rgba(207, 184, 124, 1);
+	}	
+
+	.sidebar#mainSidebar p {
 		text-align: center;
-		padding: 0 7.5%;
+		padding: 5% 2.5%;
 	}
 	
-	#mainSidebar .bar-block{
-		padding-left: 17.5%;
+	.sidebar#mainSidebar li {
+		text-align: center;
 	}
+
+	.sidebar#mainSidebar li:hover {
+		color: rgba(207, 184, 124, 1);
+	}
+
+	button#motionbutton{
+		position: fixed;
+		top: 10%;
+		left: 12%;
+		font-size: 20px;
+		cursor: pointer;
+		background-color: #5e5e5eff;
+		color: white;
+		padding: 10px 15px;
+		border: none;
+		z-index: 13;
+		transition: 0.5s ease;
+	}
+
+	button#motionbutton:hover {
+		background-color: rgba(207, 184, 124, 1);
+	}
+
 
 /* Wrappers */
 	#header-wrapper > * {
@@ -2026,7 +2054,8 @@ input, select, textarea {
 
 	#top-wrapper {
 		margin-left: 15%;
-		background: url("images/bgplain.png"), url("../imgs/stock/headerspace.png");
+ 		transition: 0.5s;
+		background: url("images/bgplain.png"), url("../imgs/stock/header1.jpg");
 		background-position: top left, center center;
 		background-size: auto, cover;
 		padding: 3em 0;
@@ -2034,11 +2063,13 @@ input, select, textarea {
 
 	#main-wrapper {
 		margin-left: 15%;
+ 		transition: 0.5s;
 		background: #fff;
 	}
 
 	#footer-wrapper {
 		margin-left: 15%;
+ 		transition: 0.5s;
 		background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("images/bg03.png"), url("images/bg02.png");
 		background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("images/bg03.png"), url("images/bg02.png");
 		background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("images/bg03.png"), url("images/bg02.png");
@@ -2062,7 +2093,7 @@ input, select, textarea {
 		.wrapper.style1 {
 			position: relative;
 			text-shadow: 1px 1px 0 #fff;
-			background-color: #fff;
+			background-color: #ffffffff;
 			background-image: url("images/bg03.png"), url("images/bg04.png"), url("images/bg02.png");
 			background-repeat: no-repeat, no-repeat, repeat;
 			background-size: 100% 15em, 100% 15em, auto auto;
@@ -2078,7 +2109,7 @@ input, select, textarea {
 		.wrapper.style3 {
 			position: relative;
 			text-shadow: 1px 1px 0 #fff;
-			background-color: #fff;
+			background-color: #eeeeeeff;
 			background-image: url("images/bg03.png"), url("images/bg02.png");
 			background-repeat: no-repeat, repeat;
 			background-size: 100% 15em, auto auto;
@@ -2102,8 +2133,7 @@ input, select, textarea {
 			background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35)), url("images/bg02.png");
 			position: relative;
 			height: 80px;
-			background-color: #3B3E45;
-			background-color: rgba(59, 62, 69, 0.9);
+			background-color: rgba(70, 70, 70, 0.9);
 			border-radius: 8px;
 			box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.45), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.15);
 			text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
@@ -2177,10 +2207,6 @@ input, select, textarea {
 
 /* Large */
 
-    @media screen and (max-width: 1281px) {
-		.sidebar.collapse{display:block!important}
-	}
-
 	@media screen and (max-width: 1280px) {
 
 		/* Basic */
@@ -2194,9 +2220,6 @@ input, select, textarea {
 				line-height: 1.75em;
 				font-size: 10.75pt;
 			}
-		
-		/* Main SideBar collapse*/
-			.sidebar.collapse{display:none!important}	
 
 		/* Wrappers */
 			#header-wrapper > * .container{
@@ -2279,6 +2302,11 @@ input, select, textarea {
 
 		/* Nav */
 
+			#header-wrapper > .container{
+				top:0%;
+				height: 44px;
+			}
+
 			#page-wrapper {
 				-moz-backface-visibility: hidden;
 				-webkit-backface-visibility: hidden;
@@ -2311,9 +2339,9 @@ input, select, textarea {
 				left: 0;
 				position: fixed;
 				text-shadow: -1px -1px 0 black;
-				top: 29px;
+				top: 0;
 				width: 100%;
-				z-index: 10001;
+				z-index: 101;
 			}
 
 				#titleBar .title {
@@ -2391,7 +2419,7 @@ input, select, textarea {
 				position: fixed;
 				top: 0;
 				width: 275px;
-				z-index: 10002;
+				z-index: 102;
 			}
 
 				#navPanel .link {
@@ -2469,7 +2497,7 @@ input, select, textarea {
 
 		/* Header */
 
-			#header, #nav{
+			#header, #nav, #mainSidebar, #motionbutton{
 				display: none;
 			}
 			
