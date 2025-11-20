@@ -2023,7 +2023,7 @@ input, select, textarea {
 	button#motionbutton{
 		position: fixed;
 		top: 10%;
-		left: 12%;
+		left: 11%;
 		font-size: 20px;
 		cursor: pointer;
 		background-color: #5e5e5eff;
@@ -2055,9 +2055,9 @@ input, select, textarea {
 	#top-wrapper {
 		margin-left: 15%;
  		transition: 0.5s;
-		background: url("images/bgplain.png"), url("../imgs/stock/header1.jpg");
-		background-position: top left, center center;
-		background-size: auto, cover;
+		background: url("images/headernorm.webp");
+		background-position: center center;
+		background-size: cover, cover;
 		padding: 3em 0;
 	}
 

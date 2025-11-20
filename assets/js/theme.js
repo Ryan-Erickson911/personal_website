@@ -24,7 +24,7 @@ function NavControl() {
   } else {
     menuicon.innerHTML = "&times;";
     menuicon.style.top = "10%";
-    menuicon.style.left = "12%";
+    menuicon.style.left = "11%";
     msidew.style.width = "16%";
 	  document.getElementById("top-wrapper").style.marginLeft = "15%";
 	  document.getElementById("main-wrapper").style.marginLeft = "15%";
