@@ -1,290 +1,536 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-    <head>
-		<title>Ryan Erickson</title>
+	<head>
+		<title>ZeroFour by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<script src="https://kit.fontawesome.com/a4631bf45a.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 		<link rel="stylesheet" href="assets/css/main.css" id="doc-theme"/>
-    </head>
-    <body class="w3-light-grey w3-content" style="max-width:1600px">
-        <nav class="w3-sidebar w3-collapse w3-animate-left" style="width:500px;" id="mySidebar"><br>
-            <div class="w3-container">
-                <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
-                    <i class="fa fa-remove"></i>
-                </a>
-                <img src="/w3images/avatar_g2.jpg" style="width:45%;" class="w3-round"><br><br>
-                <h4><b>PORTFOLIO</b></h4>
-                <p class="w3-text-grey">Template by W3.CSS</p>
-            </div>
-            <div class="w3-bar-block">
-                <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a> 
-                <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
-                <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
-            </div>
-            <div class="w3-panel w3-large">
-                <i class="fa fa-facebook-official w3-hover-opacity"></i>
-                <i class="fa fa-instagram w3-hover-opacity"></i>
-                <i class="fa fa-snapchat w3-hover-opacity"></i>
-                <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-                <i class="fa fa-twitter w3-hover-opacity"></i>
-                <i class="fa fa-linkedin w3-hover-opacity"></i>
-            </div>
-        </nav>
-		<nav class="w3-sidebar w3-animate-left" id="mainSidebar">
-			<div class="w3-container">
-				<h2><b><a href="#top" target="_self">About Me</a></b></h2>
-				<p>"Jack of all trades, master of one"</p>
-				<div class="w3-bar-block">
-					<li><a href="#inquisitive" target="_self">Inquisitive</a></li>
-					<li><a href="#experience" target="_self">Experienced</a></li>
-					<li><a href="#accomplishments" target="_self">Diverse</a></li>
-					<li><a href="main_pages/resume.html" target='_self'>Resume</a></li>
-					<li><a href="main_pages/cv.html" target='_self'>CV</a></li>
-				</div>
+	</head>
+	<body class="homepage is-preload">
+		<nav class="sidebar collapse animate-left" id="mainSidebar">
+			<h2><b><a href="#top" target="_self">About Me</a></b></h2>
+			<p>"Master of Geography, Jack of all trades"</p>
+			<div class="bar-block">
+				<li><a href="#inquisitive" target="_self">Inquisitive</a></li>
+				<li><a href="#experience" target="_self">Experienced</a></li>
+				<li><a href="#accomplishments" target="_self">Diverse</a></li>
+			</div>
+			<p>
+				<br>Co-morbid dyslexica and ADHD that drives a curious mind capable of tackling any 
+				challenge. Need technical help with a project?</p>
+			<h2><b><a href="#contact" target="_self">Contact</a></b></h2>
+			<div class="bar-block">
+				<li><a href="main_pages/resume.html" target='_self'>Resume</a></li>
+				<li><a href="main_pages/cv.html" target='_self'>CV</a></li>
+				<li><a href="https://www.linkedin.com/in/ryan-ericksons-profile/" target='_blank'>Linkedin</a></li>
+				<li><a href="https://boulder.joinhandshake.com/profiles/rerickson" target='_blank'>Handshake</a></li>
 			</div>
 		</nav>
-        <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-        <div class="w3-main" style="margin-left:300px">
-            <header id="portfolio">
-                <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-                <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-                <div class="w3-container">
-                    <h1><b>My Portfolio</b></h1>
-                    <div class="w3-section w3-bottombar w3-padding-16">
-                        <span class="w3-margin-right">Filter:</span> 
-                        <button class="w3-button w3-black">ALL</button>
-                        <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Design</button>
-                        <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Photos</button>
-                        <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Art</button>
-                    </div>
-                </div>
-            </header>
-            <div class="w3-row-padding">
-            <div class="w3-third w3-container w3-margin-bottom">
-                <img src="/w3images/mountains.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-                <div class="w3-container w3-white">
-                    <p><b>Lorem Ipsum</b></p>
-                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-                </div>
-            </div>
-            <div class="w3-third w3-container w3-margin-bottom">
-                <img src="/w3images/lights.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-                <div class="w3-container w3-white">
-                    <p><b>Lorem Ipsum</b></p>
-                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-                </div>
-            </div>
-            <div class="w3-third w3-container">
-                <img src="/w3images/nature.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-                <div class="w3-container w3-white">
-                    <p><b>Lorem Ipsum</b></p>
-                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-                </div>
-            </div>
-        </div>
-        <div class="w3-row-padding">
-          <div class="w3-third w3-container w3-margin-bottom">
-            <img src="/w3images/p1.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-            <div class="w3-container w3-white">
-              <p><b>Lorem Ipsum</b></p>
-              <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-            </div>
-          </div>
-          <div class="w3-third w3-container w3-margin-bottom">
-            <img src="/w3images/p2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-            <div class="w3-container w3-white">
-              <p><b>Lorem Ipsum</b></p>
-              <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-            </div>
-          </div>
-          <div class="w3-third w3-container">
-            <img src="/w3images/p3.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-            <div class="w3-container w3-white">
-              <p><b>Lorem Ipsum</b></p>
-              <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-            </div>
-          </div>
-        </div>
-        <div class="w3-center w3-padding-32">
-          <div class="w3-bar">
-            <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-            <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
-          </div>
-        </div>
-        <div class="w3-row-padding w3-padding-16" id="about">
-          <div class="w3-col m6">
-            <img src="/w3images/avatar_g.jpg" alt="Me" style="width:100%">
-          </div>
-          <div class="w3-col m6">
-            <img src="/w3images/me2.jpg" alt="Me" style="width:100%">
-          </div>
-        </div>
-        <div class="w3-container w3-padding-large" style="margin-bottom:32px">
-          <h4><b>About Me</b></h4>
-          <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-          <hr>
-          <h4>Technical Skills</h4>
-          <p>Photography</p>
-          <div class="w3-grey">
-            <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:95%">95%</div>
-          </div>
-          <p>Web Design</p>
-          <div class="w3-grey">
-            <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:85%">85%</div>
-          </div>
-          <p>Photoshop</p>
-          <div class="w3-grey">
-            <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:80%">80%</div>
-          </div>
-          <p>
-            <button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
-              <i class="fa fa-download w3-margin-right"></i>Download Resume
-            </button>
-          </p>
-          <hr>
-          <h4>How much I charge</h4>
-          <div class="w3-row-padding" style="margin:0 -16px">
-            <div class="w3-third w3-margin-bottom">
-              <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
-                <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
-                <li class="w3-padding-16">Web Design</li>
-                <li class="w3-padding-16">Photography</li>
-                <li class="w3-padding-16">1GB Storage</li>
-                <li class="w3-padding-16">Mail Support</li>
-                <li class="w3-padding-16">
-                  <h2>$ 10</h2>
-                  <span class="w3-opacity">per month</span>
-                </li>
-                <li class="w3-light-grey w3-padding-24">
-                  <button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
-                </li>
-              </ul>
-            </div>
-            <div class="w3-third w3-margin-bottom">
-              <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
-                <li class="w3-teal w3-xlarge w3-padding-32">Pro</li>
-                <li class="w3-padding-16">Web Design</li>
-                <li class="w3-padding-16">Photography</li>
-                <li class="w3-padding-16">50GB Storage</li>
-                <li class="w3-padding-16">Endless Support</li>
-                <li class="w3-padding-16">
-                  <h2>$ 25</h2>
-                  <span class="w3-opacity">per month</span>
-                </li>
-                <li class="w3-light-grey w3-padding-24">
-                  <button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
-                </li>
-              </ul>
-            </div>
-            <div class="w3-third">
-              <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
-                <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
-                <li class="w3-padding-16">Web Design</li>
-                <li class="w3-padding-16">Photography</li>
-                <li class="w3-padding-16">Unlimited Storage</li>
-                <li class="w3-padding-16">Endless Support</li>
-                <li class="w3-padding-16">
-                  <h2>$ 25</h2>
-                  <span class="w3-opacity">per month</span>
-                </li>
-                <li class="w3-light-grey w3-padding-24">
-                  <button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="w3-container w3-padding-large w3-grey">
-          <h4 id="contact"><b>Contact Me</b></h4>
-          <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
-            <div class="w3-third w3-dark-grey">
-              <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
-              <p>email@email.com</p>
-            </div>
-            <div class="w3-third w3-teal">
-              <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
-              <p>Chicago, US</p>
-            </div>
-            <div class="w3-third w3-dark-grey">
-              <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
-              <p>512312311</p>
-            </div>
-          </div>
-          <hr class="w3-opacity">
-          <form action="/action_page.php" target="_blank">
-            <div class="w3-section">
-              <label>Name</label>
-              <input class="w3-input w3-border" type="text" name="Name" required>
-            </div>
-            <div class="w3-section">
-              <label>Email</label>
-              <input class="w3-input w3-border" type="text" name="Email" required>
-            </div>
-            <div class="w3-section">
-              <label>Message</label>
-              <input class="w3-input w3-border" type="text" name="Message" required>
-            </div>
-            <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
-          </form>
-        </div>
-        <footer class="w3-container w3-padding-32 w3-dark-grey">
-        <div class="w3-row-padding">
-          <div class="w3-third">
-            <h3>FOOTER</h3>
-            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-          </div>
-      
-          <div class="w3-third">
-            <h3>BLOG POSTS</h3>
-            <ul class="w3-ul w3-hoverable">
-              <li class="w3-padding-16">
-                <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
-                <span class="w3-large">Lorem</span><br>
-                <span>Sed mattis nunc</span>
-              </li>
-              <li class="w3-padding-16">
-                <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
-                <span class="w3-large">Ipsum</span><br>
-                <span>Praes tinci sed</span>
-              </li> 
-            </ul>
-          </div>
-      
-          <div class="w3-third">
-            <h3>POPULAR TAGS</h3>
-            <p>
-              <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">London</span>
-              <span class="w3-tag w3-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">DIY</span>
-              <span class="w3-tag w3-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Family</span>
-              <span class="w3-tag w3-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Shopping</span>
-              <span class="w3-tag w3-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span>
-            </p>
-          </div>
-        </div>
-        </footer>
-        <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
-    </div>
-    <script>
-    function w3_open() {
-        document.getElementById("mySidebar").style.display = "block";
-        document.getElementById("myOverlay").style.display = "block";
-    }
-    function w3_close() {
-        document.getElementById("mySidebar").style.display = "none";
-        document.getElementById("myOverlay").style.display = "none";
-    }
-    </script>
-</body>
+		<div id="page-wrapper">
+			<div id="header-wrapper">
+				<div class="container">
+					<header id="header">
+						<div class="inner">
+							<h1><a href="https://github.com/Ryan-Erickson911" target='_blank' id="logo"><i class="fa-brands fa-github" width="20px" height="20px"></i></a> <a href="#" onclick="changeDocTheme();return false;" id="logo2"><img src="assets/imgs/svgs/cloud.svg" id="doc-icon" onclick="changeDocTheme();return false;" width="20px" height="20px"></a></h1>
+							<nav id="nav">
+							
+								<ul>
+									<li>
+										<a href="#">GIS</a>
+										<ul>
+											<li><a href="tutorial_pages/re_tutorials_index.html">Tutorials</a></li>
+											<li><a href="https://geemap.org/" target='_blank'>geemap (Dr. WU)</a></li>
+											<li><a href="https://www.arcgis.com/index.html" target='_blank'>Esri</a></li>
+											<li><a href="https://qgis.org/" target='_blank'>QGIS</a></li>
+											<li><a href="https://grass.osgeo.org/" target='_blank'>GRASS</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Affiliations</a>
+										<ul>
+											<li><a href="https://www.colorado.edu/geography/ryan-erickson" target='_blank'>CU Profile</a></li>
+											<li><a href="https://www.spatstat.com/people/" target='_blank'>STAR Lab</a></li>
+											<li><a href="https://ibs.colorado.edu/people/ryan-erickson/" target='_blank'>CUPC</a></li>
+											<li><a href="https://cires.colorado.edu/people/ryan-erickson#ceca" target='_blank'>CECA</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Data</a>
+										<ul>
+											<li><a href="https://www.epa.gov/outdoor-air-quality-data" target='_blank'>EPA Air Quality Data</a></li>
+											<li><a href="https://epsg.io/" target='_blank'>Epsg.io</a></li>
+											<li><a href="https://developers.google.com/earth-engine/datasets/" target='_blank'>Google Earth Engine</a></li>
+											<li><a href="https://www.openstreetmap.org/#map=5/38.01/-95.84" target='_blank'>OpenStreetMap</a></li>
+											<li><a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html" target='_blank'>TIGER/Line</a></li>
+											<li><a href="https://www.unep.org/publications-data" target='_blank'>UNEP</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Java</a>
+										<ul>
+											<li><a href="tutorial_pages/Java/rejava_index.html">Tutorials</a></li>
+											<li><a href="https://www.oracle.com/java/technologies/downloads/" target='_blank'>Download</a></li>
+											<li><a href="https://eclipseide.org/" target='_blank'>Eclipse</a></li>
+											<li><a href="https://medium.com/javarevisited/25-reasons-why-java-is-still-around-in-2024-452c582d55d0" target='_blank'>Why Java?</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Python</a>
+										<ul>
+											<li><a href="tutorial_pages/Python/repython_index.html">Tutorials</a></li>
+											<li><a href="https://www.python.org/downloads/" target='_blank'>Download</a></li>
+											<li><a href="https://anaconda.org/conda-forge/openai" target='_blank'>Anaconda</a></li>
+											<li><a href="https://code.visualstudio.com/" target='_blank'>VS Code</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">R</a>
+										<ul>
+											<li><a href="tutorial_pages/R/rer_index.html">Tutorials</a></li>
+											<li><a href="https://www.r-project.org/" target='_blank'>Download</a></li>
+											<li><a href="https://posit.co/downloads/" target='_blank'>RStudio</a></li>
+											<li><a href="https://positron.posit.co/" target='_blank'>Positron</a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</header>
+				</div>
+			</div>
+			<div id="top-wrapper">
+				<div class="inner">
+					<div id="banner">
+						<h3>
+							<a href='https://cvhs.redlandsusd.net/'><img src="assets/imgs/logos/cvhs.png" style="display: inline-block" alt="Test 1" height="100"/></a>
+							<a href='https://www.chaffey.edu/'><img src="assets/imgs/logos/chaffey.png" style="display: inline-block" alt="Test 1" height="100"/></a>
+							<a href='https://www.ucsb.edu/'><img src="assets/imgs/logos/ucsb.png" style="display: inline-block" alt="Test 1" height="100"/></a>
+							<a href='https://www.colorado.edu/'><img src="assets/imgs/logos/cuboulder.png" style="display: inline-block" alt="Test 1" height="100"/></a>
+						</h3>
+						<h3>
+							Hi, my name is Ryan <i class="fa fa-smile-o fa-parent fa-bounce" style="--fa-bounce-land-scale-x: 1.2;--fa-bounce-land-scale-y: .8;--fa-bounce-rebound: 5px;"></i>
+						</h3>
+						<img src="assets/imgs/main/meinsf.png"  style="position:static;" alt="Test 1" width="292" height="300"/>
+						<h3>
+							<br><br> I have a Masters in Geography <i class="fa fa-arrow-down fa-flip" style="--fa-animation-duration: 2s;"></i>
+						</h3>
+						<p>My thesis focused on applying data science to urban ecology!</p>
+						<a href="https://github.com/Ryan-Erickson911/surface_ozone" target='_blank' class="button large icon solid"><i class="fa-brands fa-github"></i> Check it out!</a>
+					</div>
+				</div>
+			</div>
+			<div id="main-wrapper">
+				<div id="inquisitive"></div>
+				<div class="row aln-center" id="scrollheader">
+					<header class="col-11 first major">
+						<h2>Biography</h2>
+						<p>
+							Recently graduated MA in Geography 
+						</p>
+					</header>
+				</div>
+				<div class="wrapper style1">
+					<div class="inner">
+						<section class="container box feature1">
+							<div class="row">
+								<div class="col-12">
+									<p>
+										I graduated from Chaffey Community College in Rancho Cucamonga in 2015. It introduced me to the world of academic policy and statues. I majored in 
+										a specialized AA that focused on material shared throughout the UC system in California. To be frank, I would have never considered this had I not 
+										had an outstanding academic counsular at the time. They helped me navigate the entire UC system, and their knowledge aided me well beyond 
+										undergraduate studies. After earning my AA, I applied, and was accepted, into the University of California, Santa Barbara in 2017. I spent 3 years
+										at UCSB and graduated in 2020 with a double major in Geography and Physics. My Geography degree came with a specialization in GIS, and I wanted to further 
+										pursue it at the highest level. In 2021, I was accepted into the Geography department at CU, Boulder as a Master's student under Dr. Guofeng Cao at 
+										<a href="https://www.spatstat.com/people/">STARlab</a>. This website is dedicated to a summary of my work and research interests.
+									</p>
+								</div>
+								<div class="col-4 col-12-medium">
+									<section>
+										<a href="main_pages/left-sidebar.html" class="image featured"><img src="assets/imgs/main/geography.png" alt="" /></a>
+										<header class="second icon solid fa-user">
+											<h3>Geography</h3>
+											<p>Space, Place, and Time</p>
+										</header>
+									</section>
+								</div>
+								<div class="col-4 col-12-medium">
+									<section>
+										<a href="main_pages/no-sidebar.html" class="image featured"><img src="assets/imgs/main/datasiencefin.png" alt="" /></a>
+										<header class="second icon solid fa-gift">
+											<h3>Data Science</h3>
+											<p>Programming and Syntax</p>
+										</header>
+									</section>
+								</div>
+								<div class="col-4 col-12-medium">
+									<section>
+										<a href="main_pages/right-sidebar.html" class="image featured"><img src="assets/imgs/main/physicsfin.png" alt="" /></a>
+										<header class="second icon solid fa-brain">
+											<h3>Physics</h3>
+											<p>Matter, Energy, and Force</p>
+										</header>
+									</section>
+								</div>
+								<div class="col-12">
+									<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus. Praesent semper
+									bibendum ipsum, et tristique augue fringilla eu. Vivamus id risus vel dolor auctor euismod
+									quis eget mi. Etiam eu ante risus. Aliquam erat volutpat. Aliquam luctus mattis lectus sit
+									amet pulvinar. Nam nec turpis.</p>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+				<div id="experience"></div>
+				<div class="row aln-center" id="scrollheader">
+					<header class="col-11 first major">
+						<h2>Skills and Experience</h2>
+						<p>
+							"Programming is like playing with Legos...except the instructions are often unclear and each brick must be handmade."
+						</p>
+					</header>
+				</div>
+				<div class="wrapper style2">
+					<div class="inner">
+						<section class="container box feature1">
+							<div class="row aln-center">
+								<div class="col-12">
+									<p>
+										As a multi-disiplinary scholar, I have been fortunate enough to be apart of many research projects over the last decade. My thesis uses Google Earth Engine, 
+										EPA monitor data, and statistical learning methods to model surface ozone for urban exposure analysis. My research would not be possible without the 
+										programming skills I gained at UCSB. Here are some helpful tutorials I've kept in mind over the years:
+									</p>
+								</div>
+								<div class="col-4 col-12-medium">
+									<section>
+										<header class="major">
+											<h2>Java</h2>
+											<p>Object-Oriented Programming</p>
+										</header>
+										<p>Applications, Webkits, and GUIs</p>
+										<footer>
+											<a href="#" class="button large icon solid" style="opacity: 90%;"><i class="fab fa-java fa-lg" style="color: red; opacity: 75%;"></i> Coming Soon!</a>
+										</footer>
+									</section>
+								</div>
+								<div class="col-4 col-12-medium">
+									<section>
+										<header class="major">
+											<h2>Python</h2>
+											<p>Data Science and Automation</p>
+										</header>
+										<p>The premier machine learning language</p>
+										<footer>
+											<a href="#" class="button large icon solid" style="opacity: 90%;"><i class="fab fa-python fa-lg" style="color: gold; opacity: 75%;"></i> Coming Soon!</a>
+										</footer>
+									</section>
+								</div>
+								<div class="col-4 col-12-medium">
+									<section>
+										<header class="major">
+											<h2>R</h2>
+											<p>The Statistician's Language</p>
+										</header>
+										<p>Easy, intuitive, and optimized for statistics</p>
+										<footer>
+											<a href="#" class="button medium icon solid" style="opacity: 90%;"><i class="fab fa-r-project fa-lg" style="color: blue; opacity: 75%;"></i> Coming Soon!</a>
+										</footer>
+									</section>
+								</div>
+								<div class="col-12">
+									<p>
+										<br> My thesis focused on surface ozone modeling. Using Google Earth Engine, EPA Air Quality Data, GitHub, and Python, I started the skeleton of an ML air pollution
+										model with geospatially corrected residuals trained on monitoring locations. The motivation for this can be seen in my early research projects and posters before I 
+										started graduate school. Overall, I utilize a variety of programs to conduct spatial-temporal analyses in many disciplines: 
+									</p>
+								</div>
+							</div>
+						</section>
+						<!-- <div class="container">
+							<div id="myCarousel" class="carousel slide" data-interval="3000">
+								<section>
+									<ol class="carousel-indicators">
+										<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+										<li data-target="#myCarousel" data-slide-to="1"></li>
+										<li data-target="#myCarousel" data-slide-to="2"></li>
+										<li data-target="#myCarousel" data-slide-to="3"></li>
+										<li data-target="#myCarousel" data-slide-to="4"></li>
+									</ol>
+									<div class="carousel-inner">
+										<div class="item active">
+											<a href='main_pages/posters.html'><img src="assets/imgs/crsl/poster.png" class="d-block" alt="cartgis" /></a>
+											<div class="carousel-caption">
+												<div class="caption-bubble">
+													<h3>Cartography and GIS</h3>
+													<p>A poster I made with some friends of mine for a class at UCSB.</p>
+												</div>
+											</div>
+										</div>
+										<div class="item">
+											<a href='main_pages/posters.html'><img src="assets/imgs/crsl/maunaloa.png" alt="dem" /></a> 
+											<div class="carousel-caption">
+												<div class="caption-bubble">
+													<h3>Remote Sensing</h3>
+													<p>Ditigal Elevation Model of Mauna Loa, HI overlayed with a hillshade created in GEE.</p>
+												</div>
+											</div>
+										</div>
+										<div class="item">
+											<a href='main_pages/posters.html'><img src="assets/imgs/crsl/smark_2021-07-01.png" alt="ozone" ></a>
+											<div class="carousel-caption">
+												<div class="caption-bubble">
+													<h3>Statistical Learning</h3>
+													<p>Training variables and predictive results from the XGBoost model in my thesis.</p>
+												</div>
+											</div>
+										</div>
+										<div class="item">
+											<a href='main_pages/posters.html'><img src="assets/imgs/crsl/spattemp.png" alt="trees" ></a>
+											<div class="carousel-caption">
+												<div class="caption-bubble">
+													<h3>Spatial-Temporal Analysis</h3>
+													<p>An 8-day simulation of growing tree density created for fire risk analysis.</p>
+												</div>
+											</div>
+										</div>
+										<div class="item">
+											<a href='main_pages/posters.html'><img src="assets/imgs/crsl/AstroArtPhotoShop.png" alt="astroart" ></a>
+											<div class="carousel-caption">
+												<div class="caption-bubble">
+													<h3>Astrophysics</h3>
+													<p>A refined image of Messier 31 (the Andromeda Galaxy) using the <a href='main_pages/posters.html#astrostuff'>LCO</a> at UCSB.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+										<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+										<span class="sr-only">Previous</span>
+									</a>
+									<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+										<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+										<span class="sr-only">Next</span>
+									</a>
+								</section>
+							</div>
+						</div> -->
+					</div>
+				</div>
+				<div id="accomplishments"></div>
+				<div class="row aln-center" id="scrollheader">
+					<header class="col-11 first major">
+						<h2>Accomplishments and Interests</h2>
+						<p>
+							Blogs, Programs and Additional Works
+						</p>
+					</header>
+				</div>
+				<div class="wrapper style3">
+					<div class="inner">
+						<div class="container">
+							<div class="row">
+								<div class="aln-center col-12">
+									<p>
+										After developing a passion for GIS programming, I faced significant challenges with my physical and mental health, which led me to extend my graduate studies by two years to focus on recovery and growth. With newfound access to healthcare and several awarded funding opportunities, I was able to continue expanding my thesis and multidisciplinary skill set. During this time, I collaborated with prominent researchers who helped refine my technical and analytical abilities.
+									</p>
+								</div>
+								<div class="col-8 col-12-medium">
+									<section class="box article-list">
+										<h2 class="icon fa-file-alt">Publications</h2>
+										<article class="box excerpt">
+											<a href="https://nccasc.colorado.edu/index.php/blog/geographers-perspective-existence-topographic-signature-life" class="image left"><img src="assets/imgs/logos/nccasc.png" alt="" style="width: 180px;"/></a>
+											<div>
+												<header>
+													<span class="date">August, 2025</span>
+													<h3><a href="https://nccasc.colorado.edu/index.php/blog/geographers-perspective-existence-topographic-signature-life">NC CASC Blog</a></h3>
+												</header>
+												<p>
+													I had the pleasure of working with NC CASC as a CEST member to research a topographic signature of life. I wrote blog detailing it's 
+													importance and furture directions. This was part of a program called the Climate Adaptation Scientists of Tomorrow which funded my 
+													final semester at CU.
+												</p>
+											</div>
+										</article>
+										<article class="box excerpt">
+											<a href="https://github.com/earthlab/firedpy" class="image left"><img src="assets/imgs/logos/firedpy.png" alt="" style="width: 180px;"/></a>
+											<div>
+												<header>
+													<span class="date">July, 2023</span>
+													<h3><a href="https://github.com/earthlab/firedpy">FIREDpy</a></h3>
+												</header>
+												<p>
+													The FIRe Event Delineation tool (FIREDPY) created by Earth Lab at CU. I was briefly apart of some summer work that fixed some edge-case 
+													issues on the program. It's classifies individual burn detections into discrete events for further analysis (Balch et. al., 2020).
+												</p>
+											</div>
+										</article>
+									</section>
+									<section class="box article-list" style="padding-top: 0;">
+										<h2 class="icon fa-solid fa-brain">Research</h2>
+										<article class="box excerpt">
+											<a href="main_pages/thesis1a2.html" class="image left"><img src="assets/imgs/geog/county.png" alt="" style="width: 180px;"/></a>
+											<div>
+												<header>
+													<span class="date">January, 2026</span>
+													<h3><a href="main_pages/thesis1a2.html">Thesis - Excerpt</a></h3>
+												</header>
+												<p>
+													This will take you to an excerpt from my thesis. I only included the first three chapters After focusing on the 
+													machine learning and geostatistical applications of my work, I hope to apply my findings to more human centric 
+													research.
+												</p>
+											</div>
+										</article>
+										<article class="box excerpt">
+											<a href="main_pages/thesis1a2.html" class="image left"><img src="assets/imgs/stock/pic04.jpg" alt="" style="width: 180px;"/></a>
+											<div>
+												<header>
+													<span class="date">In Progress</span>
+													<h3><a href="main_pages/thesis1a2.html">Thesis - State Model</a></h3>
+												</header>
+												<p>
+													Eventually, this will take you to a GitHub that I created to begin translating my script into a more user friendly function.
+													For now, this will take you to my thesis excerpt.
+												</p>
+											</div>
+										</article>
+										<article class="box excerpt">
+											<a href="main_pages/topolife.html" class="image left"><img src="assets/imgs/geog/olympusmonsmol.png" alt="" style="width: 180px;"/></a>
+											<div>
+												<header>
+													<span class="date">In Progress</span>
+													<h3><a href="main_pages/thesis1a2.html">Topographical Signature of Life</a></h3>
+												</header>
+												<p>
+													A potential biosignature is a substance or structure that might have a biological origin but requires 
+													more data or further study before reaching a conclusion about the absence or presence of life. Do they
+													exist? If so, can we detect them in the topographic scape of Earth?
+												</p>
+											</div>
+										</article>
+									</section>
+								</div>
+								<div class="col-4 col-12-medium">
+									<section class="box spotlight">
+										<h2 class="icon fa-plane">Hobbies</h2>
+										<article>
+											<a href="https://ryan-erickson911.github.io/IamRyanE.github.io/" class="image featured"><img src="assets/imgs/main/pic07.jpg" alt=""></a>
+											<header>
+												<h3>
+													<a href="https://ryan-erickson911.github.io/IamRyanE.github.io/">Road Trips</a>
+												</h3>
+												<p>
+													A map of fun points of interest.
+												</p>
+											</header>
+											<p>
+											As my network and social life grows, I hope to expand this map with more international points. Most of the road trips I've taken have been 
+											across the contiguous US with my Grandparents. Some of my favorite places and future destinations are on it as well!
+											</p>
+											<center><footer>
+												<a href="https://ryan-erickson911.github.io/IamRyanE.github.io/" class="button alt icon solid "><i class="fa-solid fa-map-location-dot"></i> Go to map</a>
+											</footer></center>
+										</article>
+									</section>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><div id="footer-wrapper">	
+				<footer id="footer" class="container" >
+					<div class="row" id="contact">
+						<div class="col-3 col-6-medium col-12-small">
+							<section>
+								<center><h2>Shortcuts</h2></center>
+								<ul class="divided">
+									<li><a href="#about" target="_self">About Me</a></li>
+									<li><a href="main_pages/left-sidebar.html" target="_self">Geography</a></li>
+									<li><a href="main_pages/no-sidebar.html" target="_self">Data Science</a></li>
+									<li><a href="main_pages/right-sidebar.html" target="_self">Physics</a></li>
+									<li><a href="#experience" target="_self">Experience</a></li>
+									<li><a href="#accomplishments" target="_self">Accomplishments</a></li>
+									<li><a href="https://www.r-project.org/">Python</a></li>
+									<li><a href="https://posit.co/downloads/">Java</a></li>
+									<li><a href="https://positron.posit.co/">R</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-3 col-6-medium col-12-small">
+							<section>
+								<center><h2>Institutions and Research Labs</h2></center>
+								<ul class="divided">
+									<li><a href="https://ibs.colorado.edu/">Institute of Behavioral Sciences</a></li>
+									<li><a href="https://hazards.colorado.edu/">Natural Hazards Center</a></li>
+									<li><a href="https://cupc.colorado.edu/">Colorado University Population Center</a></li>
+									<li><a href="https://cires.colorado.edu/">Cooperative Institute for Research and Environmental Sciences</a></li>
+								</ul>
+							</section>
+							<section>
+								<center><h2>Online Profiles</h2></center>
+								<ul class="divided">
+									<li><a href="https://www.colorado.edu/geography/ryan-erickson">CU Profile</a></li>
+									<li><a href="https://www.linkedin.com/in/ryan-ericksons-profile/">Linkedin</a></li>
+									<li><a href="https://github.com/Ryan-Erickson911">GitHub</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-6 col-12-medium imp-medium">
+							<section>
+								<center><h2><strong>TL;DR</strong></h2></center>
+								<center><p>My name is Ryan Erickson, I'm a recent graduate from CU, Boulder and new to the greater Seattle area. I hope you liked my website! 
+									Please reach out should you have any quesitons about my work, future collaboration, or linked materials.</p></center>
+								<center><a href="main_pages/resume.html" class="button alt icon solid fa-arrow-circle-right">Resume</a></center> 
+								<p></p>
+								<center><a href="main_pages/cv.html" class="button alt icon solid fa-arrow-circle-right">CV</a></center>
+							</section>
+							<section>
+								<center><h2>Contact Information</h2></center>
+								<div>
+									<div class="row">
+										<div class="col-7-small col-12-small">
+											<dl class="contact">
+												<dt>Email</dt>
+												<dd><a href="mailto:ryanerickson407@gmail.com">ryanerickson407@gmail.com</a></dd>
+											</dl>
+											<dl class="contact">
+												<dt>School</dt>
+												<dd><a href="mailto:ryer7052@colorado.edu">ryer7052@colorado.edu</a></dd>
+												<dd><a href="mailto:ryan.erickson-1@colorado.edu">ryan.erickson-1@colorado.edu</a></dd>
+											</dl>
+										</div>
+										<div class="col-5 col-12-small">
+											<dl class="contact">
+												<dt>Address</dt>
+												<dd>
+													Seattle, WA 98144<br />
+												</dd>
+												<dt>Phone</dt>
+												<dd>(909) 835-3952</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+					<div id="copyright">
+						<ul class="menu">
+							<li>&copy; R.Erickson. All rights reserved</li><li>Design: <a href="https://html5up.net">HTML5 UP</a> / <a href="https://www.w3schools.com/">W3 Schools</a></li><li>Base: <a href="https://html5up.net/zerofour">ZeroFour</a></li>
+						</ul>
+					</div>
+				</footer>
+			</div>
+		</div>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/theme.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
 </html>

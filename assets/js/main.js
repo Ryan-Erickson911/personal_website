@@ -2,6 +2,7 @@
 
 	var	$window = $(window),
 		$body = $('body');
+		$document = $('document');
 
 	// Breakpoints.
 		breakpoints({
@@ -17,8 +18,9 @@
 				$body.removeClass('is-preload');
 			}, 100);
 		});
-
+		
 	// Dropdowns.
+	
 		$('#nav > ul').dropotron({
 			offsetY: -22,
 			mode: 'fade',
