@@ -4,6 +4,7 @@
 		<title>Ryan Erickson</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" type="image/x-icon" href="assets/imgs/icos/mesign.ico">
 		<script src="https://kit.fontawesome.com/a4631bf45a.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="assets/css/main.css" id="doc-theme"/>
 	</head>
@@ -12,27 +13,30 @@
 			<div class="sidebar" id="mainSidebar">
 				<h2><a href="#top" target="_self">About Me</a></h2>
 				<p>"Master of Geography, Jack of all trades"</p>
-					<li><a href="#inquisitive" target="_self">Inquisitive</a></li>
-					<li><a href="#experience" target="_self">Experienced</a></li>
-					<li><a href="#accomplishments" target="_self">Diverse</a></li>
+				<li><a href="#inquisitive" target="_self">Inquisitive</a></li>
+				<li><a href="#experience" target="_self">Experienced</a></li>
+				<li><a href="#accomplishments" target="_self">Diverse</a></li>
+				</p>
 				<p>
 					I use many programs for research and fun!
 				</p>
 				<h2><a href="#contact" target="_self" style="top: 20%;">Contact</a></h2>
-					<li><a href="main_pages/resume.html" target='_self'>Resume</a></li>
-					<li><a href="main_pages/cv.html" target='_self'>CV</a></li>
-					<li><a href="https://www.linkedin.com/in/ryan-ericksons-profile/" target='_blank'>Linkedin</a></li>
-					<li><a href="https://boulder.joinhandshake.com/profiles/rerickson" target='_blank'>Handshake</a></li>
+				<li><a href="main_pages/resume.html" target='_self'>Resume</a></li>
+				<li><a href="main_pages/cv.html" target='_self'>CV</a></li>
+				<li><a href="https://www.linkedin.com/in/ryan-ericksons-profile/" target='_blank'>Linkedin</a></li>
+				<li><a href="https://boulder.joinhandshake.com/profiles/rerickson" target='_blank'>Handshake</a></li>
 			</div>
-			<button onclick="NavControl()" id="motionbutton">&times;</button>
+			<button onclick="NavControl()" id="motionbutton">hide</button>
 			<div id="header-wrapper">
 				<div class="container">
 					<header id="header">
 						<div class="inner">
-							<h1>
-								<a href="https://github.com/Ryan-Erickson911" target='_blank' id="logo"><i class="fa-brands fa-github" width="20px" height="20px"></i></a>
-								<!-- <a href="index.html" id="logo2"><i class="fa fa-home" width="20px" height="20px"></i></a> -->
-								<a href="javascript:void(0);" id="logo2"><img src="assets/imgs/svgs/cloud.svg" id="doc-icon" onclick="changeTheme();return false;" width="20px" height="20px">
+							<h1 id="logosandhome" style="padding-left: 0em; transition: 0.5s ease;">
+								<span>
+									<a href="https://github.com/Ryan-Erickson911" target='_blank' id="logo"><img src="assets/imgs/svgs/GitHubLight.webp" width="30px" height="30px" id="gitIcon"></img></a>&nbsp;
+									<!-- <a href="index.html" id="logo2"><i class="fa fa-home" width="20px" height="20px"></i></a> -->
+									<a href="#" id="logo2"><img src="assets/imgs/svgs/mesign.webp" id="doc-icon" width="29px" height="29px"></a> <!-- onclick="changeTheme();return false;" width="29px" height="29px"></a> -->
+								</span>
 							</h1> 
 							<nav id="nav">			
 								<ul>
@@ -118,23 +122,18 @@
 				</div>
 			</div>
 			<div id="top-wrapper">
+				<center><div id="logowrapper">
+					<a href='https://cvhs.redlandsusd.net/'><img src="assets/imgs/logos/cvhs.png" style="display: inline-block" alt="cvhs" height="100"/></a>
+					<a href='https://www.chaffey.edu/'><img src="assets/imgs/logos/chaffey.png" style="display: inline-block" alt="ccc" height="100"/></a>
+					<a href='https://www.ucsb.edu/'><img src="assets/imgs/logos/ucsb.png" style="display: inline-block" alt="ucsb" height="100"/></a>
+					<a href='https://www.colorado.edu/'><img src="assets/imgs/logos/cuboulder.png" style="display: inline-block" alt="cub" height="100"/></a>
+				</div></center>
 				<div class="inner">
 					<div id="banner">
-						<h3>
-							<a href='https://cvhs.redlandsusd.net/'><img src="assets/imgs/logos/cvhs.png" style="display: inline-block" alt="Test 1" height="100"/></a>
-							<a href='https://www.chaffey.edu/'><img src="assets/imgs/logos/chaffey.png" style="display: inline-block" alt="Test 1" height="100"/></a>
-							<a href='https://www.ucsb.edu/'><img src="assets/imgs/logos/ucsb.png" style="display: inline-block" alt="Test 1" height="100"/></a>
-							<a href='https://www.colorado.edu/'><img src="assets/imgs/logos/cuboulder.png" style="display: inline-block" alt="Test 1" height="100"/></a>
-						</h3>
-						<h3>
-							Hi, my name is Ryan <i class="fa fa-smile-o fa-parent fa-bounce" style="--fa-bounce-land-scale-x: 1.2;--fa-bounce-land-scale-y: .8;--fa-bounce-rebound: 5px;"></i>
-						</h3>
-						<img src="assets/imgs/main/meinsf.png"  style="position:static;" alt="Test 1" width="292" height="300"/>
-						<h3>
-							<br><br> I have a Masters in Geography <i class="fa fa-arrow-down"></i>
-						</h3>
-						<p>My thesis focused on building high-resolution surface ozone models with machine learning</p>
-						<a href="https://github.com/Ryan-Erickson911/surface_ozone" target='_blank' class="button large icon solid"><i class="fa-brands fa-github"></i> Check it out!</a>
+						<h2>
+							My name is Ryan <i class="fa fa-smile-o fa-parent fa-bounce" style="--fa-bounce-land-scale-x: 1.2;--fa-bounce-land-scale-y: .8;--fa-bounce-rebound: 5px;"></i> Welcome to my website! 	
+						</h2>
+						<img src="assets/imgs/main/meinsf.png" alt="Test 1" width="292" height="300"/></img>
 					</div>
 				</div>
 			</div>
@@ -202,7 +201,7 @@
 					<header class="col-11 first major">
 						<h2>Skills and Experience</h2>
 						<p>
-							"Programming is like playing with Legos...except the instructions are often unclear and each brick must be handmade."
+							Programming is like playing with Legos...
 						</p>
 					</header>
 				</div>
@@ -212,9 +211,8 @@
 							<div class="row aln-center">
 								<div class="col-12">
 									<p>
-										As a multi-disiplinary scholar, I have been fortunate enough to be apart of many research projects over the last decade. My thesis uses Google Earth Engine, 
-										EPA monitor data, and statistical learning methods to model surface ozone for urban exposure analysis. My research would not be possible without the 
-										programming skills I gained at UCSB. Here are some helpful tutorials I've kept in mind over the years:
+										...but the instructions are often unclear and each lego piece must be handmade. As a multi-disiplinary scholar, I have been fortunate enough to be apart of many research projects over the last decade
+										that require many different types of bricks. There are many freely avaliable sources to help you build these. Here are some helpful tutorials that got me started:
 									</p>
 								</div>
 								<div class="col-4 col-12-medium">
@@ -341,7 +339,7 @@
 						</p>
 					</header>
 				</div>
-				<div class="wrapper style3">
+				<div class="wrapper style3" id="finalwrapper">
 					<div class="inner">
 						<div class="container">
 							<div class="row">
@@ -453,24 +451,52 @@
 						</div>
 					</div>
 				</div>
+				<div id="contact"></div>
+				<div class="container" id="contactheader">
+					<header class="col-11 first major">
+						<h2>Contact</h2>
+						<p>
+							Info and Site References
+						</p>
+					</header>
+				</div>
 			</div>
-			<div id="footer-wrapper">	
-				<footer id="footer" class="container" >
+			<div id="footer-wrapper">
+				<footer id="footer" class="container">
 					<div class="row" id="contact">
 						<div class="col-3 col-6-medium col-12-small">
 							<section>
-								<center><h2>Shortcuts</h2></center>
-								<ul class="divided">
-									<li><a href="#about" target="_self">About Me</a></li>
-									<li><a href="main_pages/left-sidebar.html" target="_self">Geography</a></li>
-									<li><a href="main_pages/no-sidebar.html" target="_self">Data Science</a></li>
-									<li><a href="main_pages/right-sidebar.html" target="_self">Physics</a></li>
-									<li><a href="#experience" target="_self">Experience</a></li>
-									<li><a href="#accomplishments" target="_self">Accomplishments</a></li>
-									<li><a href="https://www.r-project.org/">Python</a></li>
-									<li><a href="https://posit.co/downloads/">Java</a></li>
-									<li><a href="https://positron.posit.co/">R</a></li>
-								</ul>
+								<div class="row">
+									<div class="col-6-medium col-12-small">
+										<dl class="contact">
+											<dt>Address</dt>
+											<dd>
+												Seattle, WA 98144<br />
+											</dd>
+										</dl>
+										<dl class="contact">
+											<dt>Emails</dt>
+											<dd><a href="mailto:ryanerickson407@gmail.com">ryanerickson407@gmail.com</a></dd>
+											<dd><a href="mailto:ryer7052@colorado.edu">ryer7052@colorado.edu</a></dd>
+											<dd><a href="mailto:ryan.erickson-1@colorado.edu">ryan.erickson-1@colorado.edu</a></dd>
+										</dl>
+										<!-- <h2>Questions?</h2>
+										<dl class="contact">
+											<dt>Section</dt>
+											<dd>
+												<form>
+													<select>
+														<textarea>Resume</textarea>
+													</select>
+												</form>
+											</dd>
+											<dt>Email</dt>
+											<dd><form><input type="email"></input></form></dd>
+											<dt>Comment</dt>
+											<dd><form><input type="text"></input></dd>
+										</dl> -->
+									</div>
+								</div>
 							</section>
 						</div>
 						<div class="col-3 col-6-medium col-12-small">
@@ -491,6 +517,12 @@
 									<li><a href="https://github.com/Ryan-Erickson911">GitHub</a></li>
 								</ul>
 							</section>
+							<section>
+								<div class="row">
+									<div class="col-6-medium col-12-small">
+									</div>
+								</div>
+							</section>
 						</div>
 						<div class="col-6 col-12-medium imp-medium">
 							<section>
@@ -500,32 +532,6 @@
 								<center><a href="main_pages/resume.html" class="button alt icon solid fa-arrow-circle-right">Resume</a></center> 
 								<p></p>
 								<center><a href="main_pages/cv.html" class="button alt icon solid fa-arrow-circle-right">CV</a></center>
-							</section>
-							<section>
-								<center><h2>Contact Information</h2></center>
-								<div>
-									<div class="row">
-										<div class="col-7-small col-12-small">
-											<dl class="contact">
-												<dt>Email</dt>
-												<dd><a href="mailto:ryanerickson407@gmail.com">ryanerickson407@gmail.com</a></dd>
-											</dl>
-											<dl class="contact">
-												<dt>School</dt>
-												<dd><a href="mailto:ryer7052@colorado.edu">ryer7052@colorado.edu</a></dd>
-												<dd><a href="mailto:ryan.erickson-1@colorado.edu">ryan.erickson-1@colorado.edu</a></dd>
-											</dl>
-										</div>
-										<div class="col-5 col-12-small">
-											<dl class="contact">
-												<dt>Address</dt>
-												<dd>
-													Seattle, WA 98144<br />
-												</dd>
-											</dl>
-										</div>
-									</div>
-								</div>
 							</section>
 						</div>
 					</div>

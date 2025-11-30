@@ -3,43 +3,57 @@ const darkTheme = "assets/css/dark.css";
 const mainTheme = "assets/css/main.css";
 const sunIcon = "assets/imgs/svgs/SunIcon.svg";
 const moonIcon = "assets/imgs/svgs/MoonIcon.svg";
-const cloudIcon = "assets/imgs/svgs/cloud.svg";
+const cloudIcon = "assets/imgs/svgs/mesign.webp";
+const gitL = "assets/imgs/svgs/GitHubLight.webp";
+const gitD = "assets/imgs/svgs/GitHubDark.webp";
 const themeIcon = document.getElementById("doc-icon");
+const gitIcon = document.getElementById("gitIcon");
 const msidew = document.getElementById("mainSidebar");
+const toplogos = document.getElementById("logosandhome");
 const menuicon = document.getElementById("motionbutton");
 let movement = 1;
 
 function NavControl() {
   if (movement==1) {
     menuicon.innerHTML="&#9776;";
-    menuicon.style.top="101px";
-    menuicon.style.left="2%";
+    menuicon.style.top="28px";
+    menuicon.style.left="1.5em";
     msidew.classList.add("hidden");
     msidew.classList.remove("visible");
+    toplogos.style.paddingLeft = "2em";
     document.getElementById("top-wrapper").style.marginLeft="0%";
     document.getElementById("main-wrapper").style.marginLeft="0%";
     document.getElementById("footer-wrapper").style.marginLeft="0%";
+	  contactheader.style.width="100%";
     return movement=0;
   } else {
-    menuicon.innerHTML = "&times;";
+    menuicon.innerHTML = "hide";
     menuicon.style.top="150px";
-    menuicon.style.left="10%";
-
+    menuicon.style.left="2.5em";
     msidew.classList.remove("hidden");
     msidew.classList.add("visible");
-
+    toplogos.style.paddingLeft = "0em";
 	  document.getElementById("top-wrapper").style.marginLeft="15%";
 	  document.getElementById("main-wrapper").style.marginLeft="15%";
 	  document.getElementById("footer-wrapper").style.marginLeft="15%";
+	  contactheader.style.width="85%";
     return movement=1;
   }
 }
 
 function checkmargins() {
-  // If the sidebar is open but the screen shrinks / scroll changes layout:
-  if (movement === 1 && window.innerWidth < 737) {
-    // Force close sidebar
-    NavControl();
+  if (window.innerWidth < 980) {
+    menuicon.innerHTML="&#9776;";
+    menuicon.style.top="28px";
+    menuicon.style.left="1.5em";
+    msidew.classList.add("hidden");
+    msidew.classList.remove("visible");
+    toplogos.style.paddingLeft = "2em";
+    document.getElementById("top-wrapper").style.marginLeft="0%";
+    document.getElementById("main-wrapper").style.marginLeft="0%";
+    document.getElementById("footer-wrapper").style.marginLeft="0%";
+	  contactheader.style.width="100%";
+    return movement=0;
   }
 }
 
@@ -48,31 +62,44 @@ function changeTheme() {
   if (theme.getAttribute("href") === mainTheme) {
     theme.setAttribute("href", lightTheme);
     themeIcon.setAttribute("src", sunIcon);
+    gitIcon.setAttribute("src", gitD);
   } else if (theme.getAttribute("href") === lightTheme) {
     theme.setAttribute("href", darkTheme);
     themeIcon.setAttribute("src", moonIcon);
+    gitIcon.setAttribute("src", gitL);
   } else {
     theme.setAttribute("href", mainTheme);
     themeIcon.setAttribute("src", cloudIcon);
+    gitIcon.setAttribute("src", gitL);
   }
 }
 
-function hidescrollheader() {
-  let headers =  document.getElementById('scrollheader');
-  let scrollY = window.scrollY;
-  let docHeight = document.documentElement.scrollHeight;
-  let atBottom = scrollY >= docHeight - 5;
 
-  if (atBottom) {
-      headers.style.transform="translateY(-100%)";
-      headers.style.opacity = "0";
-      headers.style.transition= "transform 0.4s ease, opacity 0.4s ease";
+const contactheader = document.getElementById("contactheader");
+function hideheaders() {
+  var calcspace = document.body.offsetHeight - window.pageYOffset - document.getElementById("footer").offsetHeight - 153
+  let elms = document.querySelectorAll('[id="scrollheader"]');
+  if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight+102-document.getElementById("footer").offsetHeight) {
+    contactheader.style.display = "block";
+    contactheader.style.height = calcspace+"px";
+    for(var i = 0; i < elms.length; i++)   
+      elms[i].style.top = "-100px";
+  } else if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight-3) {    
+    contactheader.style.display = "block";
+    contactheader.style.height = calcspace+"px";
+    for(var i = 0; i < elms.length; i++)   
+      elms[i].style.top = "-100px";
   } else {
-      headers.style.transform = "translateY(0)";
-      headers.style.opacity = "1";
-      headers.style.transition = "transform 0.4s ease, opacity 0.4s ease";
+    contactheader.style.display = "none";
+    contactheader.style.height = "0px";
+    for(var i = 0; i < elms.length; i++)   
+      elms[i].style.top = "102px";
   }
+
 }
-window.addEventListener("scroll", hidescrollheader);
+
 window.addEventListener("resize", checkmargins);
-menuicon.onclick= NavControl;
+window.addEventListener("scroll", checkmargins);
+window.addEventListener("resize", hideheaders);
+window.addEventListener("scroll", hideheaders);
+menuicon.onclick=NavControl;

@@ -214,20 +214,45 @@ input, select, textarea {
 
 	.container#scrollheader{
 		position: sticky;
-		text-align: center;
 		top: 102px;
+		text-align: center;
 		width: auto;
 		background: #ffffffff;
 		color: rgb(150, 150, 150);
 		padding-top: 50px;
 		padding-bottom: 25px;
 		z-index: 9;
-		background-image:url("images/bg03.png"), url("images/bg04.png"), url("images/bg02.png");
-		background-repeat:no-repeat, no-repeat, repeat;
-		background-size:100% 15em, 100% 15em, auto auto;background-position:top center, bottom center, top left;
+		background-image: url("images/bg03.png"), url("images/bg04.png"), url("images/bg02.png");
+		background-repeat: no-repeat, no-repeat, repeat;
+		background-size: 100% 15em, 100% 15em, auto auto;
+		background-position: top center, bottom center, top left;
 		box-shadow:inset 0px 0px 0px 5px rgba(207, 184, 124, 1), inset 0px 0px 0px -5px rgba(207, 184, 124, 1);
+		transition: 0.5s ease;
 	}
 
+	#contactheader{
+		position: fixed;
+		display: none;
+		top: 102px;
+		width: 85%;
+		min-height: 100px;
+		padding-top: 30px;
+		text-align: center;
+		overflow: hidden;
+		background: rgba(255, 255, 255, 0.95);
+		color: rgba(255, 255, 255, 1);
+		z-index: 9;
+		background-image: url("images/bg03.png"), url("images/bg04.png"), url("images/bg02.png");
+		background-repeat: no-repeat, no-repeat, repeat;
+		background-size: 100% 15em, 100% 15em, auto auto;
+		background-position: top center, bottom center, top left;
+		box-shadow:inset 0px 0px 0px 5px rgba(207, 184, 124, 1), inset 0px 0px 0px -5px rgba(207, 184, 124, 1);
+		animation: fadeIn 0.25s;
+	} 
+	@keyframes fadeIn {
+		0% { opacity: 0; }
+		100% { opacity: 1; }
+	}
 
 		@media screen and (max-width: 1280px) {
 
@@ -1803,7 +1828,11 @@ input, select, textarea {
 		width: 1100px;
 		margin: 0 auto;
 		overflow: hidden;
-		padding: 9em 0 6em 0;
+		padding: 2em 0 6em 0;
+	}
+	
+	#logowrapper {
+		padding-top: 102px;
 	}
 
 		#banner h2 {
@@ -1887,7 +1916,7 @@ input, select, textarea {
 		display: block;
 		height: 100%;
 		width: 15%;
-		padding: 10px;
+		padding: 20px;
 		top: 0;
 		left: 0;
 		padding-top:15em;
@@ -1915,6 +1944,7 @@ input, select, textarea {
 	
 	.sidebar#mainSidebar li {
 		text-align: center;
+		list-style: none;
 	}
 
 	.sidebar#mainSidebar li:hover {
@@ -1931,15 +1961,15 @@ input, select, textarea {
 
 	#motionbutton{
 		position: fixed;
-		top: 150px;
-		left: 10%;
+		top: 125px;
+		left: 2.5em;
 		font-size: 20px;
 		cursor: pointer;
 		background-color: #5e5e5eff;
 		color: white;
 		padding: 10px 15px;
 		border: none;
-		z-index: 13;
+		z-index: 103;
 		transition: 0.5s ease;
 	}
 
@@ -1986,7 +2016,6 @@ input, select, textarea {
 		background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("images/bg03.png"), url("images/bg02.png");
 		background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("images/bg03.png"), url("images/bg02.png");
 		background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("images/bg03.png"), url("images/bg02.png");
-		position: relative;
 		background-repeat: repeat-x, no-repeat, repeat;
 		background-size: 100% 100%, 100% 15em, auto auto;
 		background-position: top left, top center, top left;
@@ -2027,6 +2056,10 @@ input, select, textarea {
 			background-repeat: no-repeat, repeat;
 			background-size: 100% 15em, auto auto;
 			background-position: top center, top left;
+		}
+		
+		.wrapper.style3#finalwrapper{
+			padding-bottom: 10%;
 		}
 
 /* Header */
@@ -2166,7 +2199,11 @@ input, select, textarea {
 
 			#banner {
 				width: 100%;
-				padding: 4em 0 2em 0;
+				padding: 2em 0 2em 0;
+			}
+	
+			#logowrapper {
+				padding-top: 21px;
 			}
 
 				#banner h2 {
@@ -2261,8 +2298,9 @@ input, select, textarea {
 					display: block;
 					text-transform: uppercase;
 					font-weight: 800;
-					letter-spacing: 0.04em;
-					color: #fff;
+					padding-top: 0.5em;
+					max-height: 44px;
+					color: rgba(207, 184, 124, 1);
 					line-height: 44px;
 					text-align: center;
 				}
@@ -2443,7 +2481,7 @@ input, select, textarea {
 		/* Banner */
 
 			#banner {
-				padding: 8em 0 4em 0;
+				padding: 2em 0 0 0;
 			}
 
 				#banner br {
