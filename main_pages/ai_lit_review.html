@@ -1,0 +1,546 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Ryan Erickson</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" type="image/x-icon" href="../assets/imgs/icos/mesign.ico">
+		<script src="https://kit.fontawesome.com/a4631bf45a.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="../assets/css/main.css" id="doc-theme"/>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+		<script src="https://d3js.org/d3.v7.min.js"></script>
+        <style>
+            .card {
+                background: #fff;
+                text-shadow: 1px 1px 0 #fff;
+                max-width: 80%;
+                border-radius: 10px;
+                padding: 40px;
+                margin-bottom: 30px;
+                box-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+            }
+            .card2 {
+                background: #fff;
+                text-shadow: 1px 1px 0 #fff;
+                max-width: 40%;
+                border-radius: 10px;
+                padding: 40px;
+                margin-bottom: 30px;
+                box-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+            }
+
+            .search-form {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .input-group {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .input-group label {
+                display: block;
+                text-transform: uppercase;
+                font-weight: 800;
+                letter-spacing: 0.04em;
+                color: #444;
+                font-size: 0.8em;
+            }
+
+            .input-group input {
+                display: block;
+                width: 100%;
+                padding: 0 1em;
+                line-height: 3em;
+                border-radius: 8px;
+                border: solid 1px #eee;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 11pt;
+            }
+
+            .input-group input:focus {
+                outline: none;
+                box-shadow: 0 0 2px 1px rgba(207, 184, 124, 0.5);
+                border-color: rgba(207, 184, 124, 1);
+            }
+
+            /* Results */
+            .results-card {
+                display: none;
+            }
+
+            .results-card.show {
+                display: block;
+            }
+
+            .loading {
+                text-align: center;
+                padding: 40px;
+                color: #7b818c;
+            }
+
+            .spinner {
+                border: 4px solid #f3f3f3;
+                border-top: 4px solid rgba(207, 184, 124, 1);
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                animation: spin 1s linear infinite;
+                margin: 0 auto 20px;
+            }
+
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+
+            .result-content {
+                line-height: 1.85em;
+                color: #7b818c;
+            }
+
+            .result-content h2 {
+                color: #444;
+                border-bottom: solid 1px #c9c9c9;
+                padding-bottom: 0.5em;
+                margin-bottom: 1.5em;
+            }
+
+            .result-content h2:after {
+                content: '';
+                display: block;
+                border-top: solid 1px #c9c9c9;
+                height: 8px;
+                margin-top: 0.5em;
+            }
+
+            .result-content h3 {
+                color: rgba(207, 184, 124, 1);
+                margin: 1.5em 0 0.5em;
+            }
+
+            .result-content p {
+                margin-bottom: 1.5em;
+            }
+
+            .result-content strong {
+                color: #444;
+                font-weight: 700;
+            }
+
+            .result-content em {
+                font-style: italic;
+            }
+
+            .sources {
+                margin-top: 30px;
+                padding: 20px;
+                background: #f8f9fa;
+                border-radius: 8px;
+                border-left: 4px solid rgba(207, 184, 124, 1);
+            }
+
+            .sources h3 {
+                margin-bottom: 15px;
+                color: rgba(207, 184, 124, 1);
+            }
+
+            .source-item {
+                margin-bottom: 10px;
+                padding: 10px;
+                background: white;
+                border-radius: 5px;
+                border: solid 1px #eee;
+            }
+
+            .source-item a {
+                color: rgba(207, 184, 124, 1);
+                text-decoration: none;
+                font-weight: 600;
+            }
+
+            .source-item a:hover {
+                text-decoration: underline;
+            }
+
+            .error {
+                background: #fee;
+                border: 1px solid #fcc;
+                color: #c33;
+                padding: 15px;
+                border-radius: 8px;
+                margin-top: 15px;
+            }
+        </style>
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+			<div class="sidebar" id="mainSidebar">
+				<h2><a href="#top" target="_self">About Me</a></h2>
+				<p>"Master of Geography, Jack of all trades"</p>
+				<li><a href="#inquisitive" target="_self">Inquisitive</a></li>
+				<li><a href="#experience" target="_self">Experienced</a></li>
+				<li><a href="#accomplishments" target="_self">Diverse</a></li>
+				</p>
+				<p>
+					I use many programs for research and fun!
+				</p>
+				<h2><a href="#contact" target="_self" style="top: 20%;">Contact</a></h2>
+				<li><a href="resume.html" target='_self'>Resume</a></li>
+				<li><a href="cv.html" target='_self'>CV</a></li>
+				<li><a href="https://www.linkedin.com/in/ryan-ericksons-profile/" target='_blank'>Linkedin</a></li>
+				<li><a href="https://boulder.joinhandshake.com/profiles/rerickson" target='_blank'>Handshake</a></li>
+			</div>
+			<button onclick="NavControl()" id="motionbutton">hide</button>
+			<div id="header-wrapper">
+				<div class="container">
+					<header id="header">
+						<div class="inner">
+							<h1 id="logosandhome" style="padding-left: 0em; transition: 0.5s ease;">
+								<span>
+									<a href="https://github.com/Ryan-Erickson911" target='_blank' id="logo"><img src="../assets/imgs/svgs/GitHubLight.webp" width="30px" height="30px" id="gitIcon"></img></a>&nbsp;
+									<a href="../index.html" id="logo2"><i class="fa fa-home" width="20px" height="20px"></i></a>
+									<a href="#" id="logo2"><img src="../assets/imgs/svgs/mesign.webp" id="doc-icon" width="30px" height="30px"></a> <!-- onclick="changeTheme();return false;" width="29px" height="29px"></a> -->
+								</span>
+							</h1> 
+							<nav id="nav">			
+								<ul>
+									<li style="display: none;">
+										<a href="#">About</a>
+										<ul>
+											<li><a href="#inquisitive" target="_self">Inquisitive</a></li>
+											<li><a href="#experience" target="_self">Experienced</a></li>
+											<li><a href="#accomplishments" target="_self">Diverse</a></li>
+										</ul>
+									</li>
+									<li style="display: none;">
+										<a href="#">Contact</a>
+										<ul>
+											<li><a href="main_pages/resume.html" target='_self'>Resume</a></li>
+											<li><a href="main_pages/cv.html" target='_self'>CV</a></li>
+											<li><a href="https://www.linkedin.com/in/ryan-ericksons-profile/" target='_blank'>Linkedin</a></li>
+											<li><a href="https://boulder.joinhandshake.com/profiles/rerickson" target='_blank'>Handshake</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">GIS</a>
+										<ul>
+											<li><a href="tutorial_pages/re_tutorials_index.html">Tutorials</a></li>
+											<li><a href="https://geemap.org/" target='_blank'>geemap (Dr. WU)</a></li>
+											<li><a href="https://www.arcgis.com/index.html" target='_blank'>Esri</a></li>
+											<li><a href="https://qgis.org/" target='_blank'>QGIS</a></li>
+											<li><a href="https://grass.osgeo.org/" target='_blank'>GRASS</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Affiliations</a>
+										<ul>
+											<li><a href="https://www.colorado.edu/geography/ryan-erickson" target='_blank'>CU Profile</a></li>
+											<li><a href="https://www.spatstat.com/people/" target='_blank'>STAR Lab</a></li>
+											<li><a href="https://ibs.colorado.edu/people/ryan-erickson/" target='_blank'>CUPC</a></li>
+											<li><a href="https://cires.colorado.edu/people/ryan-erickson#ceca" target='_blank'>CECA</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Data</a>
+										<ul>
+											<li><a href="https://www.epa.gov/outdoor-air-quality-data" target='_blank'>EPA AQS</a></li>
+											<li><a href="https://epsg.io/" target='_blank'>Epsg.io</a></li>
+											<li><a href="https://developers.google.com/earth-engine/datasets/" target='_blank'>Google EE</a></li>
+											<li><a href="https://www.openstreetmap.org/#map=5/38.01/-95.84" target='_blank'>OSM</a></li>
+											<li><a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html" target='_blank'>TIGER/Line</a></li>
+											<li><a href="https://www.ccacoalition.org/resources/toar-data-portal-home-tropospheric-ozone-data" target='_blank'>T.O.A.R</a></li>
+											<li><a href="https://www.unep.org/publications-data" target='_blank'>UNEP</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Java</a>
+										<ul>
+											<li><a href="tutorial_pages/Java/rejava_index.html">Tutorials</a></li>
+											<li><a href="https://www.oracle.com/java/technologies/downloads/" target='_blank'>Download</a></li>
+											<li><a href="https://eclipseide.org/" target='_blank'>Eclipse</a></li>
+											<li><a href="https://medium.com/javarevisited/25-reasons-why-java-is-still-around-in-2024-452c582d55d0" target='_blank'>Why Java?</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Python</a>
+										<ul>
+											<li><a href="tutorial_pages/Python/repython_index.html">Tutorials</a></li>
+											<li><a href="https://www.python.org/downloads/" target='_blank'>Download</a></li>
+											<li><a href="https://anaconda.org/conda-forge/openai" target='_blank'>Anaconda</a></li>
+											<li><a href="https://code.visualstudio.com/" target='_blank'>VS Code</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">R</a>
+										<ul>
+											<li><a href="tutorial_pages/R/rer_index.html">Tutorials</a></li>
+											<li><a href="https://www.r-project.org/" target='_blank'>Download</a></li>
+											<li><a href="https://posit.co/downloads/" target='_blank'>RStudio</a></li>
+											<li><a href="https://positron.posit.co/" target='_blank'>Positron</a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</header>
+				</div>
+			</div>
+			<div id="top-wrapper">
+				<center><div id="logowrapper">
+					<a href='https://cvhs.redlandsusd.net/'><img src="../assets/imgs/logos/cvhs.png" style="display: inline-block" alt="cvhs" height="100"/></a>
+					<a href='https://www.chaffey.edu/'><img src="../assets/imgs/logos/chaffey.png" style="display: inline-block" alt="ccc" height="100"/></a>
+					<a href='https://www.ucsb.edu/'><img src="../assets/imgs/logos/ucsb.png" style="display: inline-block" alt="ucsb" height="100"/></a>
+					<a href='https://www.colorado.edu/'><img src="../assets/imgs/logos/cuboulder.png" style="display: inline-block" alt="cub" height="100"/></a>
+				</div></center>
+				<div class="inner">
+					<div id="banner">
+						<h2>
+							CONVERGE | Natural Hazards Center | University of Colorado, Boulder 	
+						</h2>
+						<img src="../assets/imgs/main/meinsf.png" alt="Test 1" width="292" height="300"/></img>
+					</div>
+				</div>
+			</div>
+			<div id="main-wrapper">
+				<div class="container" id="scrollheader">
+					<header class="col-11 first major">
+						<h2>In Depth AI Literature Review</h2>
+					</header>
+				</div>
+				<div class="wrapper style3">
+					<center>
+						<div class="container">
+							<header class="col-11 major">
+								<h2>2025 RAship - Natural Hazards Center | University of Colorado, Boulder</h2>
+								<p>A tool used to gather literature with AI insights and summaries.</p>
+							</header>
+							<h3>Please enter your email to get started:</h3>
+                    	</div>
+					</center>
+                    <center><div class="card2">
+                        <form class="search-form" id="searchForm">
+                            <div class="input-group">
+                                <label for="subject">Google Scholar</label>
+                                <input 
+                                    type="text" 
+                                    id="subject" 
+                                    placeholder="Email"
+                                    required
+                                />
+                            </div>
+                            <button type="submit" class="button" id="searchBtn">
+                                Click here to proceed.
+                            </button>
+                            <button type="submit" class="button" id="searchBtn">
+                                Click here to add another email (Optional)
+                            </button>
+                        </form>
+                    </div></center> 
+                    <center><div class="card hidden" id="focusTermsCard">
+                        <div class="focus-terms-header">
+                            <h2>Define Focus Areas</h2>
+                            <p>Specify your main topic and 3-5 main terms to focus your literature review</p>
+                            <div class="subject-display" id="subjectDisplay"></div>
+                        </div>
+                        <form class="search-form" id="focusTermsForm">
+                            <div id="termInputs">
+                                <div class="term-input-container">
+                                    <div class="term-number">Main Topic</div>
+                                    <div class="input-group">
+                                        <label for="term1">Your dissertation, thesis title, or a brief description of your research focus</label>
+                                        <input 
+                                            type="text" 
+                                            id="term1" 
+                                            placeholder="e.g., Integrating Machine Learning and Geostatistics for High-Resolution Surface Ozone Mapping: A Case Study in Arizona"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                                <div class="term-input-container">
+                                    <div class="input-group">
+                                        <label for="term2">Focus Term 1</label>
+                                        <input 
+                                            type="text" 
+                                            id="term2" 
+                                            placeholder="e.g., Machine Learning"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                                <div class="term-input-container">
+                                    <div class="input-group">
+                                        <label for="term3">Focus Term 2</label>
+                                        <input 
+                                            type="text" 
+                                            id="term3" 
+                                            placeholder="e.g., Surface Ozone"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                                <div class="term-input-container">
+                                    <div class="input-group">
+                                        <label for="term3">Focus Term 3</label>
+                                        <input 
+                                            type="text" 
+                                            id="term3" 
+                                            placeholder="e.g., Health Concerns due to air pollution in Arizona"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="button add-term-button" id="addTermBtn">
+                                + Add Another Term (Optional)
+                            </button>
+                            <div class="button-row">
+                                <button type="button" class="button alt" id="backBtn">
+                                    Back
+                                </button>
+                                <button type="submit" class="button" id="generateBtn">
+                                    Generate Literature Review
+                                </button>
+                            </div>
+                        </form>
+                    </div></center>
+                    <div class="results-card card" id="resultsCard">
+                        <div class="loading" id="loading">
+                            <div class="spinner"></div>
+                            <p><strong>Generating comprehensive literature review...</strong></p>
+                            <p style="font-size: 0.9em; margin-top: 10px;">This may take a moment as we search and analyze current research</p>
+                        </div>
+                        <div class="result-content" id="resultContent"></div>
+                    </div>
+                </div>
+                <div class="results-card card" id="resultsCard">
+					<div class="container">
+						<h1>AI Literature Review Results</h1>
+						<div class="results">
+						<h2>AI Literature Review</h2>
+						<div id="review"></div>
+						<h2>Reference List</h2>
+						<div id="references"></div>
+						<h2>Study Map</h2>
+						<div id="map"></div>
+						<h2>Research Timeline</h2>
+						<canvas id="timeline"></canvas>
+						<h2>Citation Network</h2>
+						<div id="citationGraph"></div>
+						<h2>PRISMA Workflow</h2>
+						<div id="prisma"></div>
+						<h2>Topic Clusters</h2>
+						<div id="clusters"></div>
+						</div>
+						<div class="exports">
+							<button onclick="exportBib()">BibTeX</button>
+							<button onclick="exportRIS()">RIS</button>
+							<button onclick="exportCSV()">CSV</button>
+							<button onclick="exportGeoJSON()">GeoJSON</button>
+						</div>
+					</div>
+				</div>
+            </div>
+			<div id="footer-wrapper">
+				<footer id="footer" class="container">
+					<div class="row" id="contact">
+						<div class="col-3 col-6-medium col-12-small">
+							<section>
+								<div class="row">
+									<div class="col-6-medium col-12-small">
+										<dl class="contact">
+											<dt>Address</dt>
+											<dd>
+												Tacoma, WA 98444<br />
+											</dd>
+										</dl>
+										<dl class="contact">
+											<dt>Emails</dt>
+											<dd><a href="mailto:ryanerickson407@gmail.com">ryanerickson407@gmail.com</a></dd>
+											<dd><a href="mailto:ryer7052@colorado.edu">ryer7052@colorado.edu</a></dd>
+											<dd><a href="mailto:ryan.erickson-1@colorado.edu">ryan.erickson-1@colorado.edu</a></dd>
+										</dl>
+										<!-- <h2>Questions?</h2>
+										<dl class="contact">
+											<dt>Section</dt>
+											<dd>
+												<form>
+													<select>
+														<textarea>Resume</textarea>
+													</select>
+												</form>
+											</dd>
+											<dt>Email</dt>
+											<dd><form><input type="email"></input></form></dd>
+											<dt>Comment</dt>
+											<dd><form><input type="text"></input></dd>
+										</dl> -->
+									</div>
+								</div>
+							</section>
+						</div>
+						<div class="col-3 col-6-medium col-12-small">
+							<section>
+								<center><h2>Institutions and Research Labs</h2></center>
+								<ul class="divided">
+									<li><a href="https://ibs.colorado.edu/">Institute of Behavioral Sciences</a></li>
+									<li><a href="https://hazards.colorado.edu/">Natural Hazards Center</a></li>
+									<li><a href="https://cupc.colorado.edu/">Colorado University Population Center</a></li>
+									<li><a href="https://cires.colorado.edu/">Cooperative Institute for Research and Environmental Sciences</a></li>
+								</ul>
+							</section>
+							<section>
+								<center><h2>Online Profiles</h2></center>
+								<ul class="divided">
+									<li><a href="https://www.colorado.edu/geography/ryan-erickson">CU Profile</a></li>
+									<li><a href="https://www.linkedin.com/in/ryan-ericksons-profile/">Linkedin</a></li>
+									<li><a href="https://github.com/Ryan-Erickson911">GitHub</a></li>
+								</ul>
+							</section>
+							<section>
+								<div class="row">
+									<div class="col-6-medium col-12-small">
+									</div>
+								</div>
+							</section>
+						</div>
+						<div class="col-6 col-12-medium imp-medium">
+							<section>
+								<center><h2><strong>TL;DR</strong></h2></center>
+								<center><p>My name is Ryan Erickson, I'm a recent graduate from CU, Boulder and new to Washington state. I hope you liked my website! 
+									Please reach out should you have any quesitons about my work, future collaboration, or linked materials.</p></center>
+								<center><a href="main_pages/resume.html" class="button alt icon solid fa-arrow-circle-right">Resume</a></center> 
+								<p></p>
+								<center><a href="main_pages/cv.html" class="button alt icon solid fa-arrow-circle-right">CV</a></center>
+							</section>
+						</div>
+					</div>
+					<div id="copyright">
+						<ul class="menu">
+							<li>&copy; R.Erickson. All rights reserved</li><li>Design: <a href="https://html5up.net">HTML5 UP</a> / <a href="https://www.w3schools.com/">W3 Schools</a></li><li>Base: <a href="https://html5up.net/zerofour">ZeroFour</a></li>
+						</ul>
+					</div>
+				</footer>
+			</div>
+		</div>
+			<script src="../assets/js/research_engine.js"></script>
+			<script src="../assets/js/ai_tools.js"></script>
+			<script src="../assets/js/map_tools.js"></script>
+			<script src="../assets/js/citation_tools.js"></script>
+			<script src="../assets/js/graph_tools.js"></script>
+			<script src="../assets/js/prisma_tools.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.dropotron.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/theme.js"></script>
+			<script src="../assets/js/lit_review.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+	</body>
+</html>
