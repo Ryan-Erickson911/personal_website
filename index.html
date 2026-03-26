@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="icon" type="image/x-icon" href="assets/imgs/icos/mesign.ico">
 		<script src="https://kit.fontawesome.com/a4631bf45a.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
 		<script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"></script>
 		<link rel="stylesheet" href="assets/css/main.css" id="doc-theme"/>
@@ -16,8 +17,8 @@
 				<h2><a href="#top" target="_self">About Me</a></h2>
 				<p>"MA - Geography, I help people with spatial data"</p>
 				<li><a href="#biography" target="_self">Bio</a></li>
-				<li><a href="#experience" target="_self">Experienced</a></li>
-				<li><a href="#accomplishments" target="_self">Diverse</a></li>
+				<li><a href="#experience" target="_self">Experience</a></li>
+				<li><a href="#accomplishments" target="_self"></a></li>
 				</p>
 				<p>
 					I like to use Python and ArcGIS. I'm fluent in TypeScript, Java, and R. I'm currently looking for work in the GIS field, but I'm open to any opportunities that allow me to apply my skills and knowledge. 
@@ -152,24 +153,30 @@
 							<div class="row">
 								<div class="col-12">
 									<div id="map"> 
-										<iframe width="95%" height="640"  src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=in&metricTemp=°F&metricWind=mph&zoom=5&overlay=wind&product=ecmwf&level=surface&lat=44.465&lon=-122.344&pressure=true&message=true" frameborder="0"></iframe>
+										<iframe width="90%" height="640"  src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=in&metricTemp=°F&metricWind=mph&zoom=5&overlay=wind&product=ecmwf&level=surface&lat=44.465&lon=-122.344&pressure=true&message=true" frameborder="0"></iframe>
 									</div>
 									<div class="col-12">
 										<header class="major">
 											<br>
 											<h3>MA - Geography, University of Colorado, Boulder</h3>
 											<p>I like making, integrating, and sharing GIS solutions and projects</p>
-										</header>
+										</header>							
 									</div>
-									<p>
-										<br>
-										I combine my backgrounds in Physics, Geography, and Computer Science to make displays! You may ask, of what? Peruse my website and find out!
-										<br>
-										I graduated from Chaffey Community College in Rancho Cucamonga where I played water polo and earned a specialized AA called Intersegmental General Education Transfer Curriculum (IGETC). I spent 3 years at UCSB and graduated in 2020 
-										with a double major in Geography and Physics. My Geography degree came with a specialization in GIS, and I wanted to further pursue it at the highest level. In 2021, I was accepted into the Geography department at CU, Boulder as a 
-										Master's student under Dr. Guofeng Cao at <a href="https://www.spatstat.com/people/">STARlab</a>. From there, I began to further develop my research skills and contribute to ongoing projects in the field of GIS and spatial analysis.
-										Now that I've graduated, I am seeking opportunities to apply my knowledge and skills in a professional setting. Overall, I'd summarize my experience as a multidisciplinary scholar with a strong foundation in Geography, Data Science, and Physics.
+									<div id="windy"></div>
+									<script src="assets/js/script.js"></script>
+									<div class="col-8 col-12-medium">
+										<section>
+										<p>
+											<br>
+											I combine my backgrounds in Physics, Geography, and Computer Science to make displays! You may ask, of what? Peruse my website and find out!
+											<br>
+											I graduated from Chaffey Community College in Rancho Cucamonga where I played water polo and earned a specialized AA called Intersegmental General Education Transfer Curriculum (IGETC). I spent 3 years at UCSB and graduated in 2020 
+											with a double major in Geography and Physics. My Geography degree came with a specialization in GIS, and I wanted to further pursue it at the highest level. In 2021, I was accepted into the Geography department at CU, Boulder as a 
+											Master's student under Dr. Guofeng Cao at <a href="https://www.spatstat.com/people/">STARlab</a>. From there, I began to further develop my research skills and contribute to ongoing projects in the field of GIS and spatial analysis.
+											Now that I've graduated, I am seeking opportunities to apply my knowledge and skills in a professional setting. Overall, I'd summarize my experience as a multidisciplinary scholar with a strong foundation in Geography, Data Science, and Physics.	
 										</p>
+										</section>
+									</div>
 								</div>
 							</div>
 						</section>
@@ -178,10 +185,7 @@
 				<div id="experience"></div>
 				<div class="container" id="scrollheader">
 					<header class="col-11 first major">
-						<h2>Skills and Experience</h2>
-						<p>
-							Programming is like playing with Legos...
-						</p>
+						<h2>What do I do?</h2>
 					</header>
 				</div>
 				<div class="wrapper style2">
@@ -190,13 +194,13 @@
 							<div class="row aln-center">
 								<div class="col-12">
 									<header class="major">
-										<h2>...but the instructions are often unclear</h2>
-										<p>and each lego piece must be handmade.</p>
+										<h2>Programming is like playing with Legos...</h2>
+										<p>...but the instructions are often unclear</p>
 									</header>
 								</div>
 								<div class="col-12">
 									<p>
-										I've been fortunate enough to be apart of many research projects over the last decade that require many different types of lego bricks. There are many freely avaliable sources to help you and I build these. 
+										Each lego piece must be handmade. I've been fortunate enough to be apart of many research projects over the last decade that require many different types of lego bricks. There are many freely avaliable sources to help you and I build these. 
 										My understanding of them is rather...basic, as I believe all coding was meant to be. The more complex the topic, the more I rely on these resources to determine advanced techniques, and better explain how they work. 
 										I thought I'd narrow down some helpful tutorials and resources for the three programming languages I use most often. These are not meant to be comprehensive, but rather a starting point for anyone interested in learning more about programming and data science.
 									</p>
@@ -432,7 +436,7 @@
 										</article>
 									</section>
 								</div>
-								<div class="col-4">
+								<div class="col-6">
 									<section class="box spotlight">
 										<h2 class="icon solid fa-wifi">Hobbies</h2>
 										<article>
@@ -570,29 +574,5 @@
 			<script src="assets/js/theme.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>
-				const options = {
-					key: 'YOUR_WINDY_KEY',
-					lat: 47.25,
-					lon: -122.44,
-					zoom: 8,
-				};
-
-				windyInit(options, windyAPI => {
-					const { map } = windyAPI;
-
-					// Load your GeoJSON
-					fetch('myshape.geojson')
-					.then(res => res.json())
-					.then(data => {
-						L.geoJSON(data, {
-							style: {
-								color: 'red',
-								weight: 2
-							}
-						}).addTo(map);
-					});
-				});
-				</script>
 	</body>
 </html>
