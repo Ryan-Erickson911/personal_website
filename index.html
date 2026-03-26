@@ -6,19 +6,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="icon" type="image/x-icon" href="assets/imgs/icos/mesign.ico">
 		<script src="https://kit.fontawesome.com/a4631bf45a.js" crossorigin="anonymous"></script>
+		<script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"></script>
 		<link rel="stylesheet" href="assets/css/main.css" id="doc-theme"/>
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
 			<div class="sidebar" id="mainSidebar">
 				<h2><a href="#top" target="_self">About Me</a></h2>
-				<p>"Master of Geography, Jack of all trades"</p>
-				<li><a href="#inquisitive" target="_self">Inquisitive</a></li>
+				<p>"MA - Geography, I help people with spatial data"</p>
+				<li><a href="#biography" target="_self">Bio</a></li>
 				<li><a href="#experience" target="_self">Experienced</a></li>
 				<li><a href="#accomplishments" target="_self">Diverse</a></li>
 				</p>
 				<p>
-					I use many programs for research and fun!
+					I like to use Python and ArcGIS. I'm fluent in TypeScript, Java, and R. I'm currently looking for work in the GIS field, but I'm open to any opportunities that allow me to apply my skills and knowledge. 
 				</p>
 				<h2><a href="#contact" target="_self" style="top: 20%;">Contact</a></h2>
 				<li><a href="main_pages/resume.html" target='_self'>Resume</a></li>
@@ -26,7 +28,7 @@
 				<li><a href="https://www.linkedin.com/in/ryan-ericksons-profile/" target='_blank'>Linkedin</a></li>
 				<li><a href="https://boulder.joinhandshake.com/profiles/rerickson" target='_blank'>Handshake</a></li>
 			</div>
-			<button onclick="NavControl()" id="motionbutton">hide</button>
+			<button onclick="NavControl()" id="motionbutton">X</button>
 			<div id="header-wrapper">
 				<div class="container">
 					<header id="header">
@@ -43,9 +45,9 @@
 									<li style="display: none;">
 										<a href="#">About</a>
 										<ul>
-											<li><a href="#inquisitive" target="_self">Inquisitive</a></li>
-											<li><a href="#experience" target="_self">Experienced</a></li>
-											<li><a href="#accomplishments" target="_self">Diverse</a></li>
+											<li><a href="#biography" target="_self">Bio</a></li>
+											<li><a href="#experience" target="_self">Experience</a></li>
+											<li><a href="#accomplishments" target="_self">Blog</a></li>
 										</ul>
 									</li>
 									<li style="display: none;">
@@ -138,13 +140,10 @@
 				</div>
 			</div>
 			<div id="main-wrapper">
-				<div id="inquisitive"></div>
+				<div id="biography"></div>
 				<div class="container" id="scrollheader">
 					<header class="col-11 first major">
-						<h2>Biography</h2>
-						<p>
-							GIS Developer - MA, Geography, University of Colorado, Boulder
-						</p>
+						<h2>GIS Developer</h2>
 					</header>
 				</div>
 				<div class="wrapper style1">
@@ -152,12 +151,55 @@
 						<section class="container box feature1">
 							<div class="row">
 								<div class="col-12">
+									<div id="map"> 
+										<iframe width="95%" height="640"  src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=in&metricTemp=°F&metricWind=mph&zoom=5&overlay=wind&product=ecmwf&level=surface&lat=44.465&lon=-122.344&pressure=true&message=true" frameborder="0"></iframe>
+									</div>
+									<div class="col-12">
+										<header class="major">
+											<br>
+											<h3>MA - Geography, University of Colorado, Boulder</h3>
+											<p>I like making, integrating, and sharing GIS solutions and projects</p>
+										</header>
+									</div>
+									<p>
+										<br>
+										I combine my backgrounds in Physics, Geography, and Computer Science to make displays! You may ask, of what? Peruse my website and find out!
+										<br>
+										I graduated from Chaffey Community College in Rancho Cucamonga where I played water polo and earned a specialized AA called Intersegmental General Education Transfer Curriculum (IGETC). I spent 3 years at UCSB and graduated in 2020 
+										with a double major in Geography and Physics. My Geography degree came with a specialization in GIS, and I wanted to further pursue it at the highest level. In 2021, I was accepted into the Geography department at CU, Boulder as a 
+										Master's student under Dr. Guofeng Cao at <a href="https://www.spatstat.com/people/">STARlab</a>. From there, I began to further develop my research skills and contribute to ongoing projects in the field of GIS and spatial analysis.
+										Now that I've graduated, I am seeking opportunities to apply my knowledge and skills in a professional setting. Overall, I'd summarize my experience as a multidisciplinary scholar with a strong foundation in Geography, Data Science, and Physics.
+										</p>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+				<div id="experience"></div>
+				<div class="container" id="scrollheader">
+					<header class="col-11 first major">
+						<h2>Skills and Experience</h2>
+						<p>
+							Programming is like playing with Legos...
+						</p>
+					</header>
+				</div>
+				<div class="wrapper style2">
+					<div class="inner">
+						<section class="container box feature1">
+							<div class="row aln-center">
+								<div class="col-12">
 									<header class="major">
-									<h2>
-										Inquisitive Individual with Three Specialties
-									</h2>
-									<p>This website is dedicated to a summary of my work over the years.</p>
+										<h2>...but the instructions are often unclear</h2>
+										<p>and each lego piece must be handmade.</p>
 									</header>
+								</div>
+								<div class="col-12">
+									<p>
+										I've been fortunate enough to be apart of many research projects over the last decade that require many different types of lego bricks. There are many freely avaliable sources to help you and I build these. 
+										My understanding of them is rather...basic, as I believe all coding was meant to be. The more complex the topic, the more I rely on these resources to determine advanced techniques, and better explain how they work. 
+										I thought I'd narrow down some helpful tutorials and resources for the three programming languages I use most often. These are not meant to be comprehensive, but rather a starting point for anyone interested in learning more about programming and data science.
+									</p>
 								</div>
 								<div class="col-4 col-12-medium">
 									<section>
@@ -188,39 +230,9 @@
 								</div>
 								<div class="col-12">
 									<p>
-										I graduated from Chaffey Community College in Rancho Cucamonga where I played water polo and earned a specialized AA called Intersegmental General Education Transfer Curriculum (IGETC). I spent 3 years at UCSB and graduated in 2020 
-										with a double major in Geography and Physics. My Geography degree came with a specialization in GIS, and I wanted to further pursue it at the highest level. In 2021, I was accepted into the Geography department at CU, Boulder as a 
-										Master's student under Dr. Guofeng Cao at <a href="https://www.spatstat.com/people/">STARlab</a>. From there, I began to further develop my research skills and contribute to ongoing projects in the field of GIS and spatial analysis.
-										Now that I've graduated, I am seeking opportunities to apply my knowledge and skills in a professional setting. Overall, I'd summarize my experience as a multidisciplinary scholar with a strong foundation in Geography, Data Science, and Physics.</p>
-								</div>
-							</div>
-						</section>
-					</div>
-				</div>
-				<div id="experience"></div>
-				<div class="container" id="scrollheader">
-					<header class="col-11 first major">
-						<h2>Skills and Experience</h2>
-						<p>
-							Programming is like playing with Legos...
-						</p>
-					</header>
-				</div>
-				<div class="wrapper style2">
-					<div class="inner">
-						<section class="container box feature1">
-							<div class="row aln-center">
-								<div class="col-12">
-									<header class="major">
-										<h2>...but the instructions are often unclear</h2>
-										<p>and each lego piece must be handmade.</p>
-									</header>
-								</div>
-								<div class="col-12">
-									<p>
-										I've been fortunate enough to be apart of many research projects over the last decade that require many different types of lego bricks. There are many freely avaliable sources to help you and I build these. 
-										My understanding of them is rather...basic, as I believe all coding was meant to be. The more complex the topic, the more I rely on these resources to determine advanced techniques, and better explain how they work. 
-										I thought I'd narrow down some helpful tutorials and resources for the three programming languages I use most often. These are not meant to be comprehensive, but rather a starting point for anyone interested in learning more about programming and data science.
+										<br> My thesis focused on surface ozone modeling. Using Google Earth Engine, EPA Air Quality Data, GitHub, and Python, I started the skeleton of an ML air pollution
+										model with geospatially corrected residuals trained on monitoring locations. The motivation for this can be seen in my early research projects and posters before I 
+										started graduate school. This required numerous trials and errrors regarding data sources, software, and programming languages. I've specialized in 3 main programming languages that I use for different purposes:
 									</p>
 								</div>
 								<div class="col-4 col-12-medium">
@@ -258,13 +270,6 @@
 											<a href="#" class="button large icon solid" style="opacity: 90%;"><i class="fab fa-r-project fa-lg" style="color: blue; opacity: 75%;"></i> Coming Soon!</a>
 										</footer>
 									</section>
-								</div>
-								<div class="col-12">
-									<p>
-										<br> My thesis focused on surface ozone modeling. Using Google Earth Engine, EPA Air Quality Data, GitHub, and Python, I started the skeleton of an ML air pollution
-										model with geospatially corrected residuals trained on monitoring locations. The motivation for this can be seen in my early research projects and posters before I 
-										started graduate school. Overall, I utilize a variety of programs to conduct spatial-temporal analyses in many disciplines: 
-									</p>
 								</div>
 							</div>
 						</section>
@@ -499,6 +504,16 @@
 											<dd><form><input type="text"></input></dd>
 										</dl> -->
 									</div>
+									<div class="col-6-medium col-12-small">	
+										<section>
+											<center><h2><strong>TL;DR</strong></h2></center>
+											<center><p>I'm an MA in Geography focusing on GIS application and software development. I'm currently looking for work in the GIS field, but I'm open to any opportunities that allow me to apply my skills and knowledge. 
+												Please reach out should you have any questions about my work, future collaboration, or linked materials.</p></center>
+											<center><a href="main_pages/resume.html" class="button alt icon solid fa-arrow-circle-right">Resume</a></center> 
+											<p></p>
+											<center><a href="main_pages/cv.html" class="button alt icon solid fa-arrow-circle-right">CV</a></center>
+										</section>
+									</div>
 								</div>
 							</section>
 						</div>
@@ -517,6 +532,8 @@
 								<ul class="divided">
 									<li><a href="https://www.colorado.edu/geography/ryan-erickson">CU Profile</a></li>
 									<li><a href="https://www.linkedin.com/in/ryan-ericksons-profile/">Linkedin</a></li>
+									<li><a href="https://www.handshake.com/in/ryan-ericksons-profile/">Handshake</a></li>
+									<li><a href="https://www.handshake.com/in/ryan-ericksons-profile/">Indeed</a></li>
 									<li><a href="https://github.com/Ryan-Erickson911">GitHub</a></li>
 								</ul>
 							</section>
@@ -530,8 +547,8 @@
 						<div class="col-6 col-12-medium imp-medium">
 							<section>
 								<center><h2><strong>TL;DR</strong></h2></center>
-								<center><p>My name is Ryan Erickson, I'm a recent graduate from CU, Boulder and new to Washington state. I hope you liked my website! 
-									Please reach out should you have any quesitons about my work, future collaboration, or linked materials.</p></center>
+								<center><p>I'm an MA in Geography focusing on GIS application and software development. I'm currently looking for work in the GIS field, but I'm open to any opportunities that allow me to apply my skills and knowledge. 
+									Please reach out should you have any questions about my work, future collaboration, or linked materials.</p></center>
 								<center><a href="main_pages/resume.html" class="button alt icon solid fa-arrow-circle-right">Resume</a></center> 
 								<p></p>
 								<center><a href="main_pages/cv.html" class="button alt icon solid fa-arrow-circle-right">CV</a></center>
@@ -553,5 +570,29 @@
 			<script src="assets/js/theme.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				const options = {
+					key: 'YOUR_WINDY_KEY',
+					lat: 47.25,
+					lon: -122.44,
+					zoom: 8,
+				};
+
+				windyInit(options, windyAPI => {
+					const { map } = windyAPI;
+
+					// Load your GeoJSON
+					fetch('myshape.geojson')
+					.then(res => res.json())
+					.then(data => {
+						L.geoJSON(data, {
+							style: {
+								color: 'red',
+								weight: 2
+							}
+						}).addTo(map);
+					});
+				});
+				</script>
 	</body>
 </html>

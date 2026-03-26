@@ -27,7 +27,7 @@ function NavControl() {
 	  contactheader.style.width="100%";
     return movement=0;
   } else {
-    menuicon.innerHTML = "hide";
+    menuicon.innerHTML = "X";
     menuicon.style.top="150px";
     menuicon.style.left="2.5em";
     msidew.classList.remove("hidden");

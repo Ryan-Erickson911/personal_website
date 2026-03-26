@@ -1965,8 +1965,7 @@ input, select, textarea {
 		left: 2.5em;
 		font-size: 20px;
 		cursor: pointer;
-		background-color: #5e5e5eff;
-		color: white;
+		color: black;
 		padding: 10px 15px;
 		border: none;
 		z-index: 103;
@@ -2151,6 +2150,7 @@ input, select, textarea {
 			color: inherit;
 		}
 
+    #windy {height: 95%; text-align: center;}
 /* Large */
 
 	@media screen and (max-width: 1280px) {
