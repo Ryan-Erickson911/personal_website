@@ -8,6 +8,8 @@
 		<script src="https://kit.fontawesome.com/a4631bf45a.js" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
 		<script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
+		<script src-="https://unpkg.com/shpjs@latest/dist/shp.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"></script>
 		<link rel="stylesheet" href="assets/css/main.css" id="doc-theme"/>
 	</head>
@@ -18,7 +20,7 @@
 				<p>"MA - Geography, I help people with spatial data"</p>
 				<li><a href="#biography" target="_self">Bio</a></li>
 				<li><a href="#experience" target="_self">Experience</a></li>
-				<li><a href="#accomplishments" target="_self"></a></li>
+				<li><a href="#accomplishments" target="_self">Projects</a></li>
 				</p>
 				<p>
 					I like to use Python and ArcGIS. I'm fluent in TypeScript, Java, and R. I'm currently looking for work in the GIS field, but I'm open to any opportunities that allow me to apply my skills and knowledge. 
@@ -152,15 +154,14 @@
 						<section class="container box feature1">
 							<div class="row">
 								<div class="col-12">
-									<div id="windy"></div>
-									<script src="assets/js/windy.js"></script>
-								</div>
-								<div class="col-12">
 									<header class="major">
-										<br>
 										<h3>MA - Geography, University of Colorado, Boulder</h3>
 										<p>I like making, integrating, and sharing GIS solutions and projects</p>
 									</header>							
+								</div>
+								<div class="col-12">
+									<div id="windy"></div>
+									<script src="assets/js/windy.js"></script>
 								</div>
 								<div class="col-12">
 									<section>
@@ -182,7 +183,7 @@
 				<div id="experience"></div>
 				<div class="container" id="scrollheader">
 					<header class="col-11 first major">
-						<h2>What do I do?</h2>
+						<h2>What is GIS?</h2>
 					</header>
 				</div>
 				<div class="wrapper style2">
@@ -191,13 +192,13 @@
 							<div class="row aln-center">
 								<div class="col-12">
 									<header class="major">
-										<h2>Programming is like playing with Legos...</h2>
-										<p>...but the instructions are often unclear</p>
+										<h3>Geographic Information Science</h3>
+										<p>Writing Earth's History with Data Science</p>
 									</header>
 								</div>
 								<div class="col-12">
 									<p>
-										Each lego piece must be handmade. I've been fortunate enough to be apart of many research projects over the last decade that require many different types of lego bricks. There are many freely avaliable sources to help you and I build these. 
+										Programming is like playing with Legos...but the instructions are often unclear. Each lego piece must be handmade. I've been fortunate enough to be apart of many research projects over the last decade that require many different types of lego bricks. There are many freely avaliable sources to help you and I build these. 
 										My understanding of them is rather...basic, as I believe all coding was meant to be. The more complex the topic, the more I rely on these resources to determine advanced techniques, and better explain how they work. 
 										I thought I'd narrow down some helpful tutorials and resources for the three programming languages I use most often. These are not meant to be comprehensive, but rather a starting point for anyone interested in learning more about programming and data science.
 									</p>
@@ -348,9 +349,6 @@
 				<div class="container" id="scrollheader">
 					<header class="col-11 first major">
 						<h2>Accomplishments and Interests</h2>
-						<p>
-							Blogs, Programs and Additional Works
-						</p>
 					</header>
 				</div>
 				<div class="wrapper style3" id="finalwrapper">
@@ -359,16 +357,11 @@
 							<div class="row">
 								<div class="col-12">
 									<center><header class="major">
-									<h2>
-										Multi-Disiplinary Research
-									</h2>
-									<p>A World of Infinite Possibilities</p>
+									<h3>
+										Working Projects and Published Material
+									</h3>
+									<p>These are fun projects, published material, and examples of GIS work from my teaching and research experiences</p>
 									</header></center>
-								</div>
-								<div class="col-12">
-									<center><p>
-										As I began developing a passion for GIS programming, I faced significant challenges with my physical and mental health, which led me to extend my graduate studies by two years to focus on recovery and growth. With several awarded funding opportunities, I was able to continue expanding my thesis and multidisciplinary skill set. During this time, I collaborated with prominent researchers who helped refine my technical and analytical abilities.
-									</p></center>
 								</div>
 								<div class="col-6">
 									<section class="box article-list">
@@ -447,12 +440,23 @@
 												</p>
 											</header>
 											<p>
-											As my network and social life grows, I hope to expand this map with more international points. Most of the road trips I've taken have been 
-											across the contiguous US with my Grandparents. Some of my favorite places and future destinations are on it as well!
+											This is my first web-based leaflet map. As my network and social life grows, I hope to expand this map with more international points. Most of the road trips I've taken have been 
+											across the contiguous US with my Grandparents. My favorite places and future destinations are on it as well!
 											</p>
-											<center><footer>
-												<a href="https://ryan-erickson911.github.io/IamRyanE.github.io/" class="button alt icon solid "><i class="fa-solid fa-map-location-dot"></i> Go to map</a>
-											</footer></center>
+										</article>
+										<article>
+											<a href="https://ryan-erickson911.github.io/IamRyanE.github.io/" class="image featured"><img src="assets/imgs/main/pic07.jpg" alt=""></a>
+											<header>
+												<h3>
+													<a href="https://ryan-erickson911.github.io/IamRyanE.github.io/">Road Trips</a>
+												</h3>
+												<p>
+													A map of fun points of interest.
+												</p>
+											</header>
+											<p>
+											This is a working version of an EPA map that I'd like to finish making for public health research. If the user imports a table that contains addresses and duration of stay. For now, it just has all avaliable EPA monitors for the US.
+											</p>
 										</article>
 									</section>
 								</div>
