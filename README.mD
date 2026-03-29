@@ -1,1 +1,1 @@
-## A personal website site generated with ZeroFour by HTML5 UP
+## A personal website I created to highlight my accomplishments and skills. 
