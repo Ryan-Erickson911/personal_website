@@ -1,18 +1,18 @@
 
 const options = {
-	key: 'S19Fy6OJO1V98atmX1rzhiLhYXhPJMyV',
-	lat: 40.03592442006402, 
-	lon: -98.48352577082942,
+	key: 'RV8pXaaxgAdDjMeq6hanEpyHN5v9krZY',
+	lat: 38.63592442006402, 
+	lon: -95.48352577082942,
 	verbose: true,
-	zoom: 7,
+	zoom: 5,
     timestamp: Date.now() + 3 * 24 * 60 * 60 * 1000,
     hourFormat: '12h',
 };
 
 windyInit(options, windyAPI => {
-	let polygonData;   // from test.geojson
-	let pointData;     // from mypoints.geojson
-	let drawnItems;    // user drawings
+	var polygonData;   // from test.geojson
+	var pointData;     // from mypoints.geojson
+	var drawnItems;    // user drawings
 	const { map } = windyAPI;
 
 	// ----- PANES (guarantee order) -----
@@ -62,14 +62,14 @@ windyInit(options, windyAPI => {
 			.setContent(html)
 			.openOn(map);
 	}
+
 	// ----- LOAD POLYGONS -----
 	$.getJSON("/assets/data/rerickson_2018_us_state_500k.geojson", function(data){
-		polygonData = data; 
 		const polygonLayer = L.geoJson(data, {
 			pane: 'polygonsPane',
 			style: {
 				color: 'purple',
-				weight: 4,
+				weight: 2,
 				fillColor: '#ffffff',
 				fillOpacity: 0.1,
 				opacity: 1
@@ -82,13 +82,11 @@ windyInit(options, windyAPI => {
 				);
 			},
 		}).addTo(map);
-
-		map.fitBounds(polygonLayer.getBounds());
+		polygonData = polygonLayer; 
 	});
 
 	// ----- LOAD POINTS -----
 	$.getJSON("assets/data/mypoints.geojson", function(data){
-		pointData = data;
 		const pointLayer = L.geoJson(data, {
 			pointToLayer: function(feature, latlng) {
 				return L.circleMarker(latlng, {
@@ -112,13 +110,13 @@ windyInit(options, windyAPI => {
 				);
 			}
 		}).addTo(map);
-
-		map.fitBounds(pointLayer.getBounds());
+		pointData = pointLayer;
 	});
+	
+	drawnItems = new L.FeatureGroup();
+	map.addLayer(drawnItems)
 
-	drawnItems = new L.FeatureGroup().addTo(map);
-
-	const drawControl = new L.Control.Draw({
+	drawControl = new L.Control.Draw({
 		draw: {
 			polygon: true,
 			rectangle: true,
@@ -131,30 +129,46 @@ windyInit(options, windyAPI => {
 			featureGroup: drawnItems
 		}
 	});
-
 	map.addControl(drawControl);
-	
-	map.on(L.Draw.Event.CREATED, function (e) {
 
+	// --- Layer control event for Select Points ---
+	map.on('overlayadd', function(e) {
+		if (e.name === 'Select Points') {
+			// Start polygon drawing mode
+			if (drawHandler) drawHandler.disable();
+			drawHandler = new L.Draw.Polygon(map, drawControl.options.draw.polygon);
+			drawHandler.enable();
+		}
+	});
+	map.on('overlayremove', function(e) {
+		if (e.name === 'Select Points') {
+			// Cancel drawing mode and clear selection
+			if (drawHandler) drawHandler.disable();
+			drawnItems.clearLayers();
+		}
+	});
+
+	map.on(L.Draw.Event.CREATED, function (e) {
+		
 		drawnItems.clearLayers();   // only allow one query polygon
 		drawnItems.addLayer(e.layer);
-
+		
 		const userPolygon = e.layer.toGeoJSON();
-
+		
 		// ---- Turf selections ----
-		const selectedPoints = turf.pointsWithinPolygon(pointData, userPolygon);
-
+		const selectedPoints = turf.pointsWithinPolygon(pointLayer, userPolygon);
+		
 		// ---- Turf polygon selection (handles MultiPolygons safely) ----
 		const selectedPolygons = polygonData.features.filter(f => {
 			// Flatten MultiPolygons → individual Polygon features
 			const flattened = turf.flatten(f);
-
+			
 			// flattened.features is an array of Polygon features
 			return flattened.features.some(poly =>
 				turf.booleanIntersects(poly, userPolygon)
 			);
 		});
-
+		
 		showSummary(selectedPoints, selectedPolygons);
 	});
 });
